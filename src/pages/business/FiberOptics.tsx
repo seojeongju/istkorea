@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Network, Check, Activity, Zap } from 'lucide-react';
+import { Network, Check } from 'lucide-react';
 
 // Product Data
 const products = [
