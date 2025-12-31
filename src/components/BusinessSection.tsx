@@ -67,12 +67,12 @@ export const BusinessSection = () => {
                         {t('business.title')} <span className="text-accent">.</span>
                     </h2>
 
-                    <div className="flex p-1 bg-gray-100 rounded-full">
+                    <div className="flex p-1 bg-gray-100 rounded-full overflow-x-auto no-scrollbar max-w-full">
                         {businesses.map((item) => (
                             <button
                                 key={item.id}
                                 onClick={() => setActiveTab(item.id)}
-                                className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeTab === item.id
+                                className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 ${activeTab === item.id
                                     ? 'bg-white text-primary shadow-sm'
                                     : 'text-gray-500 hover:text-gray-900'
                                     }`}
