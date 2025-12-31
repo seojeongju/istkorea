@@ -40,9 +40,10 @@ export const Header = () => {
                 <div className="container mx-auto px-6 h-20 flex justify-between items-center relative z-50">
                     <div className="flex items-center gap-2 z-50">
                         {/* Logo */}
-                        <a href="#" className={`text-2xl font-bold tracking-tighter transition-colors ${isScrolled || isMenuOpen ? 'text-primary' : 'text-white'
+                        <a href="#" className={`text-2xl font-bold tracking-tighter transition-colors ${isScrolled || isMenuOpen ? 'text-gray-900' : 'text-white'
                             }`}>
-                            SAEHAN<span className="text-accent">.</span>
+                            <span className="text-primary">IST</span>
+                            <span className={isScrolled || isMenuOpen ? 'text-gray-900' : 'text-white'}>korea</span>
                         </a>
                     </div>
 
@@ -100,13 +101,13 @@ export const Header = () => {
                             >
                                 <div className="space-y-1">
                                     <p className="font-bold text-gray-900">Contact</p>
-                                    <p>+82 2-1234-5678</p>
-                                    <p>info@saehannanotech.com</p>
+                                    <p>054-461-6608</p>
+                                    <p>istkorea@istkorea.kr</p>
                                 </div>
                                 <div className="space-y-1">
                                     <p className="font-bold text-gray-900">Address</p>
-                                    <p>123, Teheran-ro, Gangnam-gu,</p>
-                                    <p>Seoul, Republic of Korea</p>
+                                    <p>경북 구미시 1공단로2길 17</p>
+                                    <p>(공단동)</p>
                                 </div>
                             </motion.div>
                         </div>

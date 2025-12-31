@@ -28,16 +28,16 @@ export const Footer = () => {
                 <div className="flex flex-col md:flex-row justify-between text-sm text-gray-500">
                     <div className="space-y-2">
                         <p>
-                            <span className="font-bold text-gray-700">SAEHAN NANOTECH</span> &nbsp;|&nbsp;
-                            대표이사: 홍길동 &nbsp;|&nbsp;
-                            사업자등록번호: 123-45-67890
+                            <span className="font-bold text-gray-700">(주)아이에스티코리아</span> &nbsp;|&nbsp;
+                            대표이사: 금병철 &nbsp;|&nbsp;
+                            사업자등록번호: 513-81-55413
                         </p>
                         <p>
-                            주소: 서울특별시 강남구 테헤란로 123, 새한빌딩 4층 &nbsp;|&nbsp;
-                            전화: 02-1234-5678 &nbsp;|&nbsp;
-                            팩스: 02-1234-5679
+                            주소: 경북 구미시 1공단로2길 17 (공단동) &nbsp;|&nbsp;
+                            전화: 054-461-6608 &nbsp;|&nbsp;
+                            팩스: 054-463-6608
                         </p>
-                        <p className="mt-4 opacity-60">© 2025 SAEHAN NANOTECH. All Rights Reserved.</p>
+                        <p className="mt-4 opacity-60">Copyright ⓒ istkorea. All rights reserved.</p>
                     </div>
 
                     <div className="flex gap-6 mt-6 md:mt-0">
