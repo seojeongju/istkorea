@@ -44,7 +44,8 @@ export const Header = () => {
     }, [isMenuOpen]);
 
     const toggleLanguage = () => {
-        const nextLang = i18n.language === 'ko' ? 'en' : 'ko';
+        const currentLang = i18n.language || 'ko';
+        const nextLang = currentLang.startsWith('ko') ? 'en' : 'ko';
         i18n.changeLanguage(nextLang);
     };
 
@@ -52,8 +53,8 @@ export const Header = () => {
         <>
             <motion.header
                 className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 backdrop-blur-sm ${isScrolled || isMenuOpen || location.pathname !== '/'
-                        ? 'bg-white/95 shadow-sm border-b border-gray-100'
-                        : 'bg-transparent'
+                    ? 'bg-white/95 shadow-sm border-b border-gray-100'
+                    : 'bg-transparent'
                     } ${isMenuOpen || location.pathname !== '/' ? 'text-gray-900' : ''}`}
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
@@ -105,12 +106,12 @@ export const Header = () => {
                         <button
                             onClick={toggleLanguage}
                             className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${isScrolled || isMenuOpen || location.pathname !== '/'
-                                    ? 'bg-primary text-white hover:bg-primary/90 shadow-md'
-                                    : 'bg-white/20 backdrop-blur-sm text-white hover:bg-white/30'
+                                ? 'bg-primary text-white hover:bg-primary/90 shadow-md'
+                                : 'bg-white/20 backdrop-blur-sm text-white hover:bg-white/30'
                                 }`}
                         >
                             <Globe size={18} />
-                            <span>{i18n.language === 'ko' ? 'EN' : 'KR'}</span>
+                            <span>{(i18n.language || 'ko').startsWith('ko') ? 'EN' : 'KO'}</span>
                         </button>
 
                         {/* Mobile Menu Button */}
