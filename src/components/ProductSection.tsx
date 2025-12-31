@@ -1,29 +1,32 @@
 
 import { motion } from 'framer-motion';
 import { Plus } from 'lucide-react';
-
-const products = [
-    {
-        id: 1,
-        title: "Slot Die Coater",
-        subtitle: "디스플레이 공정 장비",
-        image: "https://images.unsplash.com/photo-1622612347101-5d928d157a9f?auto=format&fit=crop&q=80" // High tech machine
-    },
-    {
-        id: 2,
-        title: "Lamination System",
-        subtitle: "반도체 패키징 솔루션",
-        image: "https://images.unsplash.com/photo-1580835560944-77ce54013129?auto=format&fit=crop&q=80" // Clean room tech
-    },
-    {
-        id: 3,
-        title: "Inkjet Printing",
-        subtitle: "고정밀 인쇄 설비",
-        image: "https://images.unsplash.com/photo-1581093458891-2f085eda94bd?auto=format&fit=crop&q=80" // Lab equipment
-    }
-];
+import { useTranslation } from 'react-i18next';
 
 export const ProductSection = () => {
+    const { t } = useTranslation();
+
+    const products = [
+        {
+            id: 1,
+            title: t('product.items.item1.title'),
+            subtitle: t('product.items.item1.subtitle'),
+            image: "https://images.unsplash.com/photo-1622612347101-5d928d157a9f?auto=format&fit=crop&q=80" // High tech machine
+        },
+        {
+            id: 2,
+            title: t('product.items.item2.title'),
+            subtitle: t('product.items.item2.subtitle'),
+            image: "https://images.unsplash.com/photo-1580835560944-77ce54013129?auto=format&fit=crop&q=80" // Clean room tech
+        },
+        {
+            id: 3,
+            title: t('product.items.item3.title'),
+            subtitle: t('product.items.item3.subtitle'),
+            image: "https://images.unsplash.com/photo-1581093458891-2f085eda94bd?auto=format&fit=crop&q=80" // Lab equipment
+        }
+    ];
+
     return (
         <section className="py-24 bg-white relative">
             <div className="container mx-auto px-6">
@@ -35,7 +38,7 @@ export const ProductSection = () => {
                         transition={{ duration: 0.8 }}
                     >
                         <h2 className="text-4xl font-bold text-gray-900 tracking-wide">
-                            PRODUCT <span className="text-accent">.</span>
+                            {t('product.title')} <span className="text-accent">.</span>
                         </h2>
                     </motion.div>
 

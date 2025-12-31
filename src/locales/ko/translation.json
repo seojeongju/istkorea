@@ -29,5 +29,70 @@
             "title": "고객 가치 창출을 위한\n스마트 팩토리 솔루션",
             "subtitle": "최고의 품질과 서비스로 고객과 함께 성장합니다"
         }
+    },
+    "tech": {
+        "title": "CORE TECHNOLOGY",
+        "description": "끊임없는 R&D와 혁신을 통해 세계 최고 수준의 기술 솔루션을 제공합니다.",
+        "item1": {
+            "title": "나노급 정밀 제어",
+            "desc": "차세대 디스플레이 및 반도체 공정을 위한 나노미터 단위의 초정밀 코팅 및 제어 기술을 구현합니다."
+        },
+        "item2": {
+            "title": "첨단 제어 시스템",
+            "desc": "독자적인 소프트웨어 알고리즘으로 양산 환경에서의 안정성과 재현성을 완벽하게 보장합니다."
+        },
+        "item3": {
+            "title": "맞춤형 엔지니어링",
+            "desc": "고객사의 특정 요구사항과 공정 파라미터에 최적화된 장비를 설계 및 제작하여 제공합니다."
+        },
+        "item4": {
+            "title": "고속 정밀 공정",
+            "desc": "품질과 수율을 타협하지 않으면서도 최대의 생산성을 발휘하는 최적화된 시스템입니다."
+        }
+    },
+    "business": {
+        "title": "BUSINESS AREA",
+        "view_details": "자세히 보기",
+        "tabs": {
+            "display": "디스플레이",
+            "semicon": "반도체",
+            "battery": "이차전지"
+        },
+        "items": {
+            "display": {
+                "title": "차세대 디스플레이 솔루션",
+                "desc": "OLED, Micro-LED 및 플렉서블 디스플레이를 위한 초박막 코팅 및 고정밀 라미네이션 기술로 시장을 선도합니다."
+            },
+            "semicon": {
+                "title": "첨단 반도체 패키징",
+                "desc": "웨이퍼 공정, 어드밴스드 패키징 및 세정 공정에 필요한 최첨단 장비를 제공하여 칩 제조의 최고 수율을 보장합니다."
+            },
+            "battery": {
+                "title": "전기차 배터리 제조",
+                "desc": "고성능 리튬이온 배터리의 대량 생산을 위해 설계된 혁신적인 전극 코팅 및 스태킹 솔루션을 제공합니다."
+            }
+        }
+    },
+    "product": {
+        "title": "PRODUCT",
+        "items": {
+            "item1": {
+                "title": "Slot Die Coater",
+                "subtitle": "디스플레이 공정 장비"
+            },
+            "item2": {
+                "title": "Lamination System",
+                "subtitle": "반도체 패키징 솔루션"
+            },
+            "item3": {
+                "title": "Inkjet Printing",
+                "subtitle": "고정밀 인쇄 설비"
+            }
+        }
+    },
+    "support": {
+        "title": "CUSTOMER SUPPORT",
+        "question": "궁금한 점이 있으신가요?",
+        "desc": "언제든지 문의해 주시면 친절히 답변 드리겠습니다."
     }
 }

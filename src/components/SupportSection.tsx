@@ -1,8 +1,11 @@
 
 import { motion } from 'framer-motion';
 import { Plus } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const SupportSection = () => {
+    const { t } = useTranslation();
+
     return (
         <section className="relative py-24 bg-gray-100 overflow-hidden">
             {/* Background Image with blur */}
@@ -20,12 +23,12 @@ export const SupportSection = () => {
                         transition={{ duration: 0.8 }}
                     >
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            CUSTOMER SUPPORT <span className="text-accent">.</span>
+                            {t('support.title')} <span className="text-accent">.</span>
                         </h2>
                         <p className="text-xl text-gray-600 font-light">
-                            궁금한 점이 있으신가요?
+                            {t('support.question')}
                             <br />
-                            <span className="text-base mt-2 block opacity-70">언제든지 문의해 주시면 친절히 답변 드리겠습니다.</span>
+                            <span className="text-base mt-2 block opacity-70">{t('support.desc')}</span>
                         </p>
                     </motion.div>
 

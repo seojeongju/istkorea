@@ -29,5 +29,70 @@
             "title": "Customer Value Creation\nSmart Factory Solutions",
             "subtitle": "Growing together with customers through the best quality and service"
         }
+    },
+    "tech": {
+        "title": "CORE TECHNOLOGY",
+        "description": "Providing world-class technology solutions through continuous R&D and innovation.",
+        "item1": {
+            "title": "Nano-scale Precision Control",
+            "desc": "Implementing ultra-precision coating and control technology in nanometer units for next-generation display and semiconductor processes."
+        },
+        "item2": {
+            "title": "Advanced Control System",
+            "desc": "Perfectly guaranteeing stability and reproducibility in production environments with proprietary software algorithms."
+        },
+        "item3": {
+            "title": "Custom Engineering",
+            "desc": "Designing and manufacturing equipment optimized for customer-specific requirements and process parameters."
+        },
+        "item4": {
+            "title": "High-Speed Precision Process",
+            "desc": "An optimized system that demonstrates maximum productivity without compromising quality and yield."
+        }
+    },
+    "business": {
+        "title": "BUSINESS AREA",
+        "view_details": "View Details",
+        "tabs": {
+            "display": "Display",
+            "semicon": "Semiconductor",
+            "battery": "Battery"
+        },
+        "items": {
+            "display": {
+                "title": "Next-gen Display Solutions",
+                "desc": "Leading the market with ultra-thin coating and high-precision lamination technology for OLED, Micro-LED, and flexible displays."
+            },
+            "semicon": {
+                "title": "Advanced Semiconductor Packaging",
+                "desc": "Providing state-of-the-art equipment for wafer processes, advanced packaging, and cleaning processes to ensure the highest yield in chip manufacturing."
+            },
+            "battery": {
+                "title": "EV Battery Manufacturing",
+                "desc": "Providing innovative electrode coating and stacking solutions designed for mass production of high-performance lithium-ion batteries."
+            }
+        }
+    },
+    "product": {
+        "title": "PRODUCT",
+        "items": {
+            "item1": {
+                "title": "Slot Die Coater",
+                "subtitle": "Display Process Equipment"
+            },
+            "item2": {
+                "title": "Lamination System",
+                "subtitle": "Semiconductor Packaging Solution"
+            },
+            "item3": {
+                "title": "Inkjet Printing",
+                "subtitle": "High-precision Printing Equipment"
+            }
+        }
+    },
+    "support": {
+        "title": "CUSTOMER SUPPORT",
+        "question": "Have any questions?",
+        "desc": "Please feel free to contact us anytime, and we will respond kindly."
     }
 }
