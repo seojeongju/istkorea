@@ -1,0 +1,33 @@
+{
+    "header": {
+        "menu": {
+            "company": "회사 소개",
+            "products": "제품 소개",
+            "business": "사업 소개",
+            "support": "고객 지원"
+        },
+        "submenu": {
+            "greetings": "인사말",
+            "history": "연혁",
+            "organization": "조직도",
+            "location": "오시는길"
+        },
+        "contact": "Contact",
+        "address": "Address",
+        "address_detail": "경북 구미시 1공단로2길 17 (공단동)"
+    },
+    "hero": {
+        "slide1": {
+            "title": "초정밀 나노 기술의\n새로운 지평을 엽니다",
+            "subtitle": "디스플레이와 반도체 산업의 미래를 선도하는 기술력"
+        },
+        "slide2": {
+            "title": "디스플레이 장비 분야의\n글로벌 리더",
+            "subtitle": "끊임없는 연구개발과 혁신으로 최적의 솔루션을 제공합니다"
+        },
+        "slide3": {
+            "title": "고객 가치 창출을 위한\n스마트 팩토리 솔루션",
+            "subtitle": "최고의 품질과 서비스로 고객과 함께 성장합니다"
+        }
+    }
+}

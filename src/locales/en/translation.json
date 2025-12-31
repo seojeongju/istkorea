@@ -1,0 +1,33 @@
+{
+    "header": {
+        "menu": {
+            "company": "Company",
+            "products": "Products",
+            "business": "Business",
+            "support": "Support"
+        },
+        "submenu": {
+            "greetings": "CEO Message",
+            "history": "History",
+            "organization": "Organization",
+            "location": "Location"
+        },
+        "contact": "Contact",
+        "address": "Address",
+        "address_detail": "17, 1gongdan-ro 2-gil, Gumi-si, Gyeongsangbuk-do, Republic of Korea"
+    },
+    "hero": {
+        "slide1": {
+            "title": "Opening New Horizons in\nUltra-Precision Nano Technology",
+            "subtitle": "Leading the future of display and semiconductor industries with technological excellence"
+        },
+        "slide2": {
+            "title": "Global Leader in\nDisplay Equipment",
+            "subtitle": "Providing optimal solutions with continuous R&D and innovation"
+        },
+        "slide3": {
+            "title": "Customer Value Creation\nSmart Factory Solutions",
+            "subtitle": "Growing together with customers through the best quality and service"
+        }
+    }
+}

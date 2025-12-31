@@ -1,29 +1,31 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
-const slides = [
-    {
-        id: 1,
-        image: "/images/hero1.png",
-        title: "초정밀 나노 기술의\n새로운 지평을 엽니다",
-        subtitle: "디스플레이와 반도체 산업의 미래를 선도하는 기술력"
-    },
-    {
-        id: 2,
-        image: "/images/hero2.png",
-        title: "지속 가능한 내일을 위한\n친환경 제조 혁신",
-        subtitle: "환경을 생각하는 공정으로 더 나은 가치를 창출합니다"
-    },
-    {
-        id: 3,
-        image: "/images/hero3.png",
-        title: "세계가 신뢰하는\n글로벌 파트너",
-        subtitle: "최고의 품질과 끊임없는 혁신으로 고객과 함께 성장합니다"
-    }
-];
+import { useTranslation } from 'react-i18next';
 
 export const Hero = () => {
+    const { t } = useTranslation();
     const [currentSlide, setCurrentSlide] = useState(0);
+
+    const slides = [
+        {
+            id: 1,
+            image: "/images/hero1.png",
+            title: t('hero.slide1.title'),
+            subtitle: t('hero.slide1.subtitle')
+        },
+        {
+            id: 2,
+            image: "/images/hero2.png",
+            title: t('hero.slide2.title'),
+            subtitle: t('hero.slide2.subtitle')
+        },
+        {
+            id: 3,
+            image: "/images/hero3.png",
+            title: t('hero.slide3.title'),
+            subtitle: t('hero.slide3.subtitle')
+        }
+    ];
 
     useEffect(() => {
         const timer = setInterval(() => {

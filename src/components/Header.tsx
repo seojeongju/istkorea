@@ -2,29 +2,32 @@ import { useState, useEffect } from 'react';
 import { Menu, Globe, X, ChevronDown } from 'lucide-react';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-
-const menuItems = [
-    {
-        title: "회사 소개",
-        href: "/company",
-        submenu: [
-            { title: "인사말", href: "/company/greetings" },
-            { title: "연혁", href: "/company/history" },
-            { title: "조직도", href: "/company/organization" },
-            { title: "오시는길", href: "/company/location" },
-        ]
-    },
-    { title: "제품 소개", href: "#" },
-    { title: "사업 소개", href: "#" },
-    { title: "고객 지원", href: "#" }
-];
+import { useTranslation } from 'react-i18next';
 
 export const Header = () => {
+    const { t, i18n } = useTranslation();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
     const { scrollY } = useScroll();
     const location = useLocation();
+
+    // Define menu items dynamically to use translation
+    const menuItems = [
+        {
+            title: t('header.menu.company'),
+            href: "/company",
+            submenu: [
+                { title: t('header.submenu.greetings'), href: "/company/greetings" },
+                { title: t('header.submenu.history'), href: "/company/history" },
+                { title: t('header.submenu.organization'), href: "/company/organization" },
+                { title: t('header.submenu.location'), href: "/company/location" },
+            ]
+        },
+        { title: t('header.menu.products'), href: "#" },
+        { title: t('header.menu.business'), href: "#" },
+        { title: t('header.menu.support'), href: "#" }
+    ];
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         setIsScrolled(latest > 50);
@@ -39,6 +42,11 @@ export const Header = () => {
     useEffect(() => {
         document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset';
     }, [isMenuOpen]);
+
+    const toggleLanguage = () => {
+        const nextLang = i18n.language === 'ko' ? 'en' : 'ko';
+        i18n.changeLanguage(nextLang);
+    };
 
     return (
         <>
@@ -81,7 +89,7 @@ export const Header = () => {
                                                 <Link
                                                     key={sub.title}
                                                     to={sub.href}
-                                                    className="block px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors"
+                                                    className="block px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors whitespace-nowrap"
                                                 >
                                                     {sub.title}
                                                 </Link>
@@ -94,12 +102,15 @@ export const Header = () => {
                     </nav>
 
                     <div className="flex items-center gap-4 z-50">
-                        <button className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${isScrolled || isMenuOpen || location.pathname !== '/'
-                                ? 'bg-primary text-white hover:bg-primary/90 shadow-md'
-                                : 'bg-white/20 backdrop-blur-sm text-white hover:bg-white/30'
-                            }`}>
+                        <button
+                            onClick={toggleLanguage}
+                            className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${isScrolled || isMenuOpen || location.pathname !== '/'
+                                    ? 'bg-primary text-white hover:bg-primary/90 shadow-md'
+                                    : 'bg-white/20 backdrop-blur-sm text-white hover:bg-white/30'
+                                }`}
+                        >
                             <Globe size={18} />
-                            <span>EN</span>
+                            <span>{i18n.language === 'ko' ? 'EN' : 'KR'}</span>
                         </button>
 
                         {/* Mobile Menu Button */}
@@ -178,13 +189,13 @@ export const Header = () => {
                                 className="mt-12 pt-12 border-t border-gray-200 flex flex-col gap-6 text-gray-500 text-sm"
                             >
                                 <div className="space-y-1">
-                                    <p className="font-bold text-gray-900">Contact</p>
+                                    <p className="font-bold text-gray-900">{t('header.contact')}</p>
                                     <p>054-461-6608</p>
                                     <p>istkorea@istkorea.kr</p>
                                 </div>
                                 <div className="space-y-1">
-                                    <p className="font-bold text-gray-900">Address</p>
-                                    <p>경북 구미시 1공단로2길 17 (공단동)</p>
+                                    <p className="font-bold text-gray-900">{t('header.address')}</p>
+                                    <p>{t('header.address_detail')}</p>
                                 </div>
                             </motion.div>
                         </div>
