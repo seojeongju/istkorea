@@ -1,5 +1,4 @@
-import { motion } from 'framer-motion';
-import { Flag, Award, Zap, Building2, TrendingUp, Calendar } from 'lucide-react';
+import { Flag, Award, Zap, Building2, TrendingUp } from 'lucide-react';
 
 const historyData = [
     {
