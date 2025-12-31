@@ -24,7 +24,7 @@ export const Header = () => {
                 { title: t('header.submenu.location'), href: "/company/location" },
             ]
         },
-        { title: t('header.menu.products'), href: "#" },
+        { title: t('header.menu.products'), href: "#product_area", isScroll: true },
         { title: t('header.menu.business'), href: "#business_area", isScroll: true },
         { title: t('header.menu.support'), href: "#" }
     ];

@@ -40,7 +40,7 @@ export const ProductSection = () => {
     ];
 
     return (
-        <section className="py-24 bg-white relative">
+        <section id="product_area" className="py-24 bg-white relative">
             <div className="container mx-auto px-6">
                 <div className="flex justify-between items-end mb-16">
                     <motion.div
