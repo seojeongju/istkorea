@@ -37,49 +37,64 @@ export const Hero = () => {
     }, []);
 
     return (
-        <section className="relative h-screen w-full overflow-hidden bg-gray-900 text-white">
-            <AnimatePresence mode='wait'>
-                <motion.div
-                    key={currentSlide}
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
-                    initial={{ opacity: 0, scale: 1.1 }}
-                    animate={{ opacity: 0.6, scale: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 1.5 }}
-                />
-            </AnimatePresence>
+        <section className="relative h-screen min-h-[600px] w-full bg-white flex flex-col md:flex-row pt-20">
+            {/* Left Side: Text Content */}
+            <div className="w-full md:w-5/12 lg:w-4/12 flex flex-col justify-center px-6 md:px-12 z-10 bg-white order-2 md:order-1 relative h-[40%] md:h-full">
+                <AnimatePresence mode='wait'>
+                    <motion.div
+                        key={`text-${currentSlide}`}
+                        initial={{ opacity: 0, x: -30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: 10 }}
+                        transition={{ duration: 0.5 }}
+                        className="max-w-xl"
+                    >
+                        <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold leading-tight mb-4 md:mb-6 text-gray-900 whitespace-pre-line tracking-tight">
+                            {slides[currentSlide].title}
+                        </h1>
+                        <p className="text-base md:text-lg text-gray-500 font-normal leading-relaxed mb-6 md:mb-8 break-keep">
+                            {slides[currentSlide].subtitle}
+                        </p>
+                    </motion.div>
+                </AnimatePresence>
 
-            {/* Overlay to darken image for text readability */}
-            <div className="absolute inset-0 bg-black/40" />
+                {/* Custom Pagination/Progress */}
+                <div className="flex items-center gap-4 mt-2 md:mt-4">
+                    {slides.map((_, index) => (
+                        <div key={index} className="relative h-1 w-full max-w-[60px] bg-gray-100 rounded-full overflow-hidden cursor-pointer" onClick={() => setCurrentSlide(index)}>
+                            <motion.div
+                                className="absolute top-0 left-0 h-full bg-primary"
+                                initial={{ width: "0%" }}
+                                animate={{ width: currentSlide === index ? "100%" : "0%" }}
+                                transition={{ duration: currentSlide === index ? 5 : 0.3, ease: "linear" }}
+                            />
+                            {/* Static active indicator if not relying on animation duration */}
+                            <div className={`absolute top-0 left-0 h-full w-full bg-primary transition-opacity duration-300 ${currentSlide === index ? 'opacity-100' : 'opacity-0'}`} style={{ width: currentSlide === index ? 'auto' : '0%' }} />
+                        </div>
+                    ))}
+                </div>
 
-            <div className="relative z-10 h-full container mx-auto px-6 flex flex-col justify-center">
-                <motion.div
-                    key={`text-${currentSlide}`}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    className="max-w-3xl"
-                >
-                    <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-4 whitespace-pre-line">
-                        {slides[currentSlide].title}
-                    </h1>
-                    <p className="text-xl md:text-2xl text-gray-200 font-light">
-                        {slides[currentSlide].subtitle}
-                    </p>
-                </motion.div>
+                {/* Number Indicator */}
+                <div className="absolute bottom-8 left-6 md:left-12 text-sm font-mono text-gray-400">
+                    0{currentSlide + 1} <span className="mx-2">/</span> 0{slides.length}
+                </div>
             </div>
 
-            {/* Pagination */}
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-4">
-                {slides.map((_, index) => (
-                    <button
-                        key={index}
-                        onClick={() => setCurrentSlide(index)}
-                        className={`h-1 transition-all duration-300 ${currentSlide === index ? 'w-12 bg-accent' : 'w-6 bg-white/50 hover:bg-white'
-                            }`}
+            {/* Right Side: Image Slider */}
+            <div className="w-full md:w-7/12 lg:w-8/12 h-[60%] md:h-full relative overflow-hidden order-1 md:order-2">
+                <AnimatePresence mode='wait'>
+                    <motion.div
+                        key={currentSlide}
+                        className="absolute inset-0 bg-cover bg-center md:bg-left-top"
+                        style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
+                        initial={{ opacity: 0, scale: 1.1 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.8 }}
                     />
-                ))}
+                </AnimatePresence>
+                {/* Decorative Elements */}
+                <div className="absolute inset-0 bg-gradient-to-r from-white via-white/20 to-transparent md:w-20 z-10 pointer-events-none" />
             </div>
         </section>
     );
