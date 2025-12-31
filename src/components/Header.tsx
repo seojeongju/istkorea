@@ -3,11 +3,10 @@ import { Menu, Globe, X, ArrowRight } from 'lucide-react';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 
 const menuItems = [
-    { title: "About Us", href: "#" },
-    { title: "Business Area", href: "#" },
-    { title: "R&D Center", href: "#" },
-    { title: "News & Notice", href: "#" },
-    { title: "Contact Us", href: "#" }
+    { title: "회사 소개", href: "#" },
+    { title: "제품 소개", href: "#" },
+    { title: "사업 소개", href: "#" },
+    { title: "고객 지원", href: "#" }
 ];
 
 export const Header = () => {
@@ -31,7 +30,7 @@ export const Header = () => {
     return (
         <>
             <motion.header
-                className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${isScrolled || isMenuOpen ? 'bg-white shadow-none' : 'bg-transparent'
+                className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${isScrolled || isMenuOpen ? 'bg-white shadow-sm' : 'bg-transparent'
                     } ${isMenuOpen ? 'text-gray-900' : ''}`}
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
@@ -47,20 +46,38 @@ export const Header = () => {
                         </a>
                     </div>
 
-                    <nav className="flex items-center gap-6 z-50">
-                        <button className={`flex items-center gap-1 text-sm font-medium transition-colors ${isScrolled || isMenuOpen ? 'text-gray-800 hover:text-primary' : 'text-white hover:text-accent'
+                    {/* Desktop Navigation */}
+                    <nav className="hidden md:flex items-center gap-8">
+                        {menuItems.map((item) => (
+                            <a
+                                key={item.title}
+                                href={item.href}
+                                className={`text-base font-medium transition-colors hover:text-primary ${isScrolled || isMenuOpen ? 'text-gray-600' : 'text-white/90'
+                                    }`}
+                            >
+                                {item.title}
+                            </a>
+                        ))}
+                    </nav>
+
+                    <div className="flex items-center gap-4 z-50">
+                        <button className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${isScrolled || isMenuOpen
+                                ? 'bg-primary text-white hover:bg-primary/90 shadow-md'
+                                : 'bg-white/20 backdrop-blur-sm text-white hover:bg-white/30'
                             }`}>
-                            <Globe size={20} />
-                            <span className="hidden md:inline">EN</span>
+                            <Globe size={18} />
+                            <span>EN</span>
                         </button>
+
+                        {/* Mobile Menu Button */}
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className={`p-1 transition-colors ${isScrolled || isMenuOpen ? 'text-gray-800 hover:text-primary' : 'text-white hover:text-accent'
+                            className={`md:hidden p-1 transition-colors ${isScrolled || isMenuOpen ? 'text-gray-800 hover:text-primary' : 'text-white hover:text-accent'
                                 }`}
                         >
                             {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
                         </button>
-                    </nav>
+                    </div>
                 </div>
             </motion.header>
 
