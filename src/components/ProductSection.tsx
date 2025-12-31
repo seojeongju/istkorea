@@ -9,21 +9,33 @@ export const ProductSection = () => {
     const products = [
         {
             id: 1,
-            title: t('product.items.item1.title'),
-            subtitle: t('product.items.item1.subtitle'),
-            image: "https://images.unsplash.com/photo-1622612347101-5d928d157a9f?auto=format&fit=crop&q=80" // High tech machine
+            title: "VACUUM HOT PRESS",
+            subtitle: "Advanced Press Technology",
+            image: "/images/product_press_main.png"
         },
         {
             id: 2,
-            title: t('product.items.item2.title'),
-            subtitle: t('product.items.item2.subtitle'),
-            image: "https://images.unsplash.com/photo-1580835560944-77ce54013129?auto=format&fit=crop&q=80" // Clean room tech
+            title: "CHEMICAL POLISHING",
+            subtitle: "4-Head Polishing System",
+            image: "/images/product_chemical_polishing.png"
         },
         {
             id: 3,
-            title: t('product.items.item3.title'),
-            subtitle: t('product.items.item3.subtitle'),
-            image: "https://images.unsplash.com/photo-1581093458891-2f085eda94bd?auto=format&fit=crop&q=80" // Lab equipment
+            title: "STEP POLISHING",
+            subtitle: "Precision Finishing",
+            image: "/images/product_step_polishing.png"
+        },
+        {
+            id: 4,
+            title: "LAPPING MACHINE",
+            subtitle: "High Intensity Polishing",
+            image: "/images/product_lapping.png"
+        },
+        {
+            id: 5,
+            title: "MULTI WIRE SAW",
+            subtitle: "Semiconductor Slicing",
+            image: "/images/product_wiresaw.png"
         }
     ];
 
@@ -47,7 +59,7 @@ export const ProductSection = () => {
                     </button>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-16">
                     {products.map((product, index) => (
                         <motion.div
                             key={product.id}
@@ -55,28 +67,18 @@ export const ProductSection = () => {
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: index * 0.2 }}
+                            transition={{ duration: 0.6, delay: index * 0.1 }}
                         >
-                            <div className="aspect-[4/5] overflow-hidden bg-gray-100 relative">
+                            <div className="aspect-[4/5] overflow-hidden bg-gray-50 relative rounded-lg border border-gray-100">
                                 <img
                                     src={product.image}
                                     alt={product.title}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    className="w-full h-full object-contain p-4 transition-transform duration-700 group-hover:scale-105"
                                 />
-                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
-
                                 {/* Plus icon on hover */}
                                 <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <div className="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-primary shadow-lg">
                                         <Plus size={20} />
-                                    </div>
-                                </div>
-
-                                <div className="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black/60 to-transparent text-white md:bg-none md:text-gray-900 md:relative md:p-0 md:mt-6">
-                                    {/* Mobile overlay style / Desktop plain style split */}
-                                    <div className="md:hidden">
-                                        <h3 className="text-2xl font-bold mb-1">{product.title}</h3>
-                                        <p className="text-sm opacity-80">{product.subtitle}</p>
                                     </div>
                                 </div>
                             </div>
@@ -85,6 +87,12 @@ export const ProductSection = () => {
                             <div className="hidden md:block mt-6 group-hover:translate-x-2 transition-transform duration-300">
                                 <h3 className="text-2xl font-bold text-gray-800 mb-1">{product.title}</h3>
                                 <p className="text-gray-500 font-light">{product.subtitle}</p>
+                            </div>
+
+                            {/* Mobile overlay text */}
+                            <div className="md:hidden mt-4">
+                                <h3 className="text-xl font-bold text-gray-800">{product.title}</h3>
+                                <p className="text-sm text-gray-500">{product.subtitle}</p>
                             </div>
                         </motion.div>
                     ))}
