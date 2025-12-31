@@ -30,7 +30,9 @@ export const Header = () => {
     return (
         <>
             <motion.header
-                className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${isScrolled || isMenuOpen ? 'bg-white shadow-sm' : 'bg-transparent'
+                className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 backdrop-blur-sm ${isScrolled || isMenuOpen
+                    ? 'bg-white/90 shadow-sm border-b border-gray-100'
+                    : 'bg-transparent'
                     } ${isMenuOpen ? 'text-gray-900' : ''}`}
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
@@ -62,8 +64,8 @@ export const Header = () => {
 
                     <div className="flex items-center gap-4 z-50">
                         <button className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${isScrolled || isMenuOpen
-                                ? 'bg-primary text-white hover:bg-primary/90 shadow-md'
-                                : 'bg-white/20 backdrop-blur-sm text-white hover:bg-white/30'
+                            ? 'bg-primary text-white hover:bg-primary/90 shadow-md'
+                            : 'bg-white/20 backdrop-blur-sm text-white hover:bg-white/30'
                             }`}>
                             <Globe size={18} />
                             <span>EN</span>
