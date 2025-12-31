@@ -6,6 +6,7 @@ import { Home } from './pages/Home';
 import { Company } from './pages/Company';
 import { PressLine } from './pages/business/PressLine';
 import { PolishingLine } from './pages/business/PolishingLine';
+import { Semiconductor } from './pages/business/Semiconductor';
 
 // Create a ScrollToTop component to handle scroll reset on navigation
 // Create a ScrollToTop component to handle scroll reset on navigation
@@ -31,6 +32,7 @@ function App() {
           <Route path="/company/*" element={<Company />} />
           <Route path="/business/press-line" element={<PressLine />} />
           <Route path="/business/polishing-line" element={<PolishingLine />} />
+          <Route path="/business/semiconductor" element={<Semiconductor />} />
         </Routes>
         <Footer />
       </div>

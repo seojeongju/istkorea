@@ -49,6 +49,8 @@ export const BusinessSection = () => {
             navigate('/business/press-line');
         } else if (id === 'polishing') {
             navigate('/business/polishing-line');
+        } else if (id === 'semicon') {
+            navigate('/business/semiconductor');
         } else {
             // For others, we can add placeholder or different routes later
             console.log("Details for:", id);
