@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { Users, Briefcase, Settings, Target, Globe, PenTool, Cpu, Wrench, ShieldCheck, Headphones } from 'lucide-react';
+import { ElementType } from 'react';
 
-const Card = ({ title, role, icon: Icon, type = "default", index = 0 }: { title: string, role?: string, icon?: any, type?: "ceo" | "division" | "team", index?: number }) => {
+const Card = ({ title, role, icon: Icon, type = "default", index = 0 }: { title: string, role?: string, icon?: ElementType, type?: "ceo" | "division" | "team", index?: number }) => {
     const isCeo = type === "ceo";
     const isDivision = type === "division";
 
@@ -39,11 +40,11 @@ const Card = ({ title, role, icon: Icon, type = "default", index = 0 }: { title:
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="relative z-10 bg-white rounded-xl shadow-lg border-t-4 border-primary p-5 w-56 text-center group hover:-translate-y-1 transition-transform duration-300"
+                className="relative z-10 bg-white rounded-xl shadow-lg border-t-4 border-primary p-5 w-60 text-center group hover:-translate-y-1 transition-transform duration-300"
             >
                 {Icon && (
                     <div className="w-12 h-12 mx-auto bg-blue-50 text-primary rounded-full flex items-center justify-center mb-3 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                        <Icon size={24} />
+                        <Icon strokeWidth={2} className="w-6 h-6" />
                     </div>
                 )}
                 <h3 className="font-bold text-gray-900 text-lg">{title}</h3>
@@ -61,17 +62,10 @@ const Card = ({ title, role, icon: Icon, type = "default", index = 0 }: { title:
             className="flex items-center gap-3 p-3 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-100 transition-all duration-200 w-full"
         >
             <div className="w-2 h-2 rounded-full bg-primary/40 shrink-0"></div>
-            {Icon && <Icon size={14} className="text-gray-400 shrink-0" />}
+            {Icon && <Icon className="w-4 h-4 text-gray-400 shrink-0" />}
             <span className="text-sm font-medium text-gray-700">{title}</span>
         </motion.div>
     );
-};
-
-const Connector = ({ height = "h-8", type = "vertical" }: { height?: string, type?: "vertical" | "horizontal" }) => {
-    if (type === "horizontal") {
-        return <div className="hidden md:block absolute top-0 left-0 right-0 h-[2px] bg-gray-200" />;
-    }
-    return <div className={`w-[2px] ${height} bg-gray-200 mx-auto`}></div>;
 };
 
 export const Organization = () => {
