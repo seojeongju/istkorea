@@ -5,6 +5,7 @@ import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { Company } from './pages/Company';
 import { PressLine } from './pages/business/PressLine';
+import { PolishingLine } from './pages/business/PolishingLine';
 
 // Create a ScrollToTop component to handle scroll reset on navigation
 // Create a ScrollToTop component to handle scroll reset on navigation
@@ -29,6 +30,7 @@ function App() {
           <Route path="/company" element={<Company />} />
           <Route path="/company/*" element={<Company />} />
           <Route path="/business/press-line" element={<PressLine />} />
+          <Route path="/business/polishing-line" element={<PolishingLine />} />
         </Routes>
         <Footer />
       </div>

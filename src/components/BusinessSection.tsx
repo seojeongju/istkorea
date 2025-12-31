@@ -47,6 +47,8 @@ export const BusinessSection = () => {
     const handleViewDetails = (id: string) => {
         if (id === 'press') {
             navigate('/business/press-line');
+        } else if (id === 'polishing') {
+            navigate('/business/polishing-line');
         } else {
             // For others, we can add placeholder or different routes later
             console.log("Details for:", id);
