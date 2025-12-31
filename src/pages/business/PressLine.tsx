@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Check, Database, Zap, Thermometer, Layers } from 'lucide-react';
+import { Check, Database, Zap, Thermometer, Layers } from 'lucide-react';
 
 // Product Data
 const products = [
