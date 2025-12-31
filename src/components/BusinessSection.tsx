@@ -60,7 +60,7 @@ export const BusinessSection = () => {
     };
 
     return (
-        <section className="py-24 bg-white">
+        <section id="business_area" className="py-24 bg-white">
             <div className="container mx-auto px-6">
                 <div className="flex flex-col items-center mb-16">
                     <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">

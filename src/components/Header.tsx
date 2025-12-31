@@ -25,9 +25,37 @@ export const Header = () => {
             ]
         },
         { title: t('header.menu.products'), href: "#" },
-        { title: t('header.menu.business'), href: "#" },
+        { title: t('header.menu.business'), href: "#business_area", isScroll: true },
         { title: t('header.menu.support'), href: "#" }
     ];
+
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, item: { href: string; isScroll?: boolean }) => {
+        if (item.isScroll) {
+            e.preventDefault();
+            const targetId = item.href.replace('#', '');
+
+            if (location.pathname !== '/') {
+                window.location.href = `/${item.href}`;
+            } else {
+                const element = document.getElementById(targetId);
+                if (element) {
+                    const headerOffset = 80;
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            }
+            setIsMenuOpen(false);
+        } else if (item.href === '#') {
+            e.preventDefault();
+        } else {
+            setIsMenuOpen(false);
+        }
+    };
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         setIsScrolled(latest > 50);
@@ -75,6 +103,7 @@ export const Header = () => {
                             <div key={item.title} className="relative group">
                                 <Link
                                     to={item.href}
+                                    onClick={(e) => handleNavClick(e, item)}
                                     className={`flex items-center gap-1 text-base font-medium transition-colors hover:text-primary ${isScrolled || isMenuOpen || location.pathname !== '/' ? 'text-gray-600' : 'text-white/90'
                                         }`}
                                 >
@@ -90,6 +119,7 @@ export const Header = () => {
                                                 <Link
                                                     key={sub.title}
                                                     to={sub.href}
+                                                    onClick={() => setIsMenuOpen(false)}
                                                     className="block px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors whitespace-nowrap"
                                                 >
                                                     {sub.title}
@@ -143,6 +173,7 @@ export const Header = () => {
                                         <div className="flex items-center justify-between" onClick={() => setActiveDropdown(activeDropdown === item.title ? null : item.title)}>
                                             <Link
                                                 to={item.href}
+                                                onClick={(e) => handleNavClick(e, item)}
                                                 className="text-3xl font-bold text-gray-900 hover:text-primary transition-colors flex items-center gap-4"
                                             >
                                                 {item.title}
