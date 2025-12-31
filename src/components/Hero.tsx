@@ -1,22 +1,26 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import hero1 from '../assets/images/hero1.png';
+import hero2 from '../assets/images/hero2.png';
+import hero3 from '../assets/images/hero3.png';
+
 const slides = [
     {
         id: 1,
-        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80",
+        image: hero1,
         title: "초정밀 나노 기술의\n새로운 지평을 엽니다",
         subtitle: "디스플레이와 반도체 산업의 미래를 선도하는 기술력"
     },
     {
         id: 2,
-        image: "https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&q=80",
+        image: hero2,
         title: "지속 가능한 내일을 위한\n친환경 제조 혁신",
         subtitle: "환경을 생각하는 공정으로 더 나은 가치를 창출합니다"
     },
     {
         id: 3,
-        image: "https://images.unsplash.com/photo-1537462713205-e512641bf201?auto=format&fit=crop&q=80",
+        image: hero3,
         title: "세계가 신뢰하는\n글로벌 파트너",
         subtitle: "최고의 품질과 끊임없는 혁신으로 고객과 함께 성장합니다"
     }
