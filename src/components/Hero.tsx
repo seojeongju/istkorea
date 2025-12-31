@@ -78,28 +78,30 @@ export const Hero = () => {
                 </div>
             </div>
 
-            {/* Right Side: Image with Circular Gradient */}
-            <div className="w-full md:w-7/12 lg:w-8/12 h-[60%] md:h-full relative flex items-center justify-center order-1 md:order-2 z-10">
+            {/* Right Side: Image with Natural Gradient Fade */}
+            <div className="w-full md:w-7/12 lg:w-8/12 h-[60%] md:h-full relative overflow-hidden order-1 md:order-2 z-10">
                 <AnimatePresence mode='wait'>
                     <motion.div
                         key={currentSlide}
-                        className="relative w-[80%] md:w-[700px] aspect-square rounded-full overflow-hidden shadow-2xl"
-                        initial={{ opacity: 0, scale: 0.9, rotate: -5 }}
-                        animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                        exit={{ opacity: 0, scale: 1.1, rotate: 5 }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <div
-                            className="absolute inset-0 bg-cover bg-center transition-transform duration-[5000ms] hover:scale-110"
-                            style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
-                        />
-                        {/* Inner shadow/gradient overlay for depth */}
-                        <div className="absolute inset-0 bg-radial-gradient from-transparent via-transparent to-black/40" />
-                    </motion.div>
+                        className="absolute inset-0 bg-cover bg-center md:bg-left-top"
+                        style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
+                        initial={{ opacity: 0, scale: 1.1 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1 }}
+                    />
                 </AnimatePresence>
 
-                {/* External Glow/Gradient Effect */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+                {/* Natural Gradient Overlays to blend image into background */}
+
+                {/* 1. Heavy fade from Left (where text is) to Right */}
+                <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-gray-950 via-gray-950/80 to-transparent pointer-events-none" />
+
+                {/* 2. Fade from Bottom (for mobile/general blending) */}
+                <div className="absolute bottom-0 left-0 right-0 h-32 md:h-20 bg-gradient-to-t from-gray-950 to-transparent pointer-events-none" />
+
+                {/* 3. Subtle overlay to tint the image slightly to match the dark theme */}
+                <div className="absolute inset-0 bg-gray-950/20 pointer-events-none" />
             </div>
         </section>
     );
