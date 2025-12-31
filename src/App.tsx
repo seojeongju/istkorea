@@ -1,25 +1,28 @@
-
+import { BrowserRouter as Router, Routes, Route, ScrollRestoration } from 'react-router-dom';
 import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { TechSection } from './components/TechSection';
-import { BusinessSection } from './components/BusinessSection';
-import { ProductSection } from './components/ProductSection';
-import { SupportSection } from './components/SupportSection';
 import { Footer } from './components/Footer';
+import { Home } from './pages/Home';
+import { Company } from './pages/Company';
+
+// Create a ScrollToTop component to handle scroll reset on navigation
+const ScrollToTop = () => {
+  return <ScrollRestoration />;
+}
 
 function App() {
   return (
-    <div className="min-h-screen bg-white font-sans text-gray-900 selection:bg-accent selection:text-white">
-      <Header />
-      <Hero />
-      <main>
-        <TechSection />
-        <BusinessSection />
-        <ProductSection />
-        <SupportSection />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <ScrollToTop />
+      <div className="min-h-screen bg-white">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/company" element={<Company />} />
+          <Route path="/company/*" element={<Company />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
