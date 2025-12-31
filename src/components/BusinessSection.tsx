@@ -5,26 +5,26 @@ import { Monitor, Cpu, Battery } from 'lucide-react';
 const businesses = [
     {
         id: 'display',
-        label: 'Display',
+        label: '디스플레이',
         icon: <Monitor size={20} />,
-        title: "Next-Gen Display Solutions",
-        description: "Leading the market with ultra-thin film coating and high-precision lamination technologies for OLED, Micro-LED, and flexible displays.",
+        title: "차세대 디스플레이 솔루션",
+        description: "OLED, Micro-LED 및 플렉서블 디스플레이를 위한 초박막 코팅 및 고정밀 라미네이션 기술로 시장을 선도합니다.",
         image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80"
     },
     {
         id: 'semicon',
-        label: 'Semiconductor',
+        label: '반도체',
         icon: <Cpu size={20} />,
-        title: "Advanced Semiconductor Packaging",
-        description: "Providing cutting-edge equipment for wafer processing, advanced packaging, and cleaning to ensure highest yields in chip manufacturing.",
+        title: "첨단 반도체 패키징",
+        description: "웨이퍼 공정, 어드밴스드 패키징 및 세정 공정에 필요한 최첨단 장비를 제공하여 칩 제조의 최고 수율을 보장합니다.",
         image: "https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&q=80"
     },
     {
         id: 'battery',
-        label: 'Secondary Battery',
+        label: '이차전지',
         icon: <Battery size={20} />,
-        title: "EV Battery Manufacturing",
-        description: "Innovative electrode coating and stacking solutions designed for the mass production of high-performance lithium-ion batteries.",
+        title: "전기차 배터리 제조",
+        description: "고성능 리튬이온 배터리의 대량 생산을 위해 설계된 혁신적인 전극 코팅 및 스태킹 솔루션을 제공합니다.",
         image: "https://images.unsplash.com/photo-1619641461973-45373a62f43a?auto=format&fit=crop&q=80"
     }
 ];
@@ -76,7 +76,7 @@ export const BusinessSection = () => {
                                         {item.description}
                                     </p>
                                     <button className="text-primary font-bold hover:text-accent transition-colors flex items-center gap-2 mt-4 group">
-                                        LEARN MORE
+                                        자세히 보기
                                         <span className="group-hover:translate-x-1 transition-transform">→</span>
                                     </button>
                                 </div>

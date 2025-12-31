@@ -7,10 +7,10 @@ export const Footer = () => {
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
                     <div className="flex gap-8 mb-8 md:mb-0">
-                        <a href="#" className="text-gray-600 hover:text-primary font-medium transition-colors">About Us</a>
-                        <a href="#" className="text-gray-600 hover:text-primary font-medium transition-colors">Product</a>
-                        <a href="#" className="text-gray-600 hover:text-primary font-medium transition-colors">Business</a>
-                        <a href="#" className="text-gray-600 hover:text-primary font-medium transition-colors">Community</a>
+                        <a href="#" className="text-gray-600 hover:text-primary font-medium transition-colors">회사소개</a>
+                        <a href="#" className="text-gray-600 hover:text-primary font-medium transition-colors">제품소개</a>
+                        <a href="#" className="text-gray-600 hover:text-primary font-medium transition-colors">사업영역</a>
+                        <a href="#" className="text-gray-600 hover:text-primary font-medium transition-colors">인재채용</a>
                     </div>
 
                     <div className="flex gap-4">
@@ -29,20 +29,20 @@ export const Footer = () => {
                     <div className="space-y-2">
                         <p>
                             <span className="font-bold text-gray-700">SAEHAN NANOTECH</span> &nbsp;|&nbsp;
-                            CEO: Hong Gil-dong &nbsp;|&nbsp;
-                            Business License: 123-45-67890
+                            대표이사: 홍길동 &nbsp;|&nbsp;
+                            사업자등록번호: 123-45-67890
                         </p>
                         <p>
-                            Address: 123, Teheran-ro, Gangnam-gu, Seoul, Republic of Korea &nbsp;|&nbsp;
-                            Tel: 02-1234-5678 &nbsp;|&nbsp;
-                            Fax: 02-1234-5679
+                            주소: 서울특별시 강남구 테헤란로 123, 새한빌딩 4층 &nbsp;|&nbsp;
+                            전화: 02-1234-5678 &nbsp;|&nbsp;
+                            팩스: 02-1234-5679
                         </p>
                         <p className="mt-4 opacity-60">© 2025 SAEHAN NANOTECH. All Rights Reserved.</p>
                     </div>
 
                     <div className="flex gap-6 mt-6 md:mt-0">
-                        <a href="#" className="hover:text-gray-900">Privacy Policy</a>
-                        <a href="#" className="hover:text-gray-900">Terms of Use</a>
+                        <a href="#" className="hover:text-gray-900">개인정보처리방침</a>
+                        <a href="#" className="hover:text-gray-900">이용약관</a>
                     </div>
                 </div>
             </div>

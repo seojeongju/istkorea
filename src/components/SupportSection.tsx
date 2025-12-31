@@ -23,9 +23,9 @@ export const SupportSection = () => {
                             CUSTOMER SUPPORT <span className="text-accent">.</span>
                         </h2>
                         <p className="text-xl text-gray-600 font-light">
-                            문의사항을 자유롭게 남겨주세요.
+                            궁금한 점이 있으신가요?
                             <br />
-                            <span className="text-base mt-2 block opacity-70">Feel free to leave an inquiry.</span>
+                            <span className="text-base mt-2 block opacity-70">언제든지 문의해 주시면 친절히 답변 드리겠습니다.</span>
                         </p>
                     </motion.div>
 

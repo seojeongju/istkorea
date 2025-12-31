@@ -6,19 +6,19 @@ const products = [
     {
         id: 1,
         title: "Slot Die Coater",
-        subtitle: "Display Equipment",
+        subtitle: "디스플레이 공정 장비",
         image: "https://images.unsplash.com/photo-1622612347101-5d928d157a9f?auto=format&fit=crop&q=80" // High tech machine
     },
     {
         id: 2,
         title: "Lamination System",
-        subtitle: "Semiconductor Process",
+        subtitle: "반도체 패키징 솔루션",
         image: "https://images.unsplash.com/photo-1580835560944-77ce54013129?auto=format&fit=crop&q=80" // Clean room tech
     },
     {
         id: 3,
         title: "Inkjet Printing",
-        subtitle: "Precision Printing",
+        subtitle: "고정밀 인쇄 설비",
         image: "https://images.unsplash.com/photo-1581093458891-2f085eda94bd?auto=format&fit=crop&q=80" // Lab equipment
     }
 ];
