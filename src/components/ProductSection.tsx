@@ -59,11 +59,11 @@ export const ProductSection = () => {
                     </button>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-16">
+                <div className="flex flex-wrap justify-center gap-x-8 gap-y-16">
                     {products.map((product, index) => (
                         <motion.div
                             key={product.id}
-                            className="group relative cursor-pointer"
+                            className="group relative cursor-pointer w-full md:w-[calc((100%-4rem)/3)]"
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
