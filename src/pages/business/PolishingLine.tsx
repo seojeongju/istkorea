@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Check, Sparkles, Disc, SheetsInBox } from 'lucide-react'; // Changed imports
+import { Check, Sparkles, Disc, FileText } from 'lucide-react'; // Changed imports
 
 // Product Data
 const products = [
@@ -68,7 +68,7 @@ const products = [
     {
         id: 'sheet-polishing',
         name: 'SHEET POLISHING LINE',
-        icon: <SheetsInBox size={20} />, // Changed icon
+        icon: <FileText size={20} />, // Changed icon
         subtitle: 'Automated Sheet Polishing with Tape Shaft Technology',
         description: 'Versatile sheet polishing line utilizing tape shafts for easy roll replacement. Supports Buff Wheel or Scotch Brite with variable pressure control and double dust collection.',
         image: '/images/sheet_polishing_line.png',
