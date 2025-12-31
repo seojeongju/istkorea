@@ -54,22 +54,27 @@
         "title": "BUSINESS AREA",
         "view_details": "View Details",
         "tabs": {
-            "display": "Display",
+            "press": "Press Line",
+            "polishing": "Polishing Line",
             "semicon": "Semiconductor",
-            "battery": "Battery"
+            "fiber": "Fiber Optics"
         },
         "items": {
-            "display": {
-                "title": "Next-gen Display Solutions",
-                "desc": "Leading the market with ultra-thin coating and high-precision lamination technology for OLED, Micro-LED, and flexible displays."
+            "press": {
+                "title": "Advanced Press Line",
+                "desc": "High-precision hydraulic press systems optimized for mass production of automotive and electronic components."
+            },
+            "polishing": {
+                "title": "Automated Polishing Line",
+                "desc": "State-of-the-art surface finishing and polishing solutions for diverse industrial materials, ensuring mirror-like quality."
             },
             "semicon": {
-                "title": "Advanced Semiconductor Packaging",
-                "desc": "Providing state-of-the-art equipment for wafer processes, advanced packaging, and cleaning processes to ensure the highest yield in chip manufacturing."
+                "title": "Semiconductor Equipment",
+                "desc": "Next-generation equipment for wafer processing and packaging, ensuring maximum yield and precision in chip manufacturing."
             },
-            "battery": {
-                "title": "EV Battery Manufacturing",
-                "desc": "Providing innovative electrode coating and stacking solutions designed for mass production of high-performance lithium-ion batteries."
+            "fiber": {
+                "title": "Fiber Optics Equipment",
+                "desc": "Precision equipment for manufacturing and testing high-speed optical fiber components with sub-micron accuracy."
             }
         }
     },

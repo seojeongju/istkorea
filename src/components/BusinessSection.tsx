@@ -1,20 +1,28 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Monitor, Cpu, Battery } from 'lucide-react';
+import { ArrowDownToLine, Sparkles, Cpu, Activity } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export const BusinessSection = () => {
     const { t } = useTranslation();
-    const [activeTab, setActiveTab] = useState('display');
+    const [activeTab, setActiveTab] = useState('press');
 
     const businesses = [
         {
-            id: 'display',
-            label: t('business.tabs.display'),
-            icon: <Monitor size={20} />,
-            title: t('business.items.display.title'),
-            description: t('business.items.display.desc'),
-            image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80"
+            id: 'press',
+            label: t('business.tabs.press'),
+            icon: <ArrowDownToLine size={20} />,
+            title: t('business.items.press.title'),
+            description: t('business.items.press.desc'),
+            image: "/images/business_press.png"
+        },
+        {
+            id: 'polishing',
+            label: t('business.tabs.polishing'),
+            icon: <Sparkles size={20} />,
+            title: t('business.items.polishing.title'),
+            description: t('business.items.polishing.desc'),
+            image: "/images/business_polishing.png"
         },
         {
             id: 'semicon',
@@ -22,15 +30,15 @@ export const BusinessSection = () => {
             icon: <Cpu size={20} />,
             title: t('business.items.semicon.title'),
             description: t('business.items.semicon.desc'),
-            image: "https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&q=80"
+            image: "/images/business_semicon.png"
         },
         {
-            id: 'battery',
-            label: t('business.tabs.battery'),
-            icon: <Battery size={20} />,
-            title: t('business.items.battery.title'),
-            description: t('business.items.battery.desc'),
-            image: "https://images.unsplash.com/photo-1619641461973-45373a62f43a?auto=format&fit=crop&q=80"
+            id: 'fiber',
+            label: t('business.tabs.fiber'),
+            icon: <Activity size={20} />,
+            title: t('business.items.fiber.title'),
+            description: t('business.items.fiber.desc'),
+            image: "/images/business_fiber.png"
         }
     ];
 
