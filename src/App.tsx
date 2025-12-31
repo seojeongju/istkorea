@@ -4,6 +4,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { Company } from './pages/Company';
+import { PressLine } from './pages/business/PressLine';
 
 // Create a ScrollToTop component to handle scroll reset on navigation
 // Create a ScrollToTop component to handle scroll reset on navigation
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/company" element={<Company />} />
           <Route path="/company/*" element={<Company />} />
+          <Route path="/business/press-line" element={<PressLine />} />
         </Routes>
         <Footer />
       </div>

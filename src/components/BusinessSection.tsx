@@ -2,9 +2,11 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowDownToLine, Sparkles, Cpu, Activity } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 export const BusinessSection = () => {
     const { t } = useTranslation();
+    const navigate = useNavigate();
     const [activeTab, setActiveTab] = useState('press');
 
     const businesses = [
@@ -41,6 +43,15 @@ export const BusinessSection = () => {
             image: "/images/business_fiber.png"
         }
     ];
+
+    const handleViewDetails = (id: string) => {
+        if (id === 'press') {
+            navigate('/business/press-line');
+        } else {
+            // For others, we can add placeholder or different routes later
+            console.log("Details for:", id);
+        }
+    };
 
     return (
         <section className="py-24 bg-white">
@@ -85,7 +96,10 @@ export const BusinessSection = () => {
                                     <p className="text-lg text-gray-600 leading-relaxed">
                                         {item.description}
                                     </p>
-                                    <button className="text-primary font-bold hover:text-accent transition-colors flex items-center gap-2 mt-4 group">
+                                    <button
+                                        onClick={() => handleViewDetails(item.id)}
+                                        className="text-primary font-bold hover:text-accent transition-colors flex items-center gap-2 mt-4 group"
+                                    >
                                         {t('business.view_details')}
                                         <span className="group-hover:translate-x-1 transition-transform">→</span>
                                     </button>
