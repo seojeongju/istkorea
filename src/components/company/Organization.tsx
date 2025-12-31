@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Users, Briefcase, Settings, Target, Globe, PenTool, Cpu, Wrench, ShieldCheck, Headphones } from 'lucide-react';
 
 // Using any for icon type to avoid strict TypeScript mismatch with Lucide icons in this specific setup
-const Card = ({ title, role, icon: Icon, type = "default", index = 0 }: { title: string, role?: string, icon?: any, type?: "ceo" | "division" | "team", index?: number }) => {
+const Card = ({ title, role, icon: Icon, type = "default", index = 0 }: { title: string, role?: string, icon?: any, type?: "ceo" | "division" | "team" | "default", index?: number }) => {
     const isCeo = type === "ceo";
     const isDivision = type === "division";
 
