@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import { Check, ArrowRight } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next'; // Removed unused import
 
 export const PressLine = () => {
-    const { t } = useTranslation();
+    // const { t } = useTranslation(); // Removed unused hook
 
     const specs = [
         { label: "PLATEN SIZE", value: "1350 X 3200 X 55 (mm)" },
