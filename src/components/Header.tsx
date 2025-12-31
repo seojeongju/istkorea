@@ -1,0 +1,125 @@
+import { useState, useEffect } from 'react';
+import { Menu, Globe, X, ArrowRight } from 'lucide-react';
+import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
+
+const menuItems = [
+    { title: "About Us", href: "#" },
+    { title: "Business Area", href: "#" },
+    { title: "R&D Center", href: "#" },
+    { title: "News & Notice", href: "#" },
+    { title: "Contact Us", href: "#" }
+];
+
+export const Header = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { scrollY, scrollYProgress } = useScroll();
+
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        setIsScrolled(latest > 50);
+    });
+
+    // Lock body scroll when menu is open
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+    }, [isMenuOpen]);
+
+    return (
+        <>
+            <motion.header
+                className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${isScrolled || isMenuOpen ? 'bg-white shadow-none' : 'bg-transparent'
+                    } ${isMenuOpen ? 'text-gray-900' : ''}`}
+                initial={{ y: -100 }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
+                <div className="container mx-auto px-6 h-20 flex justify-between items-center relative z-50">
+                    <div className="flex items-center gap-2 z-50">
+                        {/* Logo */}
+                        <a href="#" className={`text-2xl font-bold tracking-tighter transition-colors ${isScrolled || isMenuOpen ? 'text-primary' : 'text-white'
+                            }`}>
+                            SAEHAN<span className="text-accent">.</span>
+                        </a>
+                    </div>
+
+                    <nav className="flex items-center gap-6 z-50">
+                        <button className={`flex items-center gap-1 text-sm font-medium transition-colors ${isScrolled || isMenuOpen ? 'text-gray-800 hover:text-primary' : 'text-white hover:text-accent'
+                            }`}>
+                            <Globe size={20} />
+                            <span className="hidden md:inline">EN</span>
+                        </button>
+                        <button
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            className={`p-1 transition-colors ${isScrolled || isMenuOpen ? 'text-gray-800 hover:text-primary' : 'text-white hover:text-accent'
+                                }`}
+                        >
+                            {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
+                        </button>
+                    </nav>
+                </div>
+            </motion.header>
+
+            {/* Full Screen Menu Overlay */}
+            <AnimatePresence>
+                {isMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                        className="fixed inset-0 z-40 bg-white pt-24 pb-12 flex flex-col"
+                    >
+                        <div className="container mx-auto px-6 h-full flex flex-col justify-center">
+                            <div className="flex flex-col gap-6 md:gap-8">
+                                {menuItems.map((item, index) => (
+                                    <motion.a
+                                        key={item.title}
+                                        href={item.href}
+                                        initial={{ opacity: 0, x: -40 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 0.4, delay: 0.1 + index * 0.1 }}
+                                        className="text-4xl md:text-6xl font-bold text-gray-900 hover:text-primary transition-colors flex items-center gap-4 group w-fit"
+                                    >
+                                        <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 -ml-8 text-accent">
+                                            <ArrowRight size={32} />
+                                        </span>
+                                        {item.title}
+                                    </motion.a>
+                                ))}
+                            </div>
+
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 0.6 }}
+                                className="mt-12 md:mt-24 pt-12 border-t border-gray-200 flex flex-col md:flex-row gap-8 text-gray-500 text-sm"
+                            >
+                                <div className="space-y-1">
+                                    <p className="font-bold text-gray-900">Contact</p>
+                                    <p>+82 2-1234-5678</p>
+                                    <p>info@saehannanotech.com</p>
+                                </div>
+                                <div className="space-y-1">
+                                    <p className="font-bold text-gray-900">Address</p>
+                                    <p>123, Teheran-ro, Gangnam-gu,</p>
+                                    <p>Seoul, Republic of Korea</p>
+                                </div>
+                            </motion.div>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            {/* Scroll Progress Bar */}
+            <motion.div
+                className="absolute bottom-0 left-0 h-[1px] bg-accent z-50"
+                style={{ scaleX: scrollYProgress, transformOrigin: "0%" }}
+                initial={{ scaleX: 0 }}
+            />
+        </>
+    );
+};
