@@ -10,7 +10,10 @@
             "greetings": "CEO Message",
             "history": "History",
             "organization": "Organization",
-            "location": "Location"
+            "location": "Location",
+            "news": "Company News",
+            "inquiry": "Inquiries",
+            "careers": "Careers"
         },
         "contact": "Contact",
         "address": "Address",

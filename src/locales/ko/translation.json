@@ -10,7 +10,10 @@
             "greetings": "인사말",
             "history": "연혁",
             "organization": "조직도",
-            "location": "오시는길"
+            "location": "오시는길",
+            "news": "기업소식",
+            "inquiry": "제품 및 기술 문의",
+            "careers": "인재채용"
         },
         "contact": "Contact",
         "address": "Address",

@@ -1,5 +1,6 @@
 
-import { Youtube, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Youtube, Mail, Lock } from 'lucide-react';
 
 export const Footer = () => {
     return (
@@ -7,10 +8,10 @@ export const Footer = () => {
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
                     <div className="flex gap-8 mb-8 md:mb-0">
-                        <a href="#" className="text-gray-600 hover:text-primary font-medium transition-colors">회사소개</a>
-                        <a href="#" className="text-gray-600 hover:text-primary font-medium transition-colors">제품소개</a>
-                        <a href="#" className="text-gray-600 hover:text-primary font-medium transition-colors">사업영역</a>
-                        <a href="#" className="text-gray-600 hover:text-primary font-medium transition-colors">인재채용</a>
+                        <Link to="/company" className="text-gray-600 hover:text-primary font-medium transition-colors">회사소개</Link>
+                        <a href="/#product_area" className="text-gray-600 hover:text-primary font-medium transition-colors">제품소개</a>
+                        <a href="/#business_area" className="text-gray-600 hover:text-primary font-medium transition-colors">사업영역</a>
+                        <Link to="/support/careers" className="text-gray-600 hover:text-primary font-medium transition-colors">인재채용</Link>
                     </div>
 
                     <div className="flex gap-4">
@@ -40,9 +41,14 @@ export const Footer = () => {
                         <p className="mt-4 opacity-60">Copyright ⓒ istkorea. All rights reserved.</p>
                     </div>
 
-                    <div className="flex gap-6 mt-6 md:mt-0">
+                    <div className="flex gap-6 mt-6 md:mt-0 items-center">
                         <a href="#" className="hover:text-gray-900">개인정보처리방침</a>
                         <a href="#" className="hover:text-gray-900">이용약관</a>
+                        <div className="w-px h-3 bg-gray-300 mx-1"></div>
+                        <Link to="/admin/login" className="flex items-center gap-1 hover:text-primary transition-colors">
+                            <Lock size={12} />
+                            <span>관리자</span>
+                        </Link>
                     </div>
                 </div>
             </div>

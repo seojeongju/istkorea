@@ -26,7 +26,15 @@ export const Header = () => {
         },
         { title: t('header.menu.products'), href: "#product_area", isScroll: true },
         { title: t('header.menu.business'), href: "#business_area", isScroll: true },
-        { title: t('header.menu.support'), href: "#" }
+        {
+            title: t('header.menu.support'),
+            href: "/support",
+            submenu: [
+                { title: t('header.submenu.news'), href: "/support/news" },
+                { title: t('header.submenu.inquiry'), href: "/support/inquiry" },
+                { title: t('header.submenu.careers'), href: "/support/careers" },
+            ]
+        }
     ];
 
     const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, item: { href: string; isScroll?: boolean }) => {

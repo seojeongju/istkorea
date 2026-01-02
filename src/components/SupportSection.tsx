@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Plus } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
+import { Link } from 'react-router-dom';
+
 export const SupportSection = () => {
     const { t } = useTranslation();
 
@@ -32,15 +34,17 @@ export const SupportSection = () => {
                         </p>
                     </motion.div>
 
-                    <motion.button
-                        className="mt-8 md:mt-0 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 hover:scale-110 transition-all duration-300 shadow-lg group"
-                        initial={{ opacity: 0, scale: 0.5 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                    >
-                        <Plus size={32} className="group-hover:rotate-90 transition-transform duration-300" />
-                    </motion.button>
+                    <Link to="/support/inquiry">
+                        <motion.div
+                            className="mt-8 md:mt-0 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 hover:scale-110 transition-all duration-300 shadow-lg group cursor-pointer"
+                            initial={{ opacity: 0, scale: 0.5 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                        >
+                            <Plus size={32} className="group-hover:rotate-90 transition-transform duration-300" />
+                        </motion.div>
+                    </Link>
                 </div>
             </div>
         </section>

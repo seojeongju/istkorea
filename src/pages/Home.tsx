@@ -3,6 +3,7 @@ import { TechSection } from '../components/TechSection';
 import { BusinessSection } from '../components/BusinessSection';
 import { ProductSection } from '../components/ProductSection';
 import { SupportSection } from '../components/SupportSection';
+import { NewsTickerSection } from '../components/NewsTickerSection';
 
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -35,6 +36,7 @@ export const Home = () => {
             <TechSection />
             <BusinessSection />
             <ProductSection />
+            <NewsTickerSection />
             <SupportSection />
         </main>
     );
