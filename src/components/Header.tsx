@@ -99,9 +99,12 @@ export const Header = () => {
                 <div className="container mx-auto px-6 h-20 flex justify-between items-center relative z-50">
                     <div className="flex items-center gap-2 z-50">
                         {/* Logo */}
-                        <Link to="/" className="text-2xl font-bold tracking-tighter transition-colors text-gray-900 group">
-                            <span className="text-primary">IST</span>
-                            <span className={`transition-colors ${isScrolled || isMenuOpen || location.pathname !== '/' ? 'text-gray-900' : 'text-white'}`}>korea</span>
+                        <Link to="/" className="block">
+                            <img 
+                                src="/images/logo.png" 
+                                alt="IST Korea" 
+                                className="h-12 w-auto object-contain"
+                            />
                         </Link>
                     </div>
 
