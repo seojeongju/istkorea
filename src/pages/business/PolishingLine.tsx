@@ -1,108 +1,49 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Check, Sparkles, Disc, FileText } from 'lucide-react'; // Changed imports
-
-// Product Data
-const products = [
-    {
-        id: 'coil-polishing',
-        name: 'COIL POLISHING LINE',
-        icon: <Sparkles size={20} />,
-        subtitle: 'High-Precision Surface Finishing for Metal Coils',
-        description: 'Advanced coil polishing system designed for stainless steel, aluminum, and steel coils. Features auto program control and precise belt tracking for consistent high-quality finishes.',
-        image: '/images/coil_polishing_line.png',
-        specs: [
-            { label: "DRUM DIA", value: "Ø360 (No.4 Machine Criteria)" },
-            { label: "MAIN MOTOR", value: "45 kw" },
-            { label: "BELT SIZE", value: "Min. 640mm ~ Max. 1,600mm (W) x 3200mm (L)" },
-            { label: "WORKING WIDTH", value: "Min. 600mm ~ Max. 1,600mm (±5%)" },
-            { label: "THICKNESS (SUS)", value: "0.3mm ~ 2mm" },
-            { label: "THICKNESS (AL)", value: "0.3mm ~ 3mm" },
-            { label: "THREADING SPEED", value: "Max 40 mpm" },
-            { label: "CONTROL SYSTEM", value: "PLC + HMI Touch Screen" },
-        ],
-        unitDevices: [
-            "Uncoiler & Recoiler",
-            "Welding Machine",
-            "Bottom & Top Polishing Machine",
-            "Buff Brush / Hair Line / Brushing",
-            "Wash & Dry System",
-            "Product Inspection Table"
-        ],
-        options: [
-            "Sludge Treatment & Recycle System",
-            "Auto Tracking System",
-            "Custom Belt Configurations"
-        ]
-    },
-    {
-        id: 'coil-grinding',
-        name: 'COIL GRINDING LINE',
-        icon: <Disc size={20} />,
-        subtitle: 'Heavy-Duty Surface Grinding for Steel Coils',
-        description: 'Robust grinding machine for steel coil surfaces. Features adjustable sandbelt rotation, coil transfer speed, and sanding load. Uses water-soluble oil for safety and efficiency.',
-        image: '/images/coil_grinding_line.png',
-        specs: [
-            { label: "WORKING WIDTH", value: "600mm ~ 1,300mm" },
-            { label: "WORKING THICKNESS", value: "0.25 ~ 8.0mm ±10%" },
-            { label: "WORKING SPEED", value: "5 ~ 20 mpm" },
-            { label: "DRUM DIA", value: "Inner Ø610mm / Out Ø900~1,200mm" },
-            { label: "MAIN MOTOR", value: "110kw, 90kw" },
-            { label: "OSCILLATION", value: "Smooth Operation System" },
-            { label: "CONTROL SYSTEM", value: "Auto Program Control Touch Screen" },
-            { label: "BELT TRACKING", value: "Pneumatic Sensor Control" },
-        ],
-        unitDevices: [
-            "Washing & Drying System (Electric Clutch)",
-            "Pinching Unit",
-            "Welding Machine",
-            "Recoiler Machine",
-            "Air Knife & Ring Blower Dryer"
-        ],
-        options: [
-            "Safety Fire Suppression System",
-            "Custom Drum Configurations",
-            "Advanced Oscillation Control"
-        ]
-    },
-    {
-        id: 'sheet-polishing',
-        name: 'SHEET POLISHING LINE',
-        icon: <FileText size={20} />, // Changed icon
-        subtitle: 'Automated Sheet Polishing with Tape Shaft Technology',
-        description: 'Versatile sheet polishing line utilizing tape shafts for easy roll replacement. Supports Buff Wheel or Scotch Brite with variable pressure control and double dust collection.',
-        image: '/images/sheet_polishing_line.png',
-        specs: [
-            { label: "WORK WIDTH", value: "Max 1300mm" },
-            { label: "POLISHING SPEED", value: "Max 2000rpm" },
-            { label: "WORK SPEED", value: "Max 8M/min" },
-            { label: "MAIN MOTOR", value: "37Kw / 45Kw" },
-            { label: "OSCILLATION UNIT", value: "2.2 Kw" },
-            { label: "DUST COLLECTION", value: "Double Nozzle System" },
-            { label: "CENTERING", value: "Load/Unload Conveyor Device" },
-        ],
-        unitDevices: [
-            "Tape Shaft Roll System",
-            "Buff Wheel / Scotch Brite Support",
-            "Sheet End Escape Device (Billy Plate Up/Down)",
-            "Clean Roll for Optic Back Removal",
-            "Variable Oscillation Speed Control"
-        ],
-        options: [
-            "Dressing Machine",
-            "Automatic Polish Application Device",
-            "Clean Roll System"
-        ]
-    }
-];
+import { Check, Sparkles, Disc, FileText } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const PolishingLine = () => {
+    const { t } = useTranslation();
+
+    const products = [
+        {
+            id: 'coil-polishing',
+            image: '/images/coil_polishing_line.png',
+            icon: <Sparkles size={20} />,
+            titleKey: 'coil_polishing'
+        },
+        {
+            id: 'coil-grinding',
+            image: '/images/coil_grinding_line.png',
+            icon: <Disc size={20} />,
+            titleKey: 'coil_grinding'
+        },
+        {
+            id: 'sheet-polishing',
+            image: '/images/sheet_polishing_line.png',
+            icon: <FileText size={20} />,
+            titleKey: 'sheet_polishing'
+        }
+    ];
+
     const [activeProductId, setActiveProductId] = useState(products[0].id);
-    const activeProduct = products.find(p => p.id === activeProductId) || products[0];
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [activeProductId]);
+
+    const activeProductRaw = products.find(p => p.id === activeProductId) || products[0];
+
+    const activeProduct = {
+        ...activeProductRaw,
+        name: t(`business_pages.polishing.products.${activeProductRaw.titleKey}.name`),
+        subtitle: t(`business_pages.polishing.products.${activeProductRaw.titleKey}.subtitle`),
+        description: t(`business_pages.polishing.products.${activeProductRaw.titleKey}.desc`),
+        specs: t(`business_pages.polishing.products.${activeProductRaw.titleKey}.specs`, { returnObjects: true }) as { label: string; value: string }[],
+        features: t(`business_pages.polishing.products.${activeProductRaw.titleKey}.features`, { returnObjects: true }) as string[],
+        options: t(`business_pages.polishing.products.${activeProductRaw.titleKey}.options`, { returnObjects: true }) as string[]
+    };
 
     return (
         <div className="bg-white min-h-screen pt-20">
@@ -115,10 +56,9 @@ export const PolishingLine = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h1 className="text-4xl md:text-6xl font-bold mb-6">POLISHING LINE</h1>
-                        <p className="text-gray-400 text-xl max-w-2xl">
-                            State-of-the-art Surface Finishing Solutions. <br />
-                            Precision Polishing and Grinding for Coils and Sheets.
+                        <h1 className="text-4xl md:text-6xl font-bold mb-6">{t('business_pages.polishing.title')}</h1>
+                        <p className="text-gray-400 text-xl max-w-2xl whitespace-pre-line">
+                            {t('business_pages.polishing.subtitle')}
                         </p>
                     </motion.div>
                 </div>
@@ -128,19 +68,22 @@ export const PolishingLine = () => {
             <div className="sticky top-20 z-40 bg-white shadow-md border-b border-gray-100">
                 <div className="container mx-auto px-6">
                     <div className="flex overflow-x-auto no-scrollbar gap-2 py-4">
-                        {products.map((product) => (
-                            <button
-                                key={product.id}
-                                onClick={() => setActiveProductId(product.id)}
-                                className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold whitespace-nowrap transition-all duration-300 ${activeProductId === product.id
-                                    ? 'bg-primary text-white shadow-lg scale-105'
-                                    : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
-                                    }`}
-                            >
-                                {product.icon}
-                                {product.name}
-                            </button>
-                        ))}
+                        {products.map((product) => {
+                            const productName = t(`business_pages.polishing.products.${product.titleKey}.name`);
+                            return (
+                                <button
+                                    key={product.id}
+                                    onClick={() => setActiveProductId(product.id)}
+                                    className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold whitespace-nowrap transition-all duration-300 ${activeProductId === product.id
+                                        ? 'bg-primary text-white shadow-lg scale-105'
+                                        : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
+                                        }`}
+                                >
+                                    {product.icon}
+                                    {productName}
+                                </button>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
@@ -188,7 +131,7 @@ export const PolishingLine = () => {
                                     SPECIFICATION
                                 </h3>
                                 <div className="space-y-0 border-t border-gray-100">
-                                    {activeProduct.specs.map((item, index) => (
+                                    {activeProduct.specs && activeProduct.specs.map((item, index) => (
                                         <div key={index} className={`flex flex-col sm:flex-row py-4 border-b border-gray-100 hover:bg-gray-50 transition-colors px-2 rounded-lg`}>
                                             <div className="w-full sm:w-1/3 font-semibold text-gray-700 text-sm">{item.label}</div>
                                             <div className="w-full sm:w-2/3 text-gray-600 mt-1 sm:mt-0 font-mono text-sm">
@@ -207,7 +150,7 @@ export const PolishingLine = () => {
                                         Key Features
                                     </h3>
                                     <ul className="space-y-3">
-                                        {activeProduct.unitDevices.map((item, index) => (
+                                        {activeProduct.features && activeProduct.features.map((item, index) => (
                                             <li key={index} className="flex items-start gap-3">
                                                 <div className="min-w-5 mt-0.5 text-primary">
                                                     <Check size={16} />
@@ -224,7 +167,7 @@ export const PolishingLine = () => {
                                         Options
                                     </h3>
                                     <ul className="space-y-3">
-                                        {activeProduct.options.map((item, index) => (
+                                        {activeProduct.options && activeProduct.options.map((item, index) => (
                                             <li key={index} className="flex items-start gap-3">
                                                 <div className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2" />
                                                 <span className="text-sm text-gray-500 leading-snug">{item}</span>
@@ -240,3 +183,5 @@ export const PolishingLine = () => {
         </div>
     );
 };
+
+

@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
+import { useTranslation, Trans } from 'react-i18next';
 
 export const Greetings = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden py-20">
             {/* Background Image with Overlay */}
@@ -36,10 +39,10 @@ export const Greetings = () => {
                         <div className="relative inline-block">
                             <Quote className="absolute -top-4 -left-4 text-primary/20 w-12 h-12 transform -scale-x-100" />
                             <h3 className="text-2xl md:text-3xl font-serif text-gray-800 font-medium leading-relaxed italic z-10 relative">
-                                "초정밀 나노 기술의<br />
-                                <span className="text-primary font-bold not-italic">새로운 지평</span>을 열어가는<br />
-                                글로벌 파트너,<br />
-                                <span className="text-gray-900 border-b-4 border-primary/20">IST KOREA</span>입니다."
+                                "{t('company_page.greetings.quote_front')}<br />
+                                <span className="text-primary font-bold not-italic">{t('company_page.greetings.quote_highlight')}</span>{t('company_page.greetings.quote_middle')}<br />
+                                {t('company_page.greetings.quote_partner')}<br />
+                                <span className="text-gray-900 border-b-4 border-primary/20">{t('company_page.greetings.quote_end')}</span>"
                             </h3>
                         </div>
                     </div>
@@ -49,35 +52,27 @@ export const Greetings = () => {
                         <div className="bg-white/60 backdrop-blur-md rounded-2xl p-8 md:p-12 shadow-2xl border border-white/50">
                             <div className="space-y-6 text-gray-700 leading-loose text-lg font-light text-justify">
                                 <p>
-                                    안녕하십니까? <span className="font-bold text-gray-900">(주)아이에스티코리아</span> 홈페이지를 방문해 주신여러분을 진심으로 환영합니다.
+                                    <Trans i18nKey="company_page.greetings.p1" components={[<span className="font-bold text-gray-900" />]} />
                                 </p>
                                 <p>
-                                    2003년 설립 이래, 저희 IST KOREA는 끊임없는 기술 개발과 혁신을 통해
-                                    디스플레이 및 반도체 관련 제조 장비 분야에서 독보적인 기술력을 축적해 왔습니다.
-                                    특히 PCB/FPCB 제조 설비, 터치패널(TSP) 제조 설비, 그리고 2차 전지 관련 설비 분야에서
-                                    고객 여러분께 최고의 품질과 최적의 솔루션을 제공하기 위해 노력하고 있습니다.
+                                    {t('company_page.greetings.p2')}
                                 </p>
                                 <p>
-                                    저희는 단순한 장비 제조를 넘어, 고객의 생산성 향상과 가치 창출을 위한
-                                    <span className="text-primary font-bold inline-block mx-1">'Total Engineering Solution Provider'</span>가 되고자 합니다.
-                                    급변하는 시장 환경 속에서도 흔들리지 않는 기술력과 신뢰를 바탕으로,
-                                    고객과 함께 성장하고 발전하는 든든한 파트너가 되겠습니다.
+                                    <Trans i18nKey="company_page.greetings.p3" components={[<span className="text-primary font-bold inline-block mx-1" />]} />
                                 </p>
                                 <p>
-                                    앞으로도 지속적인 R&D 투자와 인재 양성을 통해 세계 최고의 경쟁력을 갖춘
-                                    기술 선도 기업으로 도약할 것을 약속드립니다.
-                                    여러분의 변함없는 관심과 성원을 부탁드립니다.
+                                    {t('company_page.greetings.p4')}
                                 </p>
                                 <p className="font-bold text-gray-900">
-                                    감사합니다.
+                                    {t('company_page.greetings.closing')}
                                 </p>
                             </div>
 
                             <div className="mt-12 flex flex-col items-end border-t border-gray-200 pt-8">
-                                <p className="text-lg font-bold text-gray-900 tracking-wider">(주)아이에스티코리아 대표이사</p>
+                                <p className="text-lg font-bold text-gray-900 tracking-wider">{t('company_page.greetings.signature_title')}</p>
                                 <div className="flex items-end gap-4 mt-2">
                                     <img src="/images/signature.png" alt="CEO Signature" className="h-16 opacity-70" onError={(e) => e.currentTarget.style.display = 'none'} />
-                                    <p className="text-3xl font-serif text-primary font-bold mb-1">금 병 철</p>
+                                    <p className="text-3xl font-serif text-primary font-bold mb-1">{t('company_page.greetings.ceo_name')}</p>
                                 </div>
                             </div>
                         </div>

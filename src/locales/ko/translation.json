@@ -81,20 +81,32 @@
             }
         }
     },
+    "news": {
+        "label": "기업 소식",
+        "more": "더보기"
+    },
     "product": {
         "title": "PRODUCT",
         "items": {
             "item1": {
-                "title": "Slot Die Coater",
-                "subtitle": "디스플레이 공정 장비"
+                "title": "진공 핫 프레스",
+                "subtitle": "첨단 프레스 기술"
             },
             "item2": {
-                "title": "Lamination System",
-                "subtitle": "반도체 패키징 솔루션"
+                "title": "화학 연마",
+                "subtitle": "4헤드 연마 시스템"
             },
             "item3": {
-                "title": "Inkjet Printing",
-                "subtitle": "고정밀 인쇄 설비"
+                "title": "스텝 폴리싱",
+                "subtitle": "정밀 마감"
+            },
+            "item4": {
+                "title": "래핑 머신",
+                "subtitle": "고강도 연마"
+            },
+            "item5": {
+                "title": "멀티 와이어 쏘",
+                "subtitle": "반도체 절단"
             }
         }
     },
@@ -102,5 +114,714 @@
         "title": "CUSTOMER SUPPORT",
         "question": "궁금한 점이 있으신가요?",
         "desc": "언제든지 문의해 주시면 친절히 답변 드리겠습니다."
+    },
+    "company_page": {
+        "title": "회사 소개",
+        "subtitle": "IST KOREA의 어제와 오늘, 그리고 미래를 소개합니다.",
+        "greetings": {
+            "quote_front": "초정밀 나노 기술의",
+            "quote_highlight": "새로운 지평",
+            "quote_middle": "을 열어가는",
+            "quote_partner": "글로벌 파트너,",
+            "quote_end": "입니다.",
+            "p1": "안녕하십니까? <0>(주)아이에스티코리아</0> 홈페이지를 방문해 주신 여러분을 진심으로 환영합니다.",
+            "p2": "2003년 설립 이래, 저희 IST KOREA는 끊임없는 기술 개발과 혁신을 통해 디스플레이 및 반도체 관련 제조 장비 분야에서 독보적인 기술력을 축적해 왔습니다. 특히 PCB/FPCB 제조 설비, 터치패널(TSP) 제조 설비, 그리고 2차 전지 관련 설비 분야에서 고객 여러분께 최고의 품질과 최적의 솔루션을 제공하기 위해 노력하고 있습니다.",
+            "p3": "저희는 단순한 장비 제조를 넘어, 고객의 생산성 향상과 가치 창출을 위한 <0>'Total Engineering Solution Provider'</0>가 되고자 합니다. 급변하는 시장 환경 속에서도 흔들리지 않는 기술력과 신뢰를 바탕으로, 고객과 함께 성장하고 발전하는 든든한 파트너가 되겠습니다.",
+            "p4": "앞으로도 지속적인 R&D 투자와 인재 양성을 통해 세계 최고의 경쟁력을 갖춘 기술 선도 기업으로 도약할 것을 약속드립니다. 여러분의 변함없는 관심과 성원을 부탁드립니다.",
+            "closing": "감사합니다.",
+            "signature_title": "(주)아이에스티코리아 대표이사",
+            "ceo_name": "금 병 철"
+        },
+        "history": {
+            "main_title_1": "끊임없는 도전과 혁신의",
+            "main_title_2": "발자취를 소개합니다",
+            "description": "2003년 설립 이래, 독보적인 기술력으로 세계 시장을 선도해 온 IST KOREA의 여정입니다.",
+            "period1": {
+                "title": "Global Expansion & R&D",
+                "events": {
+                    "e1": "중국 상하이, 광저우 전시회 CPL, CGL LINE 출품",
+                    "e2": "중국 코일시트 그라인딩 장치 특허출원",
+                    "e3": "슈퍼소재 융합제품화기술개발사업 선정 (지식경제부)",
+                    "e4": "POSCO AST, BNG STEEL 등 주요 대기업 설비 납품",
+                    "e5": "삼성전자, 석진철강 등 다수 기업 설비 제작/설치"
+                }
+            },
+            "period2": {
+                "title": "Technological Innovation",
+                "events": {
+                    "e1": "중국 HSSM 그룹 COIL POLISHING LINE 수출",
+                    "e2": "POSCO, 아주스틸, 이녹스 등 HOT PRESS 설비 다수 공급",
+                    "e3": "진공 PRESS 및 2차전지 관련 설비 기술력 인정",
+                    "e4": "POSCO C&C, 웅진케미칼 등 대형 프로젝트 수주"
+                }
+            },
+            "period3": {
+                "title": "Growth & Corporation",
+                "events": {
+                    "e1": "(주)아이에스티코리아 법인 전환",
+                    "e2": "대양금속 터키 공장, 두산전자 등 해외 및 국내 주요 설비 수주",
+                    "e3": "STS SHEET POLISHING, VACUUM HOT PRESS 기술 차별화",
+                    "e4": "이노폴렉스, 석진철강 등 다양한 산업군으로 사업 확장"
+                }
+            },
+            "period4": {
+                "title": "Foundation & Certification",
+                "events": {
+                    "e1": "IST 설립 (2003년 12월 2일) 및 구미공단 이전",
+                    "e2": "벤처기업, INNO-BIZ (기술혁신형 중소기업) 선정",
+                    "e3": "ISO 9001 / 14001 품질/환경경영시스템 인증 획득",
+                    "e4": "기업부설연구소 설립 및 특허/실용신안 다수 등록",
+                    "e5": "중국 허페이 지사 설립으로 글로벌 네트워크 구축"
+                }
+            }
+        },
+        "organization": {
+            "title": "조직도",
+            "desc": "체계적인 조직 시스템과 전문 인력을 바탕으로 고객 가치 창출을 위해 끊임없이 노력하고 있습니다.",
+            "role_ceo": "CEO",
+            "cards": {
+                "ceo": "대표이사",
+                "div_mgmt": "경영지원본부",
+                "team_plan": "기획팀",
+                "team_fin": "재무/인사",
+                "team_gen": "총무",
+                "div_rnd": "기술연구소 / 영업",
+                "team_dom": "국내영업",
+                "team_ovs": "해외영업",
+                "team_rnd": "R&D 개발",
+                "team_des": "설계팀",
+                "div_prod": "생산본부",
+                "team_pm": "생산관리",
+                "team_mfg1": "제조 1팀",
+                "team_mfg2": "제조 2팀",
+                "team_qc": "품질관리(QC)",
+                "team_cs": "CS팀"
+            }
+        },
+        "location": {
+            "desc": "IST KOREA 본사 및 공장 위치를 안내해 드립니다.",
+            "name": "(주)아이에스티코리아",
+            "subname": "본사 및 1공장",
+            "addr_label": "주소",
+            "tel_label": "연락처",
+            "email_label": "이메일"
+        }
+    },
+    "business_pages": {
+        "press": {
+            "title": "PRESS LINE",
+            "subtitle": "모든 산업 요구를 충족하는 첨단 프레스 솔루션.\n다층 적층부터 고온 진공 공정까지.",
+            "products": {
+                "multi_layer": {
+                    "name": "MULTI-LAYER VACUUM HOT PRESS",
+                    "subtitle": "대량 생산을 위한 첨단 프레스 라인 솔루션",
+                    "desc": "고정밀 제조를 위해 설계되어 균일한 압력과 온도 분포를 보장합니다. FPCB, 반도체 패키징 및 복합 소재 라미네이션에 이상적입니다.",
+                    "specs": [
+                        {
+                            "label": "열판 크기",
+                            "value": "1350 X 3200 X 55 (mm)"
+                        },
+                        {
+                            "label": "오픈",
+                            "value": "110"
+                        },
+                        {
+                            "label": "두께 편차",
+                            "value": "20㎛"
+                        },
+                        {
+                            "label": "데이라이트",
+                            "value": "100mm"
+                        },
+                        {
+                            "label": "가압력",
+                            "value": "Max. 1200 ton"
+                        },
+                        {
+                            "label": "진공도",
+                            "value": "Max. 30 Torr"
+                        },
+                        {
+                            "label": "온도 제어",
+                            "value": "Standard Gap : ± 2℃ / Platen Temp : Max. 250℃"
+                        },
+                        {
+                            "label": "제어 시스템",
+                            "value": "PLC SYSTEM"
+                        }
+                    ],
+                    "features": [
+                        "풀 오토매틱 시스템",
+                        "모니터링 & 멀티 컨트롤",
+                        "SUS, Mesh, 제품, 쿠션 패드, 상판 적재 및 분리 장치",
+                        "SUS 열판 세척 유닛",
+                        "제품 커터"
+                    ],
+                    "options": [
+                        "캐리어 & 웨어 플레이트 (예: SUS, AL)",
+                        "레이아웃 변경",
+                        "주문 제작"
+                    ]
+                },
+                "multi_vacuum": {
+                    "name": "MULTI VACUUM HOT PRESS",
+                    "subtitle": "다양한 어플리케이션을 위한 다목적 진공 프레스",
+                    "desc": "오토 로더/스테커가 통합되어 핫 프레스와 콜드 프레스 작업을 모두 지원하는 다목적 진공 핫 프레스입니다.",
+                    "specs": [
+                        {
+                            "label": "열판 크기",
+                            "value": "700 ~ 1350 X 800 ~ 1650 X 45 ~ 50 (mm)"
+                        },
+                        {
+                            "label": "오픈",
+                            "value": "6 ~ 12"
+                        },
+                        {
+                            "label": "두께 편차",
+                            "value": "20mm"
+                        },
+                        {
+                            "label": "데이라이트",
+                            "value": "80 ~ 120mm"
+                        },
+                        {
+                            "label": "가압력",
+                            "value": "250 ~ 950 Ton"
+                        },
+                        {
+                            "label": "진공도",
+                            "value": "10 ~ 30 Torr"
+                        },
+                        {
+                            "label": "온도 제어",
+                            "value": "Gap ± 2℃ / Max. 250℃"
+                        },
+                        {
+                            "label": "제어 시스템",
+                            "value": "PLC / Touch Screen"
+                        }
+                    ],
+                    "features": [
+                        "핫 프레스 + 콜드 프레스 + 오토 로더 & 스테커",
+                        "자동 캐리어 분리 및 로딩",
+                        "프로그램 가능한 사이클 운전",
+                        "LED 기판 성형"
+                    ],
+                    "options": [
+                        "풀 오토매틱 시스템",
+                        "모니터링 & 멀티 컨트롤",
+                        "SUS 플레이트 분리기",
+                        "레이아웃 변경",
+                        "주문 제작"
+                    ]
+                },
+                "high_temper": {
+                    "name": "HIGH TEMPER VACUUM HOT PRESS",
+                    "subtitle": "고온 및 고진공 전문 장비",
+                    "desc": "고온 및 진공 조건에서 테프론 계열 소재의 접착에 적합합니다. 정밀한 온도 및 압력 제어가 특징입니다.",
+                    "specs": [
+                        {
+                            "label": "열판 크기",
+                            "value": "500 X 500 X 60 (mm)"
+                        },
+                        {
+                            "label": "두께 편차",
+                            "value": "20 ㎛"
+                        },
+                        {
+                            "label": "가압력",
+                            "value": "Max. 200 ton"
+                        },
+                        {
+                            "label": "진공도",
+                            "value": "Max. 10¯³ Torr"
+                        },
+                        {
+                            "label": "온도 제어",
+                            "value": "Gap ± 2℃ / Max. 500℃"
+                        },
+                        {
+                            "label": "가열 방식",
+                            "value": "ELECTRIC HEATING"
+                        }
+                    ],
+                    "features": [
+                        "온도 및 진공 모니터링 시스템",
+                        "데이터 관리 및 성분 분석",
+                        "고진공 기능",
+                        "전기 가열 소자"
+                    ],
+                    "options": [
+                        "진공 펌프 업그레이드",
+                        "데이터 로거 통합",
+                        "안전 차폐",
+                        "주문 제작"
+                    ]
+                },
+                "electric_heater": {
+                    "name": "ELECTRIC HEATER VHP",
+                    "subtitle": "컴팩트형 전기 히터 진공 핫 프레스",
+                    "desc": "전기 히터 열판을 사용하는 FPCB 및 PCB용 라미네이팅 장비입니다. 보일러가 없는 단순한 구조와 자동 냉각 기능이 내장되어 있습니다.",
+                    "specs": [
+                        {
+                            "label": "열판 크기",
+                            "value": "760 X 760 X 60 (mm)"
+                        },
+                        {
+                            "label": "오픈",
+                            "value": "4-6"
+                        },
+                        {
+                            "label": "데이라이트",
+                            "value": "80 ~ 100"
+                        },
+                        {
+                            "label": "가압력",
+                            "value": "200 ton"
+                        },
+                        {
+                            "label": "진공도",
+                            "value": "Max. 1 Torr"
+                        },
+                        {
+                            "label": "온도 제어",
+                            "value": "Gap ±3°C / Max. 300°C"
+                        },
+                        {
+                            "label": "제어 시스템",
+                            "value": "Touch Screen (Auto Program)"
+                        }
+                    ],
+                    "features": [
+                        "전기 열판 가열 (보일러 없음)",
+                        "자동 냉각 시스템",
+                        "컴팩트한 구조",
+                        "디지털 터치 제어"
+                    ],
+                    "options": [
+                        "PC 제어 시스템",
+                        "캐리어 & 웨어 플레이트 (예: SUS, AL)",
+                        "로봇 카",
+                        "주문 제작"
+                    ]
+                }
+            }
+        },
+        "polishing": {
+            "title": "POLISHING LINE",
+            "subtitle": "최첨단 표면 마감 솔루션.\n코일 및 시트를 위한 정밀 연마 및 그라인딩.",
+            "products": {
+                "coil_polishing": {
+                    "name": "COIL POLISHING LINE",
+                    "subtitle": "금속 코일용 고정밀 표면 마감",
+                    "desc": "스테인리스 스틸, 알루미늄 및 스틸 코일용으로 설계된 첨단 코일 연마 시스템입니다. 자동 프로그램 제어와 정밀한 벨트 트래킹으로 일관된 고품질 마감을 제공합니다.",
+                    "specs": [
+                        {
+                            "label": "드럼 직경",
+                            "value": "Ø360 (No.4 Machine Criteria)"
+                        },
+                        {
+                            "label": "메인 모터",
+                            "value": "45 kw"
+                        },
+                        {
+                            "label": "벨트 크기",
+                            "value": "Min. 640mm ~ Max. 1,600mm (W) x 3200mm (L)"
+                        },
+                        {
+                            "label": "작업 폭",
+                            "value": "Min. 600mm ~ Max. 1,600mm (±5%)"
+                        },
+                        {
+                            "label": "두께 (SUS)",
+                            "value": "0.3mm ~ 2mm"
+                        },
+                        {
+                            "label": "두께 (AL)",
+                            "value": "0.3mm ~ 3mm"
+                        },
+                        {
+                            "label": "통판 속도",
+                            "value": "Max 40 mpm"
+                        },
+                        {
+                            "label": "제어 시스템",
+                            "value": "PLC + HMI Touch Screen"
+                        }
+                    ],
+                    "features": [
+                        "언코일러 & 리코일러",
+                        "용접기",
+                        "상/하부 연마기",
+                        "버프 브러시 / 헤어라인 / 브러싱",
+                        "세정 & 건조 시스템",
+                        "제품 검사 테이블"
+                    ],
+                    "options": [
+                        "슬러지 처리 & 재활용 시스템",
+                        "오토 트래킹 시스템",
+                        "맞춤형 벨트 구성"
+                    ]
+                },
+                "coil_grinding": {
+                    "name": "COIL GRINDING LINE",
+                    "subtitle": "스틸 코일용 강력 표면 연삭",
+                    "desc": "스틸 코일 표면을 위한 강력한 그라인딩 장비입니다. 샌드벨트 회전, 코일 이송 속도, 샌딩 부하 조절이 가능합니다. 안전과 효율성을 위해 수용성 오일을 사용합니다.",
+                    "specs": [
+                        {
+                            "label": "작업 폭",
+                            "value": "600mm ~ 1,300mm"
+                        },
+                        {
+                            "label": "작업 두께",
+                            "value": "0.25 ~ 8.0mm ±10%"
+                        },
+                        {
+                            "label": "작업 속도",
+                            "value": "5 ~ 20 mpm"
+                        },
+                        {
+                            "label": "드럼 직경",
+                            "value": "Inner Ø610mm / Out Ø900~1,200mm"
+                        },
+                        {
+                            "label": "메인 모터",
+                            "value": "110kw, 90kw"
+                        },
+                        {
+                            "label": "오실레이션",
+                            "value": "Smooth Operation System"
+                        },
+                        {
+                            "label": "제어 시스템",
+                            "value": "Auto Program Control Touch Screen"
+                        },
+                        {
+                            "label": "벨트 트래킹",
+                            "value": "Pneumatic Sensor Control"
+                        }
+                    ],
+                    "features": [
+                        "세정 & 건조 시스템 (전동 클러치)",
+                        "핀칭 유닛",
+                        "용접기",
+                        "리코일러",
+                        "에어 나이프 & 링 블로워 건조기"
+                    ],
+                    "options": [
+                        "화재 진압 안전 시스템",
+                        "맞춤형 드럼 구성",
+                        "고급 오실레이션 제어"
+                    ]
+                },
+                "sheet_polishing": {
+                    "name": "SHEET POLISHING LINE",
+                    "subtitle": "테이프 샤프트 기술이 적용된 자동 시트 연마",
+                    "desc": "롤 교체가 용이한 테이프 샤프트를 활용한 다용도 시트 연마 라인입니다. 가변 압력 제어와 이중 집진 기능을 갖추고 버프 휠이나 스카치 브라이트를 지원합니다.",
+                    "specs": [
+                        {
+                            "label": "작업 폭",
+                            "value": "Max 1300mm"
+                        },
+                        {
+                            "label": "연마 속도",
+                            "value": "Max 2000rpm"
+                        },
+                        {
+                            "label": "작업 속도",
+                            "value": "Max 8M/min"
+                        },
+                        {
+                            "label": "메인 모터",
+                            "value": "37Kw / 45Kw"
+                        },
+                        {
+                            "label": "오실레이션 유닛",
+                            "value": "2.2 Kw"
+                        },
+                        {
+                            "label": "집진",
+                            "value": "Double Nozzle System"
+                        },
+                        {
+                            "label": "센터링",
+                            "value": "Load/Unload Conveyor Device"
+                        }
+                    ],
+                    "features": [
+                        "테이프 샤프트 롤 시스템",
+                        "버프 휠 / 스카치 브라이트 지원",
+                        "시트 엔드 이스케이프 장치 (빌리 플레이트 상/하)",
+                        "광학 백 제거용 클린 롤",
+                        "가변 오실레이션 속도 제어"
+                    ],
+                    "options": [
+                        "드레싱 머신",
+                        "자동 연마제 도포 장치",
+                        "클린 롤 시스템"
+                    ]
+                }
+            }
+        },
+        "semiconductor": {
+            "title": "SEMICONDUCTOR EQUIPMENT",
+            "subtitle": "첨단 화학 연마 & 정밀 절단 기술.\n웨이퍼 공정을 위한 최고의 수율과 정밀도 보장.",
+            "products": {
+                "chemical_polishing": {
+                    "name": "CHEMICAL POLISHING MACHINE",
+                    "subtitle": "고성능 웨이퍼 연마 솔루션",
+                    "desc": "생산성과 정밀도에 초점을 맞춘 첨단 화학 연마 시스템입니다. 최적의 웨이퍼 표면 처리를 위해 4헤드 동시 작동과 다단 압력 제어 기능을 갖추고 있습니다.",
+                    "specs": [
+                        {
+                            "label": "작업 크기",
+                            "value": "Max. Dia 400mm * 4"
+                        },
+                        {
+                            "label": "압력",
+                            "value": "Max. 400kg (1 Head) * 4 Head"
+                        },
+                        {
+                            "label": "턴테이블 크기",
+                            "value": "Ø1300"
+                        },
+                        {
+                            "label": "턴테이블 속도",
+                            "value": "Max. 60 rpm (Main motor: 22kw)"
+                        },
+                        {
+                            "label": "오실레이션",
+                            "value": "Max. 30 rpm (Motor: 5.5kw)"
+                        },
+                        {
+                            "label": "압력 제어",
+                            "value": "Multistage Control (20 Step)"
+                        },
+                        {
+                            "label": "제어 시스템",
+                            "value": "Touch Screen + PLC (HMI System)"
+                        }
+                    ],
+                    "features": [
+                        "4헤드 동시 작동",
+                        "생산성 시스템 포함",
+                        "다단 압력 제어",
+                        "스트로크 30~80mm 오실레이션",
+                        "턴테이블 냉각 시스템",
+                        "자동 슬러리 공급"
+                    ],
+                    "options": [
+                        "데이터 로깅 시스템",
+                        "맞춤형 슬러리 믹서",
+                        "원격 모니터링"
+                    ]
+                },
+                "lapping_machine": {
+                    "name": "LAPPING MACHINE",
+                    "subtitle": "반도체용 정밀 표면 래핑",
+                    "desc": "재사용 가능한 주조 턴테이블로 고강도 품질 생산을 위해 설계되었습니다. 반도체 소재에 대해 뛰어난 작업성과 우수한 표면 마감 품질을 제공합니다.",
+                    "specs": [
+                        {
+                            "label": "작업 크기",
+                            "value": "Max. Dia 400mm * 1"
+                        },
+                        {
+                            "label": "압력",
+                            "value": "Max. 100kg (1 Head) * 1 Head"
+                        },
+                        {
+                            "label": "턴테이블 크기",
+                            "value": "Ø1000"
+                        },
+                        {
+                            "label": "턴테이블 속도",
+                            "value": "Max. 30 rpm (Main motor: 5.5kw)"
+                        },
+                        {
+                            "label": "오실레이션",
+                            "value": "Max. 30 rpm (Motor: 2.2kw)"
+                        },
+                        {
+                            "label": "압력 제어",
+                            "value": "Regulator Control"
+                        },
+                        {
+                            "label": "제어 시스템",
+                            "value": "Touch Screen + PLC (HMI System)"
+                        }
+                    ],
+                    "features": [
+                        "고강도 주조 턴테이블",
+                        "연마 후 테이블 재사용 가능",
+                        "자동 슬러리 공급 시스템",
+                        "스트로크 30~80mm 오실레이션",
+                        "우수한 작업성 구조"
+                    ],
+                    "options": [
+                        "고급 압력 조절기",
+                        "냉각 장치",
+                        "안전 인클로저"
+                    ]
+                },
+                "wire_saw_600n": {
+                    "name": "MULTI WIRE SAW 600N",
+                    "subtitle": "고강도 수직 정밀 절단기",
+                    "desc": "고강도 잉곳 절단을 위해 설계된 견고한 수직형 와이어 쏘입니다. 수직 보빈 설치와 양면 로딩 방식으로 최대의 안정성을 제공하는 견고한 구조가 특징입니다.",
+                    "specs": [
+                        {
+                            "label": "작업 크기",
+                            "value": "Max. 700x700x700 mm"
+                        },
+                        {
+                            "label": "롤 타입",
+                            "value": "4-Roll System"
+                        },
+                        {
+                            "label": "제품 직경",
+                            "value": "Max. ø700mm"
+                        },
+                        {
+                            "label": "도어 타입",
+                            "value": "Slide Door"
+                        },
+                        {
+                            "label": "상하 슬라이드",
+                            "value": "Precision ±0.02mm"
+                        },
+                        {
+                            "label": "스핀들 속도",
+                            "value": "Max. 1500rpm"
+                        },
+                        {
+                            "label": "절단 간격",
+                            "value": "0.05mm precision"
+                        },
+                        {
+                            "label": "전원",
+                            "value": "380V / 60Hz"
+                        }
+                    ],
+                    "features": [
+                        "견고한 고강도 구조",
+                        "양면 로딩 방식",
+                        "수직 보빈 설치",
+                        "효율적인 슬러지 후방 배치",
+                        "PLC + 터치 스크린 제어"
+                    ],
+                    "options": [
+                        "다이아몬드 와이어 키트",
+                        "고급 텐션 제어",
+                        "냉각수 여과 시스템"
+                    ]
+                },
+                "wire_saw_600s": {
+                    "name": "MULTI WIRE SAW 600S",
+                    "subtitle": "컴팩트한 고효율 수평 와이어 쏘",
+                    "desc": "정밀 절단에 이상적인 공간 절약형 수평 와이어 쏘입니다. 세척이 쉬운 슬러지 디자인과 사용자 친화적인 수평 보빈 배치가 특징입니다.",
+                    "specs": [
+                        {
+                            "label": "작업 크기",
+                            "value": "Max. 600x600x500 mm"
+                        },
+                        {
+                            "label": "롤 타입",
+                            "value": "4-Roll System"
+                        },
+                        {
+                            "label": "제품 직경",
+                            "value": "Max. ø600mm"
+                        },
+                        {
+                            "label": "도어 타입",
+                            "value": "Slide Door"
+                        },
+                        {
+                            "label": "상하 슬라이드",
+                            "value": "Precision ±0.02mm"
+                        },
+                        {
+                            "label": "스핀들 속도",
+                            "value": "Max. 1500rpm"
+                        },
+                        {
+                            "label": "절단 간격",
+                            "value": "Under 0.04mm"
+                        },
+                        {
+                            "label": "전원",
+                            "value": "380V / 60Hz"
+                        }
+                    ],
+                    "features": [
+                        "공간 활용을 위한 소형 설계",
+                        "수평 보빈 타입",
+                        "쉬운 슬러지 세척 구조",
+                        "사용자 친화적 조작",
+                        "고정밀 절단"
+                    ],
+                    "options": [
+                        "컴팩트 냉각수 시스템",
+                        "와이어 단선 감지",
+                        "주문 제작 고정구"
+                    ]
+                }
+            }
+        },
+        "fiber": {
+            "title": "FIBER OPTICS EQUIPMENT",
+            "subtitle": "차세대 광섬유 제조.\n고품질 모재 생산을 위한 정밀 VAD 기술.",
+            "products": {
+                "core_equipment": {
+                    "name": "VAD CORE EQUIPMENT (IRD)",
+                    "subtitle": "ZWPF 및 강화 BIF를 위한 첨단 VAD 공법",
+                    "desc": "광섬유 모재 제조를 위한 최첨단 기상 축 증착(VAD) 장비입니다. 고정밀 공정 제어로 ZWPF(Zero Water Peak Fiber) 및 BIF(Bend-Insensitive Fiber) 생산을 위해 설계되었습니다.",
+                    "specs": [
+                        {
+                            "label": "프레임 높이",
+                            "value": "12m"
+                        },
+                        {
+                            "label": "챔버 재질",
+                            "value": "Hastelloy Chamber"
+                        },
+                        {
+                            "label": "프레임 타입",
+                            "value": "Steel Frame Construction"
+                        },
+                        {
+                            "label": "화학물질 & 가스",
+                            "value": "SiCl4, GeCl4, CF4, H2, O2, N2"
+                        },
+                        {
+                            "label": "청정도",
+                            "value": "Class 10,000"
+                        },
+                        {
+                            "label": "생산능력",
+                            "value": "2 M-fkm/year"
+                        },
+                        {
+                            "label": "정렬",
+                            "value": "Precision Torch Alignment System"
+                        },
+                        {
+                            "label": "전달 시스템",
+                            "value": "Advanced Gas & Vapor Delivery"
+                        }
+                    ],
+                    "features": [
+                        "VAD 공법 구현",
+                        "ZWPF (Zero Water Peak Fiber) 역량",
+                        "강화된 BIF (Bend Insensitive Fiber A2, B3)",
+                        "통합 토치 정렬 시스템",
+                        "고처리량 가스 전달"
+                    ],
+                    "options": [
+                        "공정 자동화 제품군",
+                        "실시간 모재 모니터링",
+                        "맞춤형 가스 혼합 시스템"
+                    ]
+                }
+            }
+        }
     }
 }

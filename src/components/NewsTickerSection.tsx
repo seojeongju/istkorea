@@ -2,8 +2,10 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Newspaper } from 'lucide-react';
 import { storage } from '../services/storage';
+import { useTranslation } from 'react-i18next';
 
 export const NewsTickerSection = () => {
+    const { t } = useTranslation();
     const newsItems = storage.getNews().slice(0, 5); // Get latest 5 news
 
     return (
@@ -13,7 +15,7 @@ export const NewsTickerSection = () => {
                 {/* News Label */}
                 <div className="flex items-center gap-2 text-primary font-bold shrink-0 z-10 bg-white pr-4 border-r border-gray-200">
                     <Newspaper size={18} className="text-secondary" />
-                    <span className="text-gray-900 tracking-tight">CORPORATE NEWS</span>
+                    <span className="text-gray-900 tracking-tight">{t('news.label')}</span>
                 </div>
 
                 {/* Ticker Content */}
@@ -57,7 +59,7 @@ export const NewsTickerSection = () => {
 
                 {/* More Button */}
                 <Link to="/support/news" className="shrink-0 text-xs md:text-sm font-medium text-gray-500 hover:text-primary flex items-center gap-1 z-10 bg-white pl-4 ml-auto border-l border-gray-200">
-                    <span className="hidden leading-none md:block">More</span> <ChevronRight size={14} />
+                    <span className="hidden leading-none md:block">{t('news.more')}</span> <ChevronRight size={14} />
                 </Link>
             </div>
 

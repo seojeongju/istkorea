@@ -1,56 +1,32 @@
 import { motion } from 'framer-motion';
 import { Flag, Award, Zap, Building2, TrendingUp } from 'lucide-react';
-
-const historyData = [
-    {
-        period: "2010 ~ 2013",
-        title: "Global Expansion & R&D",
-        icon: TrendingUp,
-        events: [
-            "중국 상하이, 광저우 전시회 CPL, CGL LINE 출품",
-            "중국 코일시트 그라인딩 장치 특허출원",
-            "슈퍼소재 융합제품화기술개발사업 선정 (지식경제부)",
-            "POSCO AST, BNG STEEL 등 주요 대기업 설비 납품",
-            "삼성전자, 석진철강 등 다수 기업 설비 제작/설치"
-        ]
-    },
-    {
-        period: "2007 ~ 2009",
-        title: "Technological Innovation",
-        icon: Zap,
-        events: [
-            "중국 HSSM 그룹 COIL POLISHING LINE 수출",
-            "POSCO, 아주스틸, 이녹스 등 HOT PRESS 설비 다수 공급",
-            "진공 PRESS 및 2차전지 관련 설비 기술력 인정",
-            "POSCO C&C, 웅진케미칼 등 대형 프로젝트 수주"
-        ]
-    },
-    {
-        period: "2005 ~ 2006",
-        title: "Growth & Corporation",
-        icon: Building2,
-        events: [
-            "(주)아이에스티코리아 법인 전환",
-            "대양금속 터키 공장, 두산전자 등 해외 및 국내 주요 설비 수주",
-            "STS SHEET POLISHING, VACUUM HOT PRESS 기술 차별화",
-            "이노폴렉스, 석진철강 등 다양한 산업군으로 사업 확장"
-        ]
-    },
-    {
-        period: "2003 ~ 2004",
-        title: "Foundation & Certification",
-        icon: Flag,
-        events: [
-            "IST 설립 (2003년 12월 2일) 및 구미공단 이전",
-            "벤처기업, INNO-BIZ (기술혁신형 중소기업) 선정",
-            "ISO 9001 / 14001 품질/환경경영시스템 인증 획득",
-            "기업부설연구소 설립 및 특허/실용신안 다수 등록",
-            "중국 허페이 지사 설립으로 글로벌 네트워크 구축"
-        ]
-    }
-];
+import { useTranslation } from 'react-i18next';
 
 export const History = () => {
+    const { t } = useTranslation();
+
+    const historyData = [
+        {
+            period: "2010 ~ 2013",
+            titleKey: "period1",
+            icon: TrendingUp,
+        },
+        {
+            period: "2007 ~ 2009",
+            titleKey: "period2",
+            icon: Zap,
+        },
+        {
+            period: "2005 ~ 2006",
+            titleKey: "period3",
+            icon: Building2,
+        },
+        {
+            period: "2003 ~ 2004",
+            titleKey: "period4",
+            icon: Flag,
+        }
+    ];
     return (
         <div className="max-w-7xl mx-auto py-16 px-6 min-h-screen bg-white">
             <motion.div
@@ -64,11 +40,11 @@ export const History = () => {
                     <span>IST KOREA HISTORY</span>
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-                    끊임없는 도전과 혁신의 <br className="hidden md:block" />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">발자취를 소개합니다</span>
+                    {t('company_page.history.main_title_1')} <br className="hidden md:block" />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">{t('company_page.history.main_title_2')}</span>
                 </h2>
                 <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
-                    2003년 설립 이래, 독보적인 기술력으로 세계 시장을 선도해 온 IST KOREA의 여정입니다.
+                    {t('company_page.history.description')}
                 </p>
             </motion.div>
 
@@ -82,6 +58,10 @@ export const History = () => {
                 <div className="space-y-24">
                     {historyData.map((item, index) => {
                         const Icon = item.icon;
+                        const title = t(`company_page.history.${item.titleKey}.title`);
+                        const eventsObj = t(`company_page.history.${item.titleKey}.events`, { returnObjects: true }) as Record<string, string>;
+                        const events = Object.values(eventsObj);
+
                         return (
                             <motion.div
                                 key={index}
@@ -106,13 +86,13 @@ export const History = () => {
                                                 <Icon size={24} />
                                             </div>
                                             <div>
-                                                <h3 className="text-xl font-bold text-gray-900">{item.title}</h3>
+                                                <h3 className="text-xl font-bold text-gray-900">{title}</h3>
                                                 <p className="text-sm text-primary font-medium">{item.period}</p>
                                             </div>
                                         </div>
 
                                         <ul className="space-y-4">
-                                            {item.events.map((event, i) => (
+                                            {events.map((event, i) => (
                                                 <li key={i} className={`flex items-start gap-3 text-gray-600 leading-relaxed
                                                     ${index % 2 === 0 ? '' : 'md:flex-row-reverse md:text-right'}
                                                 `}>

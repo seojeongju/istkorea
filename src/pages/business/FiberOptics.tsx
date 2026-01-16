@@ -1,48 +1,37 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Network, Check } from 'lucide-react';
-
-// Product Data
-const products = [
-    {
-        id: 'core-equipment',
-        name: 'VAD CORE EQUIPMENT (IRD)',
-        icon: <Network size={20} />,
-        subtitle: 'Advanced VAD Method for ZWPF & Enhanced BIF',
-        description: 'State-of-the-art Vapor Phase Axial Deposition (VAD) equipment for manufacturing optical fiber preforms. Designed for Zero Water Peak Fiber (ZWPF) and Bend-Insensitive Fiber (BIF) production with high precision process control.',
-        image: '/images/fiber_core_equipment.png',
-        specs: [
-            { label: "FRAME HEIGHT", value: "12m" },
-            { label: "CHAMBER MATERIAL", value: "Hastelloy Chamber" },
-            { label: "FRAME TYPE", value: "Steel Frame Construction" },
-            { label: "CHEMICALS & GASES", value: "SiCl4, GeCl4, CF4, H2, O2, N2" },
-            { label: "CLEAN CLASS", value: "Class 10,000" },
-            { label: "CAPACITY", value: "2 M-fkm/year" },
-            { label: "ALIGNMENT", value: "Precision Torch Alignment System" },
-            { label: "DELIVERY SYSTEM", value: "Advanced Gas & Vapor Delivery" },
-        ],
-        unitDevices: [
-            "VAD Method Implementation",
-            "ZWPF (Zero Water Peak Fiber) Capability",
-            "Enhanced BIF (Bend Insensitive Fiber A2, B3)",
-            "Integrated Torch Alignment System",
-            "High-Throughput Gas Delivery"
-        ],
-        options: [
-            "Process Automation Suite",
-            "Real-time Preform Monitoring",
-            "Custom Gas Mixing Systems"
-        ]
-    }
-];
+import { useTranslation } from 'react-i18next';
 
 export const FiberOptics = () => {
+    const { t } = useTranslation();
+
+    const products = [
+        {
+            id: 'core-equipment',
+            image: '/images/fiber_core_equipment.png',
+            icon: <Network size={20} />,
+            titleKey: 'core_equipment'
+        }
+    ];
+
     const [activeProductId, setActiveProductId] = useState(products[0].id);
-    const activeProduct = products.find(p => p.id === activeProductId) || products[0];
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [activeProductId]);
+
+    const activeProductRaw = products.find(p => p.id === activeProductId) || products[0];
+
+    const activeProduct = {
+        ...activeProductRaw,
+        name: t(`business_pages.fiber.products.${activeProductRaw.titleKey}.name`),
+        subtitle: t(`business_pages.fiber.products.${activeProductRaw.titleKey}.subtitle`),
+        description: t(`business_pages.fiber.products.${activeProductRaw.titleKey}.desc`),
+        specs: t(`business_pages.fiber.products.${activeProductRaw.titleKey}.specs`, { returnObjects: true }) as { label: string; value: string }[],
+        features: t(`business_pages.fiber.products.${activeProductRaw.titleKey}.features`, { returnObjects: true }) as string[],
+        options: t(`business_pages.fiber.products.${activeProductRaw.titleKey}.options`, { returnObjects: true }) as string[]
+    };
 
     return (
         <div className="bg-white min-h-screen pt-20">
@@ -55,10 +44,9 @@ export const FiberOptics = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h1 className="text-4xl md:text-6xl font-bold mb-6">FIBER OPTICS EQUIPMENT</h1>
-                        <p className="text-gray-400 text-xl max-w-2xl">
-                            Next-Generation Optical Fiber Manufacturing. <br />
-                            Precision VAD Technology for High-Quality Preforms.
+                        <h1 className="text-4xl md:text-6xl font-bold mb-6">{t('business_pages.fiber.title')}</h1>
+                        <p className="text-gray-400 text-xl max-w-2xl whitespace-pre-line">
+                            {t('business_pages.fiber.subtitle')}
                         </p>
                     </motion.div>
                 </div>
@@ -68,19 +56,22 @@ export const FiberOptics = () => {
             <div className="sticky top-20 z-40 bg-white shadow-md border-b border-gray-100">
                 <div className="container mx-auto px-6">
                     <div className="flex overflow-x-auto no-scrollbar gap-2 py-4">
-                        {products.map((product) => (
-                            <button
-                                key={product.id}
-                                onClick={() => setActiveProductId(product.id)}
-                                className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold whitespace-nowrap transition-all duration-300 ${activeProductId === product.id
-                                    ? 'bg-primary text-white shadow-lg scale-105'
-                                    : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
-                                    }`}
-                            >
-                                {product.icon}
-                                {product.name}
-                            </button>
-                        ))}
+                        {products.map((product) => {
+                            const productName = t(`business_pages.fiber.products.${product.titleKey}.name`);
+                            return (
+                                <button
+                                    key={product.id}
+                                    onClick={() => setActiveProductId(product.id)}
+                                    className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold whitespace-nowrap transition-all duration-300 ${activeProductId === product.id
+                                        ? 'bg-primary text-white shadow-lg scale-105'
+                                        : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
+                                        }`}
+                                >
+                                    {product.icon}
+                                    {productName}
+                                </button>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
@@ -128,7 +119,7 @@ export const FiberOptics = () => {
                                     SPECIFICATION
                                 </h3>
                                 <div className="space-y-0 border-t border-gray-100">
-                                    {activeProduct.specs.map((item, index) => (
+                                    {activeProduct.specs && activeProduct.specs.map((item, index) => (
                                         <div key={index} className={`flex flex-col sm:flex-row py-4 border-b border-gray-100 hover:bg-gray-50 transition-colors px-2 rounded-lg`}>
                                             <div className="w-full sm:w-1/3 font-semibold text-gray-700 text-sm">{item.label}</div>
                                             <div className="w-full sm:w-2/3 text-gray-600 mt-1 sm:mt-0 font-mono text-sm">
@@ -147,7 +138,7 @@ export const FiberOptics = () => {
                                         Key Features
                                     </h3>
                                     <ul className="space-y-3">
-                                        {activeProduct.unitDevices.map((item, index) => (
+                                        {activeProduct.features && activeProduct.features.map((item, index) => (
                                             <li key={index} className="flex items-start gap-3">
                                                 <div className="min-w-5 mt-0.5 text-primary">
                                                     <Check size={16} />
@@ -164,7 +155,7 @@ export const FiberOptics = () => {
                                         Options
                                     </h3>
                                     <ul className="space-y-3">
-                                        {activeProduct.options.map((item, index) => (
+                                        {activeProduct.options && activeProduct.options.map((item, index) => (
                                             <li key={index} className="flex items-start gap-3">
                                                 <div className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2" />
                                                 <span className="text-sm text-gray-500 leading-snug">{item}</span>
@@ -180,3 +171,5 @@ export const FiberOptics = () => {
         </div>
     );
 };
+
+

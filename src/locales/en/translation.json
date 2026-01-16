@@ -81,20 +81,32 @@
             }
         }
     },
+    "news": {
+        "label": "CORPORATE NEWS",
+        "more": "More"
+    },
     "product": {
         "title": "PRODUCT",
         "items": {
             "item1": {
-                "title": "Slot Die Coater",
-                "subtitle": "Display Process Equipment"
+                "title": "VACUUM HOT PRESS",
+                "subtitle": "Advanced Press Technology"
             },
             "item2": {
-                "title": "Lamination System",
-                "subtitle": "Semiconductor Packaging Solution"
+                "title": "CHEMICAL POLISHING",
+                "subtitle": "4-Head Polishing System"
             },
             "item3": {
-                "title": "Inkjet Printing",
-                "subtitle": "High-precision Printing Equipment"
+                "title": "STEP POLISHING",
+                "subtitle": "Precision Finishing"
+            },
+            "item4": {
+                "title": "LAPPING MACHINE",
+                "subtitle": "High Intensity Polishing"
+            },
+            "item5": {
+                "title": "MULTI WIRE SAW",
+                "subtitle": "Semiconductor Slicing"
             }
         }
     },
@@ -102,5 +114,714 @@
         "title": "CUSTOMER SUPPORT",
         "question": "Have any questions?",
         "desc": "Please feel free to contact us anytime, and we will respond kindly."
+    },
+    "company_page": {
+        "title": "Company Introduction",
+        "subtitle": "Introducing the past, present, and future of IST KOREA.",
+        "greetings": {
+            "quote_front": "Opening ",
+            "quote_highlight": "new horizons",
+            "quote_middle": " in ultra-precision nano technology,",
+            "quote_partner": "your global partner,",
+            "quote_end": "IST KOREA.",
+            "p1": "Hello, and a warm welcome to the <0>IST KOREA</0> website.",
+            "p2": "Since our establishment in 2003, IST KOREA has accumulated unrivaled technological capabilities in the field of display and semiconductor manufacturing equipment through continuous R&D and innovation. We strive to provide the best quality and optimal solutions to our customers, especially in PCB/FPCB manufacturing facilities, Touch Screen Panel (TSP) facilities, and battery-related equipment.",
+            "p3": "Beyond simple equipment manufacturing, we aim to be a <0>'Total Engineering Solution Provider'</0> that enhances customer productivity and creates value. We will be a reliable partner growing together with our customers based on unwavering technology and trust even in a rapidly changing market environment.",
+            "p4": "We promise to leap forward as a technology-leading company with world-class competitiveness through continuous R&D investment and talent cultivation. We ask for your continued interest and support.",
+            "closing": "Thank you.",
+            "signature_title": "CEO, IST KOREA Inc.",
+            "ceo_name": "Byung-Cheol Geum"
+        },
+        "history": {
+            "main_title_1": "Introducing the footsteps of",
+            "main_title_2": "continuous challenge and innovation",
+            "description": "It is the journey of IST KOREA leading the global market with unrivaled technology since its establishment in 2003.",
+            "period1": {
+                "title": "Global Expansion & R&D",
+                "events": {
+                    "e1": "Exhibited CPL, CGL LINE at Shanghai and Guangzhou exhibitions in China",
+                    "e2": "Patent application for Coil Sheet Grinding Device in China",
+                    "e3": "Selected for Super Material Convergence Product Technology Development Project (Ministry of Knowledge Economy)",
+                    "e4": "Supplied equipment to major large companies such as POSCO AST, BNG STEEL",
+                    "e5": "Manufactured/Installed equipment for multiple companies including Samsung Electronics, Seokjin Steel"
+                }
+            },
+            "period2": {
+                "title": "Technological Innovation",
+                "events": {
+                    "e1": "Exported COIL POLISHING LINE to HSSM Group in China",
+                    "e2": "Supplied multiple HOT PRESS facilities to POSCO, Ajin Steel, Innox, etc.",
+                    "e3": "Recognized for Vacuum PRESS and rechargeable battery-related equipment technology",
+                    "e4": "Won large projects from POSCO C&C, Woongjin Chemical, etc."
+                }
+            },
+            "period3": {
+                "title": "Growth & Corporation",
+                "events": {
+                    "e1": "Incorporated as IST KOREA Inc.",
+                    "e2": "Won orders for major domestic and overseas facilities including Daeyang Metal Turkey Plant, Doosan Electronics",
+                    "e3": "Differentiated STS SHEET POLISHING, VACUUM HOT PRESS technology",
+                    "e4": "Expanded business to various industries including Innoflex, Seokjin Steel"
+                }
+            },
+            "period4": {
+                "title": "Foundation & Certification",
+                "events": {
+                    "e1": "Established IST (Dec 2, 2003) and moved to Gumi Industrial Complex",
+                    "e2": "Selected as Venture Company, INNO-BIZ (Technology Innovation SME)",
+                    "e3": "Acquired ISO 9001 / 14001 Quality/Environmental Management System Certification",
+                    "e4": "Established Corporate Research Institute and registered multiple patents/utility models",
+                    "e5": "Established Hefei Branch in China to build global network"
+                }
+            }
+        },
+        "organization": {
+            "title": "Organization Chart",
+            "desc": "We are constantly striving to create customer value based on a systematic organizational system and professional manpower.",
+            "role_ceo": "CEO",
+            "cards": {
+                "ceo": "CEO",
+                "div_mgmt": "Management Division",
+                "team_plan": "Planning Team",
+                "team_fin": "Finance/HR",
+                "team_gen": "General Affairs",
+                "div_rnd": "R&D / Sales Division",
+                "team_dom": "Domestic Sales",
+                "team_ovs": "Overseas Sales",
+                "team_rnd": "R&D",
+                "team_des": "Design Team",
+                "div_prod": "Production Division",
+                "team_pm": "Production Mgmt",
+                "team_mfg1": "Manufacturing 1",
+                "team_mfg2": "Manufacturing 2",
+                "team_qc": "Quality Control (QC)",
+                "team_cs": "CS Team"
+            }
+        },
+        "location": {
+            "desc": "Directing you to IST KOREA Headquarters and Factory location.",
+            "name": "IST KOREA Inc.",
+            "subname": "Headquarters & 1st Factory",
+            "addr_label": "Address",
+            "tel_label": "Tel",
+            "email_label": "Email"
+        }
+    },
+    "business_pages": {
+        "press": {
+            "title": "PRESS LINE",
+            "subtitle": "Advanced Press Solutions for Every Industrial Need.\nFrom Multi-Layer Lamination to High-Temperature Vacuum Processes.",
+            "products": {
+                "multi_layer": {
+                    "name": "MULTI-LAYER VACUUM HOT PRESS",
+                    "subtitle": "Advanced Press Line Solutions for Mass Production",
+                    "desc": "Designed for high-precision manufacturing, ensuring uniform pressure and temperature distribution. Ideal for FPCB, semiconductor packaging, and composite material lamination.",
+                    "specs": [
+                        {
+                            "label": "PLATEN SIZE",
+                            "value": "1350 X 3200 X 55 (mm)"
+                        },
+                        {
+                            "label": "OPENING",
+                            "value": "110"
+                        },
+                        {
+                            "label": "THICKNESS DEVIATION",
+                            "value": "20㎛"
+                        },
+                        {
+                            "label": "DAYLIGHT",
+                            "value": "100mm"
+                        },
+                        {
+                            "label": "PRESS POWER",
+                            "value": "Max. 1200 ton"
+                        },
+                        {
+                            "label": "VACUUM",
+                            "value": "Max. 30 Torr"
+                        },
+                        {
+                            "label": "TEMPERATURE CONTROL",
+                            "value": "Standard Gap : ± 2℃ / Platen Temp : Max. 250℃"
+                        },
+                        {
+                            "label": "CONTROL SYSTEM",
+                            "value": "PLC SYSTEM"
+                        }
+                    ],
+                    "features": [
+                        "FULL AUTOMATIC SYSTEM",
+                        "MONITORING & MULTI CONTROL",
+                        "SUS, Mesh, Product, Cushion Pad, Top platen Stacking and Separators",
+                        "SUS Platen Washing Unit",
+                        "Product cutter"
+                    ],
+                    "options": [
+                        "Carrier & Wear Plate (ex SUS, AL)",
+                        "Lay-Out Change",
+                        "Order Made"
+                    ]
+                },
+                "multi_vacuum": {
+                    "name": "MULTI VACUUM HOT PRESS",
+                    "subtitle": "Versatile Vacuum Press for Various Applications",
+                    "desc": "Multi-purpose vacuum hot press supporting both hot and cold press operations with auto loader/stacker integration.",
+                    "specs": [
+                        {
+                            "label": "PLATEN SIZE",
+                            "value": "700 ~ 1350 X 800 ~ 1650 X 45 ~ 50 (mm)"
+                        },
+                        {
+                            "label": "OPENING",
+                            "value": "6 ~ 12"
+                        },
+                        {
+                            "label": "THICKNESS DEVIATION",
+                            "value": "20mm"
+                        },
+                        {
+                            "label": "DAYLIGHT",
+                            "value": "80 ~ 120mm"
+                        },
+                        {
+                            "label": "PRESS POWER",
+                            "value": "250 ~ 950 Ton"
+                        },
+                        {
+                            "label": "VACUUM",
+                            "value": "10 ~ 30 Torr"
+                        },
+                        {
+                            "label": "TEMP CONTROL",
+                            "value": "Gap ± 2℃ / Max. 250℃"
+                        },
+                        {
+                            "label": "CONTROL SYSTEM",
+                            "value": "PLC / Touch Screen"
+                        }
+                    ],
+                    "features": [
+                        "HOT PRESS + COLD PRESS + AUTO LOADER & STACKER",
+                        "Automatic Carrier Separation and Loading",
+                        "Programmable Cycle Operations",
+                        "Forming LED substrates"
+                    ],
+                    "options": [
+                        "FULL AUTOMATIC SYSTEM",
+                        "MONITORING & MULTI CONTROL",
+                        "SUS PLATE SEPARATOR",
+                        "LAY-OUT CHANGE",
+                        "ORDER MADE"
+                    ]
+                },
+                "high_temper": {
+                    "name": "HIGH TEMPER VACUUM HOT PRESS",
+                    "subtitle": "High Temperature & High Vacuum Specialist",
+                    "desc": "Suitable for adhesion of Teflon series materials under high temperature and vacuum conditions. Features precise temperature and pressure control.",
+                    "specs": [
+                        {
+                            "label": "PLATEN SIZE",
+                            "value": "500 X 500 X 60 (mm)"
+                        },
+                        {
+                            "label": "THICKNESS DEVIATION",
+                            "value": "20 ㎛"
+                        },
+                        {
+                            "label": "PRESS POWER",
+                            "value": "Max. 200 ton"
+                        },
+                        {
+                            "label": "VACUUM",
+                            "value": "Max. 10¯³ Torr"
+                        },
+                        {
+                            "label": "TEMP CONTROL",
+                            "value": "Gap ± 2℃ / Max. 500℃"
+                        },
+                        {
+                            "label": "HEATING TYPE",
+                            "value": "ELECTRIC HEATING"
+                        }
+                    ],
+                    "features": [
+                        "Temperature & Vacuum Monitoring System",
+                        "Data Management & Content Analysis",
+                        "High Vacuum Capability",
+                        "Electric Heating Elements"
+                    ],
+                    "options": [
+                        "Vacuum Pump Upgrade",
+                        "Data Logger Integration",
+                        "Safety Shielding",
+                        "Order Made"
+                    ]
+                },
+                "electric_heater": {
+                    "name": "ELECTRIC HEATER VHP",
+                    "subtitle": "Compact Electric Heater Vacuum Hot Press",
+                    "desc": "Laminating equipment for FPCB & PCB using electric heater plates. Boiler-free simple structure with built-in auto cooling.",
+                    "specs": [
+                        {
+                            "label": "PLATEN SIZE",
+                            "value": "760 X 760 X 60 (mm)"
+                        },
+                        {
+                            "label": "OPENING",
+                            "value": "4-6"
+                        },
+                        {
+                            "label": "DAYLIGHT",
+                            "value": "80 ~ 100"
+                        },
+                        {
+                            "label": "PRESS POWER",
+                            "value": "200 ton"
+                        },
+                        {
+                            "label": "VACUUM",
+                            "value": "Max. 1 Torr"
+                        },
+                        {
+                            "label": "TEMP CONTROL",
+                            "value": "Gap ±3°C / Max. 300°C"
+                        },
+                        {
+                            "label": "CONTROL SYSTEM",
+                            "value": "Touch Screen (Auto Program)"
+                        }
+                    ],
+                    "features": [
+                        "Electric Plate Heating (No Boiler)",
+                        "Auto Cooling System",
+                        "Compact Structure",
+                        "Digital Touch Control"
+                    ],
+                    "options": [
+                        "PC CONTROL SYSTEM",
+                        "CARRIER & WEAR PLATE (EX SUS, AL)",
+                        "ROBOT CAR",
+                        "ORDER MADE"
+                    ]
+                }
+            }
+        },
+        "polishing": {
+            "title": "POLISHING LINE",
+            "subtitle": "State-of-the-art Surface Finishing Solutions.\nPrecision Polishing and Grinding for Coils and Sheets.",
+            "products": {
+                "coil_polishing": {
+                    "name": "COIL POLISHING LINE",
+                    "subtitle": "High-Precision Surface Finishing for Metal Coils",
+                    "desc": "Advanced coil polishing system designed for stainless steel, aluminum, and steel coils. Features auto program control and precise belt tracking for consistent high-quality finishes.",
+                    "specs": [
+                        {
+                            "label": "DRUM DIA",
+                            "value": "Ø360 (No.4 Machine Criteria)"
+                        },
+                        {
+                            "label": "MAIN MOTOR",
+                            "value": "45 kw"
+                        },
+                        {
+                            "label": "BELT SIZE",
+                            "value": "Min. 640mm ~ Max. 1,600mm (W) x 3200mm (L)"
+                        },
+                        {
+                            "label": "WORKING WIDTH",
+                            "value": "Min. 600mm ~ Max. 1,600mm (±5%)"
+                        },
+                        {
+                            "label": "THICKNESS (SUS)",
+                            "value": "0.3mm ~ 2mm"
+                        },
+                        {
+                            "label": "THICKNESS (AL)",
+                            "value": "0.3mm ~ 3mm"
+                        },
+                        {
+                            "label": "THREADING SPEED",
+                            "value": "Max 40 mpm"
+                        },
+                        {
+                            "label": "CONTROL SYSTEM",
+                            "value": "PLC + HMI Touch Screen"
+                        }
+                    ],
+                    "features": [
+                        "Uncoiler & Recoiler",
+                        "Welding Machine",
+                        "Bottom & Top Polishing Machine",
+                        "Buff Brush / Hair Line / Brushing",
+                        "Wash & Dry System",
+                        "Product Inspection Table"
+                    ],
+                    "options": [
+                        "Sludge Treatment & Recycle System",
+                        "Auto Tracking System",
+                        "Custom Belt Configurations"
+                    ]
+                },
+                "coil_grinding": {
+                    "name": "COIL GRINDING LINE",
+                    "subtitle": "Heavy-Duty Surface Grinding for Steel Coils",
+                    "desc": "Robust grinding machine for steel coil surfaces. Features adjustable sandbelt rotation, coil transfer speed, and sanding load. Uses water-soluble oil for safety and efficiency.",
+                    "specs": [
+                        {
+                            "label": "WORKING WIDTH",
+                            "value": "600mm ~ 1,300mm"
+                        },
+                        {
+                            "label": "WORKING THICKNESS",
+                            "value": "0.25 ~ 8.0mm ±10%"
+                        },
+                        {
+                            "label": "WORKING SPEED",
+                            "value": "5 ~ 20 mpm"
+                        },
+                        {
+                            "label": "DRUM DIA",
+                            "value": "Inner Ø610mm / Out Ø900~1,200mm"
+                        },
+                        {
+                            "label": "MAIN MOTOR",
+                            "value": "110kw, 90kw"
+                        },
+                        {
+                            "label": "OSCILLATION",
+                            "value": "Smooth Operation System"
+                        },
+                        {
+                            "label": "CONTROL SYSTEM",
+                            "value": "Auto Program Control Touch Screen"
+                        },
+                        {
+                            "label": "BELT TRACKING",
+                            "value": "Pneumatic Sensor Control"
+                        }
+                    ],
+                    "features": [
+                        "Washing & Drying System (Electric Clutch)",
+                        "Pinching Unit",
+                        "Welding Machine",
+                        "Recoiler Machine",
+                        "Air Knife & Ring Blower Dryer"
+                    ],
+                    "options": [
+                        "Safety Fire Suppression System",
+                        "Custom Drum Configurations",
+                        "Advanced Oscillation Control"
+                    ]
+                },
+                "sheet_polishing": {
+                    "name": "SHEET POLISHING LINE",
+                    "subtitle": "Automated Sheet Polishing with Tape Shaft Technology",
+                    "desc": "Versatile sheet polishing line utilizing tape shafts for easy roll replacement. Supports Buff Wheel or Scotch Brite with variable pressure control and double dust collection.",
+                    "specs": [
+                        {
+                            "label": "WORK WIDTH",
+                            "value": "Max 1300mm"
+                        },
+                        {
+                            "label": "POLISHING SPEED",
+                            "value": "Max 2000rpm"
+                        },
+                        {
+                            "label": "WORK SPEED",
+                            "value": "Max 8M/min"
+                        },
+                        {
+                            "label": "MAIN MOTOR",
+                            "value": "37Kw / 45Kw"
+                        },
+                        {
+                            "label": "OSCILLATION UNIT",
+                            "value": "2.2 Kw"
+                        },
+                        {
+                            "label": "DUST COLLECTION",
+                            "value": "Double Nozzle System"
+                        },
+                        {
+                            "label": "CENTERING",
+                            "value": "Load/Unload Conveyor Device"
+                        }
+                    ],
+                    "features": [
+                        "Tape Shaft Roll System",
+                        "Buff Wheel / Scotch Brite Support",
+                        "Sheet End Escape Device (Billy Plate Up/Down)",
+                        "Clean Roll for Optic Back Removal",
+                        "Variable Oscillation Speed Control"
+                    ],
+                    "options": [
+                        "Dressing Machine",
+                        "Automatic Polish Application Device",
+                        "Clean Roll System"
+                    ]
+                }
+            }
+        },
+        "semiconductor": {
+            "title": "SEMICONDUCTOR EQUIPMENT",
+            "subtitle": "Advanced Chemical Polishing & Precision Slicing Technology.\nEnsuring the Highest Yield and Accuracy for Wafer Processing.",
+            "products": {
+                "chemical_polishing": {
+                    "name": "CHEMICAL POLISHING MACHINE",
+                    "subtitle": "High-Performance Wafer Polishing Solution",
+                    "desc": "Advanced chemical polishing system focusing on productivity and precision. Features simultaneous 4-head operation and multi-stage pressure control for optimal wafer surface processing.",
+                    "specs": [
+                        {
+                            "label": "WORKING SIZE",
+                            "value": "Max. Dia 400mm * 4"
+                        },
+                        {
+                            "label": "PRESSURE",
+                            "value": "Max. 400kg (1 Head) * 4 Head"
+                        },
+                        {
+                            "label": "TURN TABLE SIZE",
+                            "value": "Ø1300"
+                        },
+                        {
+                            "label": "TURN TABLE SPEED",
+                            "value": "Max. 60 rpm (Main motor: 22kw)"
+                        },
+                        {
+                            "label": "OSCILLATION",
+                            "value": "Max. 30 rpm (Motor: 5.5kw)"
+                        },
+                        {
+                            "label": "PRESSURE CONTROL",
+                            "value": "Multistage Control (20 Step)"
+                        },
+                        {
+                            "label": "CONTROL SYSTEM",
+                            "value": "Touch Screen + PLC (HMI System)"
+                        }
+                    ],
+                    "features": [
+                        "4 Head Simultaneous Operation",
+                        "Included Productivity System",
+                        "Multi Stage Pressure Control",
+                        "Stroke 30~80mm Oscillation",
+                        "Turn Table Cooling System",
+                        "Automatic Slurry Supply"
+                    ],
+                    "options": [
+                        "Data Logging System",
+                        "Custom Slurry Mixers",
+                        "Remote Monitoring"
+                    ]
+                },
+                "lapping_machine": {
+                    "name": "LAPPING MACHINE",
+                    "subtitle": "Precision Surface Lapping for Semiconductors",
+                    "desc": "Designed for high-intensity quality production with a reusable casting turn table. Offers excellent workability and superior quality surface finishing for semiconductor materials.",
+                    "specs": [
+                        {
+                            "label": "WORKING SIZE",
+                            "value": "Max. Dia 400mm * 1"
+                        },
+                        {
+                            "label": "PRESSURE",
+                            "value": "Max. 100kg (1 Head) * 1 Head"
+                        },
+                        {
+                            "label": "TURN TABLE SIZE",
+                            "value": "Ø1000"
+                        },
+                        {
+                            "label": "TURN TABLE SPEED",
+                            "value": "Max. 30 rpm (Main motor: 5.5kw)"
+                        },
+                        {
+                            "label": "OSCILLATION",
+                            "value": "Max. 30 rpm (Motor: 2.2kw)"
+                        },
+                        {
+                            "label": "PRESSURE CONTROL",
+                            "value": "Regulator Control"
+                        },
+                        {
+                            "label": "CONTROL SYSTEM",
+                            "value": "Touch Screen + PLC (HMI System)"
+                        }
+                    ],
+                    "features": [
+                        "High Intensity Casting Turn Table",
+                        "Reusable Table after Polishing",
+                        "Automatic Slurry Supply System",
+                        "Stroke 30~80mm Oscillation",
+                        "Excellent Workability Structure"
+                    ],
+                    "options": [
+                        "Advanced Pressure Regulators",
+                        "Cooling Units",
+                        "Safety Enclosures"
+                    ]
+                },
+                "wire_saw_600n": {
+                    "name": "MULTI WIRE SAW 600N",
+                    "subtitle": "Heavy Duty Vertical Precision Slicing",
+                    "desc": "Robust vertical wire saw designed for heavy-duty ingot slicing. Features a solid structure with a vertical bobbin installation and a both-side loading method for maximum stability.",
+                    "specs": [
+                        {
+                            "label": "WORKING SIZE",
+                            "value": "Max. 700x700x700 mm"
+                        },
+                        {
+                            "label": "ROLL TYPE",
+                            "value": "4-Roll System"
+                        },
+                        {
+                            "label": "PRODUCT DIA",
+                            "value": "Max. ø700mm"
+                        },
+                        {
+                            "label": "DOOR TYPE",
+                            "value": "Slide Door"
+                        },
+                        {
+                            "label": "UP-DOWN SLIDE",
+                            "value": "Precision ±0.02mm"
+                        },
+                        {
+                            "label": "SPINDLE SPEED",
+                            "value": "Max. 1500rpm"
+                        },
+                        {
+                            "label": "SLICE DISTANCE",
+                            "value": "0.05mm precision"
+                        },
+                        {
+                            "label": "POWER",
+                            "value": "380V / 60Hz"
+                        }
+                    ],
+                    "features": [
+                        "Solid Heavy Duty Structure",
+                        "Both-Side Loading Method",
+                        "Vertical Bobbin Installation",
+                        "Efficient Sludge Rear Arrangement",
+                        "PLC + Touch Screen Control"
+                    ],
+                    "options": [
+                        "Diamond Wire Kit",
+                        "Advanced Tension Control",
+                        "Coolant Filtration System"
+                    ]
+                },
+                "wire_saw_600s": {
+                    "name": "MULTI WIRE SAW 600S",
+                    "subtitle": "Compact & Efficient Horizontal Wire Saw",
+                    "desc": "Space-saving horizontal wire saw ideal for precision cutting. Features an easy-to-clean sludge design and a user-friendly horizontal bobbin layout.",
+                    "specs": [
+                        {
+                            "label": "WORKING SIZE",
+                            "value": "Max. 600x600x500 mm"
+                        },
+                        {
+                            "label": "ROLL TYPE",
+                            "value": "4-Roll System"
+                        },
+                        {
+                            "label": "PRODUCT DIA",
+                            "value": "Max. ø600mm"
+                        },
+                        {
+                            "label": "DOOR TYPE",
+                            "value": "Slide Door"
+                        },
+                        {
+                            "label": "UP-DOWN SLIDE",
+                            "value": "Precision ±0.02mm"
+                        },
+                        {
+                            "label": "SPINDLE SPEED",
+                            "value": "Max. 1500rpm"
+                        },
+                        {
+                            "label": "SLICE DISTANCE",
+                            "value": "Under 0.04mm"
+                        },
+                        {
+                            "label": "POWER",
+                            "value": "380V / 60Hz"
+                        }
+                    ],
+                    "features": [
+                        "Small Space Utilization Design",
+                        "Horizontal Bobbin Type",
+                        "Easy Sludge Cleaning Structure",
+                        "User-Friendly Operation",
+                        "High Precision Slicing"
+                    ],
+                    "options": [
+                        "Compacted Coolant System",
+                        "Wire Break Detection",
+                        "Order Made Fixtures"
+                    ]
+                }
+            }
+        },
+        "fiber": {
+            "title": "FIBER OPTICS EQUIPMENT",
+            "subtitle": "Next-Generation Optical Fiber Manufacturing.\nPrecision VAD Technology for High-Quality Preforms.",
+            "products": {
+                "core_equipment": {
+                    "name": "VAD CORE EQUIPMENT (IRD)",
+                    "subtitle": "Advanced VAD Method for ZWPF & Enhanced BIF",
+                    "desc": "State-of-the-art Vapor Phase Axial Deposition (VAD) equipment for manufacturing optical fiber preforms. Designed for Zero Water Peak Fiber (ZWPF) and Bend-Insensitive Fiber (BIF) production with high precision process control.",
+                    "specs": [
+                        {
+                            "label": "FRAME HEIGHT",
+                            "value": "12m"
+                        },
+                        {
+                            "label": "CHAMBER MATERIAL",
+                            "value": "Hastelloy Chamber"
+                        },
+                        {
+                            "label": "FRAME TYPE",
+                            "value": "Steel Frame Construction"
+                        },
+                        {
+                            "label": "CHEMICALS & GASES",
+                            "value": "SiCl4, GeCl4, CF4, H2, O2, N2"
+                        },
+                        {
+                            "label": "CLEAN CLASS",
+                            "value": "Class 10,000"
+                        },
+                        {
+                            "label": "CAPACITY",
+                            "value": "2 M-fkm/year"
+                        },
+                        {
+                            "label": "ALIGNMENT",
+                            "value": "Precision Torch Alignment System"
+                        },
+                        {
+                            "label": "DELIVERY SYSTEM",
+                            "value": "Advanced Gas & Vapor Delivery"
+                        }
+                    ],
+                    "features": [
+                        "VAD Method Implementation",
+                        "ZWPF (Zero Water Peak Fiber) Capability",
+                        "Enhanced BIF (Bend Insensitive Fiber A2, B3)",
+                        "Integrated Torch Alignment System",
+                        "High-Throughput Gas Delivery"
+                    ],
+                    "options": [
+                        "Process Automation Suite",
+                        "Real-time Preform Monitoring",
+                        "Custom Gas Mixing Systems"
+                    ]
+                }
+            }
+        }
     }
 }

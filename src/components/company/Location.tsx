@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const Location = () => {
+    const { t } = useTranslation();
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -10,9 +13,9 @@ export const Location = () => {
             className="max-w-6xl mx-auto py-12 px-6"
         >
             <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">오시는 길</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">{t('header.submenu.location')}</h2>
                 <div className="w-20 h-1 bg-primary mx-auto"></div>
-                <p className="mt-4 text-gray-600">IST KOREA 본사 및 공장 위치를 안내해 드립니다.</p>
+                <p className="mt-4 text-gray-600">{t('company_page.location.desc')}</p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -35,8 +38,8 @@ export const Location = () => {
                 <div className="space-y-8">
                     <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 h-full flex flex-col justify-center">
                         <div className="mb-8">
-                            <h3 className="text-2xl font-bold text-gray-900 mb-2">(주)아이에스티코리아</h3>
-                            <p className="text-gray-500">본사 및 1공장</p>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-2">{t('company_page.location.name')}</h3>
+                            <p className="text-gray-500">{t('company_page.location.subname')}</p>
                         </div>
 
                         <div className="space-y-6">
@@ -45,10 +48,9 @@ export const Location = () => {
                                     <MapPin size={24} />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-gray-900 mb-1">주소</h4>
+                                    <h4 className="font-bold text-gray-900 mb-1">{t('company_page.location.addr_label')}</h4>
                                     <p className="text-gray-600 leading-relaxed">
-                                        경북 구미시 1공단로2길 17<br />
-                                        (공단동 264-16)
+                                        {t('header.address_detail')}
                                     </p>
                                 </div>
                             </div>
@@ -58,7 +60,7 @@ export const Location = () => {
                                     <Phone size={24} />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-gray-900 mb-1">연락처</h4>
+                                    <h4 className="font-bold text-gray-900 mb-1">{t('company_page.location.tel_label')}</h4>
                                     <p className="text-gray-600">Tel: 054-461-6608</p>
                                     <p className="text-gray-600">Fax: 054-463-6608</p>
                                 </div>
@@ -69,7 +71,7 @@ export const Location = () => {
                                     <Mail size={24} />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-gray-900 mb-1">이메일</h4>
+                                    <h4 className="font-bold text-gray-900 mb-1">{t('company_page.location.email_label')}</h4>
                                     <p className="text-gray-600">istkorea@istkorea.kr</p>
                                 </div>
                             </div>

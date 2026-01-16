@@ -9,32 +9,32 @@ export const ProductSection = () => {
     const products = [
         {
             id: 1,
-            title: "VACUUM HOT PRESS",
-            subtitle: "Advanced Press Technology",
+            title: t('product.items.item1.title'),
+            subtitle: t('product.items.item1.subtitle'),
             image: "/images/product_press_main.png"
         },
         {
             id: 2,
-            title: "CHEMICAL POLISHING",
-            subtitle: "4-Head Polishing System",
+            title: t('product.items.item2.title'),
+            subtitle: t('product.items.item2.subtitle'),
             image: "/images/product_chemical_polishing.png"
         },
         {
             id: 3,
-            title: "STEP POLISHING",
-            subtitle: "Precision Finishing",
+            title: t('product.items.item3.title'),
+            subtitle: t('product.items.item3.subtitle'),
             image: "/images/product_step_polishing.png"
         },
         {
             id: 4,
-            title: "LAPPING MACHINE",
-            subtitle: "High Intensity Polishing",
+            title: t('product.items.item4.title'),
+            subtitle: t('product.items.item4.subtitle'),
             image: "/images/product_lapping.png"
         },
         {
             id: 5,
-            title: "MULTI WIRE SAW",
-            subtitle: "Semiconductor Slicing",
+            title: t('product.items.item5.title'),
+            subtitle: t('product.items.item5.subtitle'),
             image: "/images/product_wiresaw.png"
         }
     ];
