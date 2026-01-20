@@ -914,5 +914,32 @@
                 "content": "Members shall not engage in the following acts.\n1. Registration of false information when applying or changing\n2. Theft of others' information\n3. Change of information posted by the Company\n4. Transmission or posting of information (computer programs, etc.) other than information set by the Company"
             }
         ]
+    },
+    "footer": {
+        "menu": {
+            "company": "Company",
+            "products": "Products",
+            "business": "Business",
+            "careers": "Careers"
+        },
+        "info": {
+            "company_name": "IST Korea Co., Ltd.",
+            "ceo_label": "CEO",
+            "ceo_name": "Byung-Cheol Geum",
+            "reg_no_label": "Registration No.",
+            "reg_no": "513-81-55413",
+            "address_label": "Address",
+            "address": "17, 1gongdan-ro 2-gil, Gumi-si, Gyeongsangbuk-do, Korea",
+            "tel_label": "Tel",
+            "tel": "+82-54-461-6608",
+            "fax_label": "Fax",
+            "fax": "+82-54-463-6608",
+            "copyright": "Copyright ⓒ istkorea. All rights reserved."
+        },
+        "links": {
+            "privacy": "Privacy Policy",
+            "terms": "Terms of Service",
+            "admin": "Admin"
+        }
     }
 }

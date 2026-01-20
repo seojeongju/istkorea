@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Users, Briefcase, Settings, Target, Globe, PenTool, Cpu, Wrench, ShieldCheck, Headphones } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 // Using any for icon type to avoid strict TypeScript mismatch with Lucide icons in this specific setup
 const Card = ({ title, role, icon: Icon, type = "default", index = 0 }: { title: string, role?: string, icon?: any, type?: "ceo" | "division" | "team" | "default", index?: number }) => {
@@ -69,6 +70,8 @@ const Card = ({ title, role, icon: Icon, type = "default", index = 0 }: { title:
 };
 
 export const Organization = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="max-w-7xl mx-auto py-16 px-6 bg-gray-50/50 min-h-screen">
             <motion.div
@@ -78,18 +81,17 @@ export const Organization = () => {
                 className="text-center mb-20"
             >
                 <span className="text-primary font-bold tracking-wider text-sm uppercase mb-2 block">Organization Chart</span>
-                <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">조직도</h2>
+                <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">{t('company_page.organization.title')}</h2>
                 <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
-                <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">
-                    체계적인 조직 시스템과 전문 인력을 바탕으로 <br className="hidden md:block" />
-                    고객 가치 창출을 위해 끊임없이 노력하고 있습니다.
+                <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg whitespace-pre-line">
+                    {t('company_page.organization.desc')}
                 </p>
             </motion.div>
 
             <div className="flex flex-col items-center relative">
                 {/* Level 1: CEO */}
                 <div className="relative mb-12">
-                    <Card title="대표이사" role="CEO" type="ceo" />
+                    <Card title={t('company_page.organization.cards.ceo')} role={t('company_page.organization.role_ceo')} type="ceo" />
                     <div className="absolute -bottom-12 left-1/2 w-px h-12 bg-gray-300 -translate-x-1/2"></div>
                 </div>
 
@@ -104,16 +106,16 @@ export const Organization = () => {
                             {/* Vertical line from top horizontal line to card */}
                             <div className="hidden md:block h-8 w-px bg-gray-300 mb-0"></div>
 
-                            <Card title="경영지원본부" type="division" icon={Briefcase} index={1} />
+                            <Card title={t('company_page.organization.cards.div_mgmt')} type="division" icon={Briefcase} index={1} />
 
                             {/* Connector to children */}
                             <div className="h-8 w-px bg-gray-300 mt-0"></div>
 
                             {/* Children */}
                             <div className="w-full space-y-3 px-4 md:px-8">
-                                <Card title="기획팀" index={2} icon={Target} />
-                                <Card title="재무/인사" index={3} icon={Users} />
-                                <Card title="총무" index={4} icon={Settings} />
+                                <Card title={t('company_page.organization.cards.team_plan')} index={2} icon={Target} />
+                                <Card title={t('company_page.organization.cards.team_fin')} index={3} icon={Users} />
+                                <Card title={t('company_page.organization.cards.team_gen')} index={4} icon={Settings} />
                             </div>
                         </div>
 
@@ -121,15 +123,15 @@ export const Organization = () => {
                         <div className="flex flex-col items-center relative">
                             <div className="hidden md:block h-8 w-px bg-gray-300 mb-0"></div>
 
-                            <Card title="기술연구소 / 영업" type="division" icon={PenTool} index={5} />
+                            <Card title={t('company_page.organization.cards.div_rnd')} type="division" icon={PenTool} index={5} />
 
                             <div className="h-8 w-px bg-gray-300 mt-0"></div>
 
                             <div className="w-full space-y-3 px-4 md:px-8">
-                                <Card title="국내영업" index={6} icon={Briefcase} />
-                                <Card title="해외영업" index={7} icon={Globe} />
-                                <Card title="R&D 개발" index={8} icon={Cpu} />
-                                <Card title="설계팀" index={9} icon={PenTool} />
+                                <Card title={t('company_page.organization.cards.team_dom')} index={6} icon={Briefcase} />
+                                <Card title={t('company_page.organization.cards.team_ovs')} index={7} icon={Globe} />
+                                <Card title={t('company_page.organization.cards.team_rnd')} index={8} icon={Cpu} />
+                                <Card title={t('company_page.organization.cards.team_des')} index={9} icon={PenTool} />
                             </div>
                         </div>
 
@@ -137,16 +139,16 @@ export const Organization = () => {
                         <div className="flex flex-col items-center relative">
                             <div className="hidden md:block h-8 w-px bg-gray-300 mb-0"></div>
 
-                            <Card title="생산본부" type="division" icon={Wrench} index={10} />
+                            <Card title={t('company_page.organization.cards.div_prod')} type="division" icon={Wrench} index={10} />
 
                             <div className="h-8 w-px bg-gray-300 mt-0"></div>
 
                             <div className="w-full space-y-3 px-4 md:px-8">
-                                <Card title="생산관리" index={11} icon={Settings} />
-                                <Card title="제조 1팀" index={12} icon={Wrench} />
-                                <Card title="제조 2팀" index={13} icon={Wrench} />
-                                <Card title="품질관리(QC)" index={14} icon={ShieldCheck} />
-                                <Card title="CS팀" index={15} icon={Headphones} />
+                                <Card title={t('company_page.organization.cards.team_pm')} index={11} icon={Settings} />
+                                <Card title={t('company_page.organization.cards.team_mfg1')} index={12} icon={Wrench} />
+                                <Card title={t('company_page.organization.cards.team_mfg2')} index={13} icon={Wrench} />
+                                <Card title={t('company_page.organization.cards.team_qc')} index={14} icon={ShieldCheck} />
+                                <Card title={t('company_page.organization.cards.team_cs')} index={15} icon={Headphones} />
                             </div>
                         </div>
                     </div>

@@ -914,5 +914,32 @@
                 "content": "회원은 다음 행위를 하여서는 안 됩니다.\n1. 신청 또는 변경 시 허위 내용의 등록\n2. 타인의 정보 도용\n3. 회사가 게시한 정보의 변경\n4. 회사가 정한 정보 이외의 정보(컴퓨터 프로그램 등)의 송신 또는 게시"
             }
         ]
+    },
+    "footer": {
+        "menu": {
+            "company": "회사소개",
+            "products": "제품소개",
+            "business": "사업소개",
+            "careers": "인재채용"
+        },
+        "info": {
+            "company_name": "(주)아이에스티코리아",
+            "ceo_label": "대표이사",
+            "ceo_name": "금병철",
+            "reg_no_label": "사업자등록번호",
+            "reg_no": "513-81-55413",
+            "address_label": "주소",
+            "address": "경북 구미시 1공단로2길 17 (공단동)",
+            "tel_label": "전화",
+            "tel": "054-461-6608",
+            "fax_label": "팩스",
+            "fax": "054-463-6608",
+            "copyright": "Copyright ⓒ istkorea. All rights reserved."
+        },
+        "links": {
+            "privacy": "개인정보처리방침",
+            "terms": "이용약관",
+            "admin": "관리자"
+        }
     }
 }
