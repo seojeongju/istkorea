@@ -49,19 +49,36 @@ export const ProductSection = () => {
     return (
         <section id="product_area" className="py-24 bg-white relative">
             <div className="container mx-auto px-6">
-                <div className="flex justify-between items-end mb-16">
-                    <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <h2 className="text-4xl font-bold text-gray-900 tracking-wide">
-                            {t('product.title')} <span className="text-accent">.</span>
-                        </h2>
-                    </motion.div>
+                <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                    <div className="flex flex-col gap-4">
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <h2 className="text-4xl font-bold text-gray-900 tracking-wide">
+                                {t('product.title')} <span className="text-accent">.</span>
+                            </h2>
+                        </motion.div>
 
-                    <button className="hidden md:flex items-center justify-center w-12 h-12 rounded-full border border-gray-200 hover:bg-primary hover:border-primary hover:text-white transition-all duration-300">
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                        >
+                            <Link to="/support/inquiry" className="inline-flex items-center gap-2 group bg-blue-50 hover:bg-blue-100 px-5 py-3 rounded-lg border border-blue-100 transition-all shadow-sm hover:shadow-md">
+                                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                                <p className="text-primary font-semibold text-base md:text-lg flex items-center gap-2">
+                                    {t('product.inquiry_notice')}
+                                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                                </p>
+                            </Link>
+                        </motion.div>
+                    </div>
+
+                    <button className="hidden md:flex items-center justify-center w-12 h-12 rounded-full border border-gray-200 hover:bg-primary hover:border-primary hover:text-white transition-all duration-300 transform hover:scale-110">
                         <Plus size={24} />
                     </button>
                 </div>
@@ -105,21 +122,7 @@ export const ProductSection = () => {
                     ))}
                 </div>
 
-                {/* Inquiry Notice Link */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.8 }}
-                    className="mt-16 text-center"
-                >
-                    <Link to="/support/inquiry" className="inline-block group">
-                        <p className="text-gray-500 text-lg hover:text-primary transition-colors flex items-center justify-center gap-2">
-                            {t('product.inquiry_notice')}
-                            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                        </p>
-                    </Link>
-                </motion.div>
+
             </div>
         </section>
     );
