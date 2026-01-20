@@ -25,7 +25,17 @@ export const Header = () => {
             ]
         },
         { title: t('header.menu.products'), href: "#product_area", isScroll: true },
-        { title: t('header.menu.business'), href: "#business_area", isScroll: true },
+        {
+            title: t('header.menu.business'),
+            href: "/business/press-line",
+            submenu: [
+                { title: t('header.submenu.press'), href: "/business/press-line" },
+                { title: t('header.submenu.polishing'), href: "/business/polishing-line" },
+                { title: t('header.submenu.semicon'), href: "/business/semiconductor" },
+                { title: t('header.submenu.fiber'), href: "/business/fiber-optics" },
+            ]
+        },
+
         {
             title: t('header.menu.support'),
             href: "/support",
@@ -100,9 +110,9 @@ export const Header = () => {
                     <div className="flex items-center gap-2 z-50">
                         {/* Logo */}
                         <Link to="/" className="block">
-                            <img 
-                                src="/images/logo.png" 
-                                alt="IST Korea" 
+                            <img
+                                src="/images/logo.png"
+                                alt="IST Korea"
                                 className="h-12 w-auto object-contain"
                             />
                         </Link>

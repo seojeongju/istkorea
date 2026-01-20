@@ -1,6 +1,6 @@
 import { Hero } from '../components/Hero';
 import { TechSection } from '../components/TechSection';
-import { BusinessSection } from '../components/BusinessSection';
+
 import { ProductSection } from '../components/ProductSection';
 import { SupportSection } from '../components/SupportSection';
 import { NewsTickerSection } from '../components/NewsTickerSection';
@@ -34,7 +34,7 @@ export const Home = () => {
         <main>
             <Hero />
             <TechSection />
-            <BusinessSection />
+
             <ProductSection />
             <NewsTickerSection />
             <SupportSection />

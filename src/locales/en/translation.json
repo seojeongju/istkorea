@@ -13,7 +13,11 @@
             "location": "Location",
             "news": "Company News",
             "inquiry": "Inquiries",
-            "careers": "Careers"
+            "careers": "Careers",
+            "press": "Press Line",
+            "polishing": "Polishing Line",
+            "semicon": "Semiconductor Equipment",
+            "fiber": "Fiber Optics"
         },
         "contact": "Contact",
         "address": "Address",
