@@ -1,6 +1,7 @@
 
 import { motion } from 'framer-motion';
-import { Plus } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Plus, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export const ProductSection = () => {
@@ -103,6 +104,22 @@ export const ProductSection = () => {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* Inquiry Notice Link */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.8 }}
+                    className="mt-16 text-center"
+                >
+                    <Link to="/support/inquiry" className="inline-block group">
+                        <p className="text-gray-500 text-lg hover:text-primary transition-colors flex items-center justify-center gap-2">
+                            {t('product.inquiry_notice')}
+                            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                        </p>
+                    </Link>
+                </motion.div>
             </div>
         </section>
     );
