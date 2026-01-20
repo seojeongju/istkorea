@@ -216,6 +216,34 @@
             "email_label": "Email"
         }
     },
+    "business_main": {
+        "title": "Multi-Wire Saw Solutions that\nElevate Precision and Productivity",
+        "intro": "IST Korea realizes high productivity and material utilization simultaneously with high-precision multi-wire saw technology optimized for cutting Silicon (Si) and SiC ingots.",
+        "what_is": {
+            "title": "What is Multi-Wire Saw?",
+            "desc1": "Multi-wire saw is a cutting technology that simultaneously slices ingots using multiple diamond wires in parallel. This can dramatically increase productivity by creating multiple wafers in the same process.",
+            "desc2": "In addition, precise tension control between wires and a multi-cutting structure result in small cutting loss (kerf) and cutting results with excellent surface quality."
+        },
+        "applications": {
+            "title": "Applications",
+            "subtitle": "Industrial Applications",
+            "items": [
+                {
+                    "title": "Semiconductor Manufacturing",
+                    "desc": "Equipment optimized for Silicon (Si) and SiC wafer slicing processes, supporting high-quality wafer production."
+                },
+                {
+                    "title": "Power Electronics / EV Industry",
+                    "desc": "SiC is spotlighted as a material for electric vehicles and inverters due to its high efficiency characteristics of power semiconductors, and multi-wire saws are also used for cutting these high value-added materials."
+                },
+                {
+                    "title": "Substrate for Optoelectronics / LED / Display",
+                    "desc": "Cutting substrates such as Sapphire and GaN is also possible with multi-wire saws, making them suitable for producing LEDs and high-frequency components."
+                }
+            ]
+        },
+        "subpages_title": "Business Areas"
+    },
     "business_pages": {
         "press": {
             "title": "PRESS LINE",

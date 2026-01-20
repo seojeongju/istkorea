@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Company } from './pages/Company';
+import { BusinessMain } from './pages/business/BusinessMain';
 import { PressLine } from './pages/business/PressLine';
 import { PolishingLine } from './pages/business/PolishingLine';
 import { Semiconductor } from './pages/business/Semiconductor';
@@ -37,6 +38,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/company" element={<Company />} />
           <Route path="/company/*" element={<Company />} />
+          <Route path="/business" element={<BusinessMain />} />
           <Route path="/business/press-line" element={<PressLine />} />
           <Route path="/business/polishing-line" element={<PolishingLine />} />
           <Route path="/business/semiconductor" element={<Semiconductor />} />

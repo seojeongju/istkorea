@@ -27,7 +27,7 @@ export const Header = () => {
         { title: t('header.menu.products'), href: "#product_area", isScroll: true },
         {
             title: t('header.menu.business'),
-            href: "/business/press-line",
+            href: "/business",
             submenu: [
                 { title: t('header.submenu.press'), href: "/business/press-line" },
                 { title: t('header.submenu.polishing'), href: "/business/polishing-line" },
