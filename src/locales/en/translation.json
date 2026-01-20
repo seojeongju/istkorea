@@ -860,5 +860,59 @@
                 }
             }
         }
+    },
+    "privacy_policy": {
+        "title": "Privacy Policy",
+        "last_updated": "Last updated: January 1, 2024",
+        "intro": "IST Korea (hereinafter referred to as the 'Company') establishes and discloses the following privacy policy in order to protect the personal information of the information subject (customer) and to handle grievances related thereto promptly and smoothly in accordance with Article 30 of the Personal Information Protection Act.",
+        "sections": [
+            {
+                "title": "1. Purpose of Processing Personal Information",
+                "content": "The Company processes personal information for the following purposes and does not use it for purposes other than the following.\n- Confirmation of customer intent to join, identification and authentication of oneself in accordance with the provision of services to customers, maintenance and management of membership qualifications, payment of amounts according to the supply of goods or services, supply and delivery of goods or services, etc."
+            },
+            {
+                "title": "2. Processing and Retention Period of Personal Information",
+                "content": "① The Company processes and retains personal information within the period of retention and use of personal information agreed upon when collecting personal information from the information subject or the period of retention and use of personal information in accordance with laws and regulations.\n② Specific personal information processing and retention periods are as follows.\n- Customer subscription and management: Until the service use contract or membership withdrawal\n- Records of contract or subscription withdrawal, payment, supply of goods, etc. in e-commerce: 5 years"
+            },
+            {
+                "title": "3. Personal Information Items Processed",
+                "content": "The Company processes the following personal information items for smooth service provision.\n- Collected items: Name, phone number, mobile phone number, email, company name, position\n- Collection method: Website, written form, telephone/fax, email"
+            },
+            {
+                "title": "4. Destruction of Personal Information",
+                "content": "The Company destroys the personal information without delay when the personal information becomes unnecessary, such as the expiration of the personal information retention period or the achievement of the processing purpose."
+            },
+            {
+                "title": "5. Chief Privacy Officer",
+                "content": "The Company designates a Chief Privacy Officer as follows to take general responsibility for personal information processing and to handle complaints and damage relief of information subjects related to personal information processing.\n\n▶ Chief Privacy Officer\n- Name: Administrator\n- Position: Management Team Leader\n- Contact: 054-461-6608, istkorea@istkorea.kr"
+            }
+        ]
+    },
+    "terms_of_service": {
+        "title": "Terms of Service",
+        "last_updated": "Last updated: January 1, 2024",
+        "intro": "These terms and conditions govern the rights, obligations and responsibilities of the Company and the user in connection with the use of the website service (hereinafter referred to as the 'Service') provided by IST Korea (hereinafter referred to as the 'Company').",
+        "sections": [
+            {
+                "title": "Article 1 (Purpose)",
+                "content": "The purpose of these Terms is to stipulate the conditions and procedures for use of internet-related services provided by the website operated by the Company, and the rights, obligations and responsibilities of users and the Company."
+            },
+            {
+                "title": "Article 2 (Definitions)",
+                "content": "1. 'Site' refers to a virtual business place set up by the Company to trade goods or services using information and communication facilities such as computers to provide goods or services to users.\n2. 'User' refers to members and non-members who access the Site and receive services provided by the Site in accordance with these Terms."
+            },
+            {
+                "title": "Article 3 (Posting and Revision of Terms)",
+                "content": "1. The Company posts the contents of these Terms, trade name, location of sales office, name of representative, business registration number, contact information, etc. on the initial service screen of the Site so that users can know them.\n2. The Company may revise these Terms to the extent that it does not violate relevant laws."
+            },
+            {
+                "title": "Article 4 (Provision and Change of Service)",
+                "content": "The Company performs the following tasks.\n1. Provision of information on goods or services and conclusion of purchase contracts\n2. Other tasks determined by the Company"
+            },
+            {
+                "title": "Article 5 (Obligations of Members)",
+                "content": "Members shall not engage in the following acts.\n1. Registration of false information when applying or changing\n2. Theft of others' information\n3. Change of information posted by the Company\n4. Transmission or posting of information (computer programs, etc.) other than information set by the Company"
+            }
+        ]
     }
 }

@@ -10,7 +10,7 @@ export const Footer = () => {
                     <div className="flex gap-8 mb-8 md:mb-0">
                         <Link to="/company" className="text-gray-600 hover:text-primary font-medium transition-colors">회사소개</Link>
                         <a href="/#product_area" className="text-gray-600 hover:text-primary font-medium transition-colors">제품소개</a>
-                        <a href="/#business_area" className="text-gray-600 hover:text-primary font-medium transition-colors">사업영역</a>
+                        <Link to="/business" className="text-gray-600 hover:text-primary font-medium transition-colors">사업소개</Link>
                         <Link to="/support/careers" className="text-gray-600 hover:text-primary font-medium transition-colors">인재채용</Link>
                     </div>
 
@@ -42,8 +42,8 @@ export const Footer = () => {
                     </div>
 
                     <div className="flex gap-6 mt-6 md:mt-0 items-center">
-                        <a href="#" className="hover:text-gray-900">개인정보처리방침</a>
-                        <a href="#" className="hover:text-gray-900">이용약관</a>
+                        <Link to="/privacy-policy" className="hover:text-gray-900">개인정보처리방침</Link>
+                        <Link to="/terms-of-service" className="hover:text-gray-900">이용약관</Link>
                         <div className="w-px h-3 bg-gray-300 mx-1"></div>
                         <Link to="/admin/login" className="flex items-center gap-1 hover:text-primary transition-colors">
                             <Lock size={12} />

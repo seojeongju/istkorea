@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { Home } from './pages/Home';
 import { Company } from './pages/Company';
 import { BusinessMain } from './pages/business/BusinessMain';
+import { PrivacyPolicy } from './pages/PrivacyPolicy';
+import { TermsOfService } from './pages/TermsOfService';
 import { PressLine } from './pages/business/PressLine';
 import { PolishingLine } from './pages/business/PolishingLine';
 import { Semiconductor } from './pages/business/Semiconductor';
@@ -45,6 +47,8 @@ function App() {
           <Route path="/business/fiber-optics" element={<FiberOptics />} />
           <Route path="/support" element={<Support />} />
           <Route path="/support/*" element={<Support />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/admin/login" element={<AdminLogin />} />
         </Route>
 
