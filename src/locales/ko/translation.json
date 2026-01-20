@@ -93,7 +93,7 @@
         "title": "PRODUCT",
         "items": {
             "item1": {
-                "title": "SiC 잉곳 & 웨이퍼",
+                "title": "SiC 절단 부분 원하는 스타일 가능",
                 "subtitle": "고정밀 절단 솔루션"
             },
             "item2": {
@@ -111,6 +111,10 @@
             "item5": {
                 "title": "멀티 와이어 쏘",
                 "subtitle": "반도체 절단"
+            },
+            "item6": {
+                "title": "잉곳",
+                "subtitle": "고순도 소재 기술"
             }
         }
     },

@@ -36,6 +36,12 @@ export const ProductSection = () => {
             title: t('product.items.item5.title'),
             subtitle: t('product.items.item5.subtitle'),
             image: "/images/product_wiresaw.png"
+        },
+        {
+            id: 6,
+            title: t('product.items.item6.title'),
+            subtitle: t('product.items.item6.subtitle'),
+            image: "/images/product_ingot.jpg"
         }
     ];
 

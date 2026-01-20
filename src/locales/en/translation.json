@@ -93,7 +93,7 @@
         "title": "PRODUCT",
         "items": {
             "item1": {
-                "title": "SiC Ingot & Wafer",
+                "title": "Custom SiC Cutting Styles Available",
                 "subtitle": "High Precision Cutting"
             },
             "item2": {
@@ -111,6 +111,10 @@
             "item5": {
                 "title": "MULTI WIRE SAW",
                 "subtitle": "Semiconductor Slicing"
+            },
+            "item6": {
+                "title": "Ingot",
+                "subtitle": "High Purity Material"
             }
         }
     },
