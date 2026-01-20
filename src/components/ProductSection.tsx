@@ -11,7 +11,7 @@ export const ProductSection = () => {
             id: 1,
             title: t('product.items.item1.title'),
             subtitle: t('product.items.item1.subtitle'),
-            image: "/images/product_press_main.png"
+            image: "/images/product_sic_cutting.png"
         },
         {
             id: 2,
