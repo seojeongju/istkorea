@@ -122,7 +122,66 @@
     "support": {
         "title": "CUSTOMER SUPPORT",
         "question": "궁금한 점이 있으신가요?",
-        "desc": "언제든지 문의해 주시면 친절히 답변 드리겠습니다."
+        "desc": "언제든지 문의해 주시면 친절히 답변 드리겠습니다.",
+        "inquiry": {
+            "title": "제품 및 기술 문의",
+            "success": {
+                "title": "문의가 접수되었습니다.",
+                "desc": "빠른 시일 내에 답변 드리겠습니다.",
+                "button": "추가 문의하기"
+            },
+            "form": {
+                "name": "이름",
+                "name_placeholder": "홍길동",
+                "email": "이메일",
+                "email_placeholder": "example@email.com",
+                "phone": "연락처",
+                "phone_placeholder": "010-0000-0000",
+                "type": "문의 유형",
+                "types": {
+                    "product": "제품 문의",
+                    "tech": "기술 지원",
+                    "recruit": "채용 문의",
+                    "other": "기타 문의"
+                },
+                "content": "문의 내용",
+                "content_placeholder": "문의하실 내용을 상세히 적어주세요.",
+                "submit": "문의하기"
+            }
+        },
+        "careers": {
+            "title": "인재채용",
+            "desc": "IST KOREA와 함께 미래를 선도할 열정적인 인재를 기다립니다.",
+            "values": {
+                "creative": {
+                    "title": "창의적 사고",
+                    "desc": "기존의 틀을 깨고 새로운 가치를 창출하는 인재"
+                },
+                "challenge": {
+                    "title": "도전 정신",
+                    "desc": "실패를 두려워하지 않고 목표를 향해 끊임없이 도전하는 인재"
+                },
+                "professional": {
+                    "title": "전문성",
+                    "desc": "자신의 분야에서 최고가 되기 위해 노력하는 프로페셔널"
+                }
+            },
+            "list": {
+                "title": "진행중인 채용 공고",
+                "deadline": "마감일",
+                "detail": "상세보기",
+                "empty": "현재 진행중인 채용 공고가 없습니다."
+            },
+            "detail": {
+                "close": "닫기",
+                "empty_content": "상세 내용이 없습니다."
+            },
+            "always": {
+                "title": "상시 채용 진행중",
+                "desc": "당신의 열정과 능력을 펼칠 기회를 잡으세요.",
+                "button": "지원하기"
+            }
+        }
     },
     "company_page": {
         "title": "회사 소개",

@@ -2,10 +2,18 @@ import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { storage, type CareerItem } from '../../services/storage'; // Fix import type
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const Careers = () => {
+    const { t } = useTranslation();
     const activeCareers = storage.getCareers().filter(c => c.status === 'open');
     const [selectedCareer, setSelectedCareer] = useState<CareerItem | null>(null);
+
+    const coreValues = [
+        { key: 'creative', icon: CheckCircle2 },
+        { key: 'challenge', icon: CheckCircle2 },
+        { key: 'professional', icon: CheckCircle2 },
+    ];
 
     return (
         <motion.div
@@ -14,28 +22,26 @@ export const Careers = () => {
             transition={{ duration: 0.5 }}
         >
             <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">인재채용</h2>
-                <p className="text-lg text-gray-600">IST KOREA와 함께 미래를 선도할 열정적인 인재를 기다립니다.</p>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">{t('support.careers.title')}</h2>
+                <p className="text-lg text-gray-600">{t('support.careers.desc')}</p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 mb-16">
-                {['창의적 사고', '도전 정신', '전문성'].map((item, idx) => (
+                {coreValues.map((item, idx) => (
                     <div key={idx} className="bg-gray-50 p-8 rounded-2xl text-center hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100">
                         <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <CheckCircle2 className="text-primary w-8 h-8" />
+                            <item.icon className="text-primary w-8 h-8" />
                         </div>
-                        <h3 className="text-xl font-bold mb-3">{item}</h3>
+                        <h3 className="text-xl font-bold mb-3">{t(`support.careers.values.${item.key}.title`)}</h3>
                         <p className="text-gray-500 break-keep">
-                            {item === '창의적 사고' && '기존의 틀을 깨고 새로운 가치를 창출하는 인재'}
-                            {item === '도전 정신' && '실패를 두려워하지 않고 목표를 향해 끊임없이 도전하는 인재'}
-                            {item === '전문성' && '자신의 분야에서 최고가 되기 위해 노력하는 프로페셔널'}
+                            {t(`support.careers.values.${item.key}.desc`)}
                         </p>
                     </div>
                 ))}
             </div>
 
             <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm mb-12">
-                <h3 className="text-2xl font-bold mb-6">진행중인 채용 공고</h3>
+                <h3 className="text-2xl font-bold mb-6">{t('support.careers.list.title')}</h3>
                 {activeCareers.length > 0 ? (
                     <div className="grid gap-4">
                         {activeCareers.map((career) => (
@@ -48,12 +54,12 @@ export const Careers = () => {
                                     <h4 className="text-xl font-bold">{career.title}</h4>
                                 </div>
                                 <div className="mt-4 md:mt-0 flex items-center gap-4">
-                                    <span className="text-sm text-gray-500">마감일: {career.deadline}</span>
+                                    <span className="text-sm text-gray-500">{t('support.careers.list.deadline')}: {career.deadline}</span>
                                     <button
                                         onClick={() => setSelectedCareer(career)}
                                         className="bg-gray-900 text-white px-6 py-2 rounded-lg font-medium hover:bg-gray-800 transition-colors"
                                     >
-                                        상세보기
+                                        {t('support.careers.list.detail')}
                                     </button>
                                 </div>
                             </div>
@@ -61,7 +67,7 @@ export const Careers = () => {
                     </div>
                 ) : (
                     <div className="text-center py-12 text-gray-500">
-                        현재 진행중인 채용 공고가 없습니다.
+                        {t('support.careers.list.empty')}
                     </div>
                 )}
             </div>
@@ -78,14 +84,14 @@ export const Careers = () => {
                             <button onClick={() => setSelectedCareer(null)} className="text-gray-400 hover:text-gray-900 p-2">✕</button>
                         </div>
                         <div className="p-8 overflow-y-auto prose max-w-none">
-                            <div dangerouslySetInnerHTML={{ __html: selectedCareer.content || '<p>상세 내용이 없습니다.</p>' }} />
+                            <div dangerouslySetInnerHTML={{ __html: selectedCareer.content || `<p>${t('support.careers.detail.empty_content')}</p>` }} />
                         </div>
                         <div className="p-6 border-t border-gray-100 flex justify-end bg-gray-50">
                             <button
                                 onClick={() => setSelectedCareer(null)}
                                 className="px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800"
                             >
-                                닫기
+                                {t('support.careers.detail.close')}
                             </button>
                         </div>
                     </div>
@@ -95,11 +101,11 @@ export const Careers = () => {
             <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
                 <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
                     <div>
-                        <h3 className="text-2xl font-bold mb-2">상시 채용 진행중</h3>
-                        <p className="text-gray-400">당신의 열정과 능력을 펼칠 기회를 잡으세요.</p>
+                        <h3 className="text-2xl font-bold mb-2">{t('support.careers.always.title')}</h3>
+                        <p className="text-gray-400">{t('support.careers.always.desc')}</p>
                     </div>
                     <button className="bg-white text-gray-900 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors flex items-center gap-2 group">
-                        지원하기
+                        {t('support.careers.always.button')}
                         <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                     </button>
                 </div>

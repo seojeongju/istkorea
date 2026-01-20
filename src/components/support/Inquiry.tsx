@@ -1,13 +1,15 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { storage } from '../../services/storage';
 
 export const Inquiry = () => {
+    const { t } = useTranslation();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         phone: '',
-        type: '제품 문의',
+        type: 'product',
         content: ''
     });
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -27,7 +29,7 @@ export const Inquiry = () => {
         }, ...inquiries]);
 
         setIsSubmitted(true);
-        setFormData({ name: '', email: '', phone: '', type: '제품 문의', content: '' });
+        setFormData({ name: '', email: '', phone: '', type: 'product', content: '' });
     };
 
     if (isSubmitted) {
@@ -42,13 +44,13 @@ export const Inquiry = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                 </div>
-                <h2 className="text-3xl font-bold mb-4">문의가 접수되었습니다.</h2>
-                <p className="text-gray-600 mb-8">빠른 시일 내에 답변 드리겠습니다.</p>
+                <h2 className="text-3xl font-bold mb-4">{t('support.inquiry.success.title')}</h2>
+                <p className="text-gray-600 mb-8">{t('support.inquiry.success.desc')}</p>
                 <button
                     onClick={() => setIsSubmitted(false)}
                     className="bg-primary text-white px-8 py-3 rounded-xl font-bold hover:bg-primary/90 transition-colors"
                 >
-                    추가 문의하기
+                    {t('support.inquiry.success.button')}
                 </button>
             </motion.div>
         );
@@ -61,75 +63,75 @@ export const Inquiry = () => {
             transition={{ duration: 0.5 }}
             className="max-w-3xl mx-auto"
         >
-            <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">제품 및 기술 문의</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">{t('support.inquiry.title')}</h2>
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">이름</label>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">{t('support.inquiry.form.name')}</label>
                             <input
                                 type="text"
                                 required
                                 value={formData.name}
                                 onChange={e => setFormData({ ...formData, name: e.target.value })}
                                 className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                                placeholder="홍길동"
+                                placeholder={t('support.inquiry.form.name_placeholder')}
                             />
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">이메일</label>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">{t('support.inquiry.form.email')}</label>
                             <input
                                 type="email"
                                 required
                                 value={formData.email}
                                 onChange={e => setFormData({ ...formData, email: e.target.value })}
                                 className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                                placeholder="example@email.com"
+                                placeholder={t('support.inquiry.form.email_placeholder')}
                             />
                         </div>
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">연락처</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">{t('support.inquiry.form.phone')}</label>
                         <input
                             type="tel"
                             required
                             value={formData.phone}
                             onChange={e => setFormData({ ...formData, phone: e.target.value })}
                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                            placeholder="010-0000-0000"
+                            placeholder={t('support.inquiry.form.phone_placeholder')}
                         />
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">문의 유형</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">{t('support.inquiry.form.type')}</label>
                         <select
                             value={formData.type}
                             onChange={e => setFormData({ ...formData, type: e.target.value })}
                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                         >
-                            <option>제품 문의</option>
-                            <option>기술 지원</option>
-                            <option>채용 문의</option>
-                            <option>기타 문의</option>
+                            <option value="product">{t('support.inquiry.form.types.product')}</option>
+                            <option value="tech">{t('support.inquiry.form.types.tech')}</option>
+                            <option value="recruit">{t('support.inquiry.form.types.recruit')}</option>
+                            <option value="other">{t('support.inquiry.form.types.other')}</option>
                         </select>
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">문의 내용</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">{t('support.inquiry.form.content')}</label>
                         <textarea
                             rows={5}
                             required
                             value={formData.content}
                             onChange={e => setFormData({ ...formData, content: e.target.value })}
                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
-                            placeholder="문의하실 내용을 상세히 적어주세요."
+                            placeholder={t('support.inquiry.form.content_placeholder')}
                         ></textarea>
                     </div>
 
                     <div className="pt-4">
                         <button type="submit" className="w-full bg-primary text-white py-4 rounded-xl font-bold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
-                            문의하기
+                            {t('support.inquiry.form.submit')}
                         </button>
                     </div>
                 </form>
