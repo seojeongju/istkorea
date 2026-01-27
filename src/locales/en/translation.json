@@ -181,6 +181,11 @@
                 "desc": "Seize the opportunity to unleash your passion and ability.",
                 "button": "Apply Now"
             }
+        },
+        "news": {
+            "title": "Company News",
+            "badge": "News",
+            "default_content": "Discover the latest news from IST KOREA as we grow through continuous technological development and innovation."
         }
     },
     "company_page": {

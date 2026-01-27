@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { storage } from '../../services/storage';
+import { useTranslation } from 'react-i18next';
 
 export const News = () => {
+    const { t } = useTranslation();
     const newsItems = storage.getNews();
 
     return (
@@ -10,16 +12,16 @@ export const News = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">기업소식</h2>
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">{t('support.news.title')}</h2>
             <div className="grid gap-6">
                 {newsItems.map((item) => (
                     <div key={item.id} className="bg-white p-6 rounded-xl border border-gray-100 hover:shadow-lg transition-shadow">
-                        <span className="text-sm text-primary font-medium">News</span>
+                        <span className="text-sm text-primary font-medium">{t('support.news.badge')}</span>
                         <h3 className="text-xl font-bold mt-2 mb-3">{item.title}</h3>
                         {/* Render HTML content safely */}
                         <div
                             className="text-gray-600 mb-4 news-content line-clamp-3 overflow-hidden text-ellipsis"
-                            dangerouslySetInnerHTML={{ __html: item.content || '지속적인 기술 개발과 혁신을 통해 성장하는 IST KOREA의 다양한 소식을 만나보세요.' }}
+                            dangerouslySetInnerHTML={{ __html: item.content || t('support.news.default_content') }}
                         />
                         {/* We might want a 'read more' expansion, but for now user just wanted editing. 
                              Usually news list shows summary, detail page shows full. 

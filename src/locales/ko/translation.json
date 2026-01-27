@@ -181,6 +181,11 @@
                 "desc": "당신의 열정과 능력을 펼칠 기회를 잡으세요.",
                 "button": "지원하기"
             }
+        },
+        "news": {
+            "title": "기업소식",
+            "badge": "News",
+            "default_content": "지속적인 기술 개발과 혁신을 통해 성장하는 IST KOREA의 다양한 소식을 만나보세요."
         }
     },
     "company_page": {
