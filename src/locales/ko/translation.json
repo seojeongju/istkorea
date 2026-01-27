@@ -301,6 +301,10 @@
                 }
             ]
         },
+        "business_areas": {
+            "title": "사업 영역",
+            "subtitle": "IST KOREA의 핵심 기술과 전문성이 집약된 4가지 사업 분야를 확인하세요"
+        },
         "subpages_title": "세부 사업 영역"
     },
     "business_pages": {

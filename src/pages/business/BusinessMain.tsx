@@ -73,6 +73,64 @@ export const BusinessMain = () => {
                 </div>
             </div>
 
+            {/* Business Areas - Quick Navigation */}
+            <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+                <div className="container mx-auto px-6">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-12"
+                    >
+                        <span className="text-primary font-semibold tracking-wider text-sm uppercase">
+                            Our Business
+                        </span>
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-4">
+                            {t('business_main.business_areas.title')}
+                        </h2>
+                        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                            {t('business_main.business_areas.subtitle')}
+                        </p>
+                    </motion.div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {subPages.map((page, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                            >
+                                <Link
+                                    to={page.path}
+                                    className="group block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-100 h-full"
+                                >
+                                    <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 p-8 flex items-center justify-center relative overflow-hidden">
+                                        <img
+                                            src={page.image}
+                                            alt={page.title}
+                                            className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                    </div>
+                                    <div className="p-6 bg-white relative">
+                                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                                        <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center justify-between group-hover:text-primary transition-colors">
+                                            {page.title}
+                                            <ArrowRight size={20} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300 text-primary" />
+                                        </h3>
+                                        <p className="text-sm text-gray-600 leading-relaxed line-clamp-3">
+                                            {page.desc}
+                                        </p>
+                                    </div>
+                                </Link>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* Intro Section */}
             <section className="py-20">
                 <div className="container mx-auto px-6">

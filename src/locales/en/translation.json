@@ -301,6 +301,10 @@
                 }
             ]
         },
+        "business_areas": {
+            "title": "Business Areas",
+            "subtitle": "Explore IST KOREA's 4 core business areas powered by cutting-edge technology and expertise"
+        },
         "subpages_title": "Business Areas"
     },
     "business_pages": {
