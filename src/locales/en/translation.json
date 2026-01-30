@@ -41,8 +41,8 @@
         "title": "CORE TECHNOLOGY",
         "description": "Providing world-class technology solutions through continuous R&D and innovation.",
         "item1": {
-            "title": "Nano-scale Precision Control",
-            "desc": "Implementing ultra-precision coating and control technology in nanometer units for next-generation display and semiconductor processes."
+            "title": "Nano-scale Precision System",
+            "desc": "Implementing ultra-precision cutting and polishing in nanometer units for next-generation display and semiconductor processes."
         },
         "item2": {
             "title": "Advanced Control System",
@@ -53,8 +53,8 @@
             "desc": "Designing and manufacturing equipment optimized for customer-specific requirements and process parameters."
         },
         "item4": {
-            "title": "High-Speed Precision Process",
-            "desc": "An optimized system that demonstrates maximum productivity without compromising quality and yield."
+            "title": "High-Speed Precision",
+            "desc": "An optimized system that demonstrates maximum productivity without compromising quality and yield. Thin plate, Slice, CMP processing"
         }
     },
     "business": {
@@ -93,16 +93,16 @@
         "title": "PRODUCT",
         "items": {
             "item1": {
-                "title": "Custom SiC Cutting Styles Available",
-                "subtitle": "High Precision Cutting"
+                "title": "SLICING",
+                "subtitle": "High Precision Slicing Solution (Si, SiC, Glass)"
             },
             "item2": {
-                "title": "CHEMICAL POLISHING",
+                "title": "CMP",
                 "subtitle": "4-Head Polishing System"
             },
             "item3": {
                 "title": "STEP POLISHING",
-                "subtitle": "Precision Finishing"
+                "subtitle": "Precision Finishing, Protrusion Polishing"
             },
             "item4": {
                 "title": "LAPPING MACHINE",
@@ -110,10 +110,10 @@
             },
             "item5": {
                 "title": "MULTI WIRE SAW",
-                "subtitle": "Semiconductor Slicing"
+                "subtitle": "Slurry & Diamond"
             },
             "item6": {
-                "title": "Ingot",
+                "title": "Ingot Cutting & Processing",
                 "subtitle": "High Purity Material"
             }
         },
@@ -328,7 +328,7 @@
                         },
                         {
                             "label": "OPENING",
-                            "value": "110"
+                            "value": "10"
                         },
                         {
                             "label": "THICKNESS DEVIATION",
