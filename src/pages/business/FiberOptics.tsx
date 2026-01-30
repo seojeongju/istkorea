@@ -169,55 +169,55 @@ export const FiberOptics = () => {
                 </AnimatePresence>
                 {/* Image Gallery Section */}
                 <div className="container mx-auto px-6 pb-20 border-t border-gray-100 pt-16">
-                    <div className="max-w-4xl mx-auto">
+                    <div className="max-w-lg mx-auto">
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
-                            className="grid grid-cols-1 md:grid-cols-3 gap-6"
+                            className="grid grid-cols-1 md:grid-cols-3 gap-4"
                         >
                             <motion.div
-                                whileHover={{ y: -10 }}
-                                className="group relative overflow-hidden rounded-xl shadow-lg aspect-[3/4] bg-gray-100"
+                                whileHover={{ y: -5 }}
+                                className="group relative overflow-hidden rounded-lg shadow-md aspect-[3/4] bg-gray-100"
                             >
                                 <img
                                     src="/images/fiber/fiber_process.jpg"
                                     alt="Fiber drawing process"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                                    <p className="text-white font-bold text-lg tracking-tight">Process Drawing</p>
+                                <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                    <p className="text-white font-bold text-xs tracking-tight">Process Drawing</p>
                                 </div>
                             </motion.div>
 
                             <motion.div
-                                whileHover={{ y: -10 }}
+                                whileHover={{ y: -5 }}
                                 transition={{ delay: 0.1 }}
-                                className="group relative overflow-hidden rounded-xl shadow-lg aspect-[3/4] bg-gray-100"
+                                className="group relative overflow-hidden rounded-lg shadow-md aspect-[3/4] bg-gray-100"
                             >
                                 <img
                                     src="/images/fiber/fiber_main.jpg"
                                     alt="Fiber production equipment"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                                    <p className="text-white font-bold text-lg tracking-tight">Main System</p>
+                                <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                    <p className="text-white font-bold text-xs tracking-tight">Main System</p>
                                 </div>
                             </motion.div>
 
                             <motion.div
-                                whileHover={{ y: -10 }}
+                                whileHover={{ y: -5 }}
                                 transition={{ delay: 0.2 }}
-                                className="group relative overflow-hidden rounded-xl shadow-lg aspect-[3/4] bg-gray-100"
+                                className="group relative overflow-hidden rounded-lg shadow-md aspect-[3/4] bg-gray-100"
                             >
                                 <img
                                     src="/images/fiber/fiber_close_up.jpg"
                                     alt="Fiber processing detail"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                                    <p className="text-white font-bold text-lg tracking-tight">Refining Detail</p>
+                                <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                    <p className="text-white font-bold text-xs tracking-tight">Refining Detail</p>
                                 </div>
                             </motion.div>
                         </motion.div>
