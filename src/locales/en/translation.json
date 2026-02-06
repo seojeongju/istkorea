@@ -673,7 +673,7 @@
             "subtitle": "Advanced Chemical Polishing & Precision Slicing Technology.\nEnsuring the Highest Yield and Accuracy for Wafer Processing.",
             "products": {
                 "chemical_polishing": {
-                    "name": "CHEMICAL POLISHING MACHINE",
+                    "name": "CHEMICAL & MECHANICAL & POLISHING",
                     "subtitle": "High-Performance Wafer Polishing Solution",
                     "desc": "Advanced chemical polishing system focusing on productivity and precision. Features simultaneous 4-head operation and multi-stage pressure control for optimal wafer surface processing.",
                     "specs": [
@@ -874,59 +874,7 @@
         "fiber": {
             "title": "FIBER OPTICS EQUIPMENT",
             "subtitle": "Next-Generation Optical Fiber Manufacturing.\nPrecision VAD Technology for High-Quality Preforms.",
-            "products": {
-                "core_equipment": {
-                    "name": "VAD CORE EQUIPMENT (IRD)",
-                    "subtitle": "Advanced VAD Method for ZWPF & Enhanced BIF",
-                    "desc": "State-of-the-art Vapor Phase Axial Deposition (VAD) equipment for manufacturing optical fiber preforms. Designed for Zero Water Peak Fiber (ZWPF) and Bend-Insensitive Fiber (BIF) production with high precision process control.",
-                    "specs": [
-                        {
-                            "label": "FRAME HEIGHT",
-                            "value": "12m"
-                        },
-                        {
-                            "label": "CHAMBER MATERIAL",
-                            "value": "Hastelloy Chamber"
-                        },
-                        {
-                            "label": "FRAME TYPE",
-                            "value": "Steel Frame Construction"
-                        },
-                        {
-                            "label": "CHEMICALS & GASES",
-                            "value": "SiCl4, GeCl4, CF4, H2, O2, N2"
-                        },
-                        {
-                            "label": "CLEAN CLASS",
-                            "value": "Class 10,000"
-                        },
-                        {
-                            "label": "CAPACITY",
-                            "value": "2 M-fkm/year"
-                        },
-                        {
-                            "label": "ALIGNMENT",
-                            "value": "Precision Torch Alignment System"
-                        },
-                        {
-                            "label": "DELIVERY SYSTEM",
-                            "value": "Advanced Gas & Vapor Delivery"
-                        }
-                    ],
-                    "features": [
-                        "VAD Method Implementation",
-                        "ZWPF (Zero Water Peak Fiber) Capability",
-                        "Enhanced BIF (Bend Insensitive Fiber A2, B3)",
-                        "Integrated Torch Alignment System",
-                        "High-Throughput Gas Delivery"
-                    ],
-                    "options": [
-                        "Process Automation Suite",
-                        "Real-time Preform Monitoring",
-                        "Custom Gas Mixing Systems"
-                    ]
-                }
-            }
+            "products": {}
         }
     },
     "privacy_policy": {
