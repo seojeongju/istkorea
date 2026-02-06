@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Network, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export const FiberOptics = () => {
@@ -115,7 +115,7 @@ export const FiberOptics = () => {
                                         SPECIFICATION
                                     </h3>
                                     <div className="space-y-0 border-t border-gray-100">
-                                        {activeProduct.specs && activeProduct.specs.map((item, index) => (
+                                        {activeProduct.specs && activeProduct.specs.map((item: any, index: number) => (
                                             <div key={index} className={`flex flex-col sm:flex-row py-4 border-b border-gray-100 hover:bg-gray-50 transition-colors px-2 rounded-lg`}>
                                                 <div className="w-full sm:w-1/3 font-semibold text-gray-700 text-sm">{item.label}</div>
                                                 <div className="w-full sm:w-2/3 text-gray-600 mt-1 sm:mt-0 font-mono text-sm">
@@ -134,7 +134,7 @@ export const FiberOptics = () => {
                                             Key Features
                                         </h3>
                                         <ul className="space-y-3">
-                                            {activeProduct.features && activeProduct.features.map((item, index) => (
+                                            {activeProduct.features && activeProduct.features.map((item: any, index: number) => (
                                                 <li key={index} className="flex items-start gap-3">
                                                     <div className="min-w-5 mt-0.5 text-primary">
                                                         <Check size={16} />
@@ -151,7 +151,7 @@ export const FiberOptics = () => {
                                             Options
                                         </h3>
                                         <ul className="space-y-3">
-                                            {activeProduct.options && activeProduct.options.map((item, index) => (
+                                            {activeProduct.options && activeProduct.options.map((item: any, index: number) => (
                                                 <li key={index} className="flex items-start gap-3">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2" />
                                                     <span className="text-sm text-gray-500 leading-snug">{item}</span>
