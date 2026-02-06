@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Network, Check } from 'lucide-react';
+import { Network } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export const FiberOptics = () => {
