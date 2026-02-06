@@ -77,7 +77,7 @@ export const FiberOptics = () => {
             </div>
 
             {/* Product Content */}
-            <div className="container mx-auto px-6 py-16 min-h-[800px]">
+            <div className="container mx-auto px-6 py-16">
                 <AnimatePresence mode='wait'>
                     <motion.div
                         key={activeProduct.id}
@@ -85,86 +85,23 @@ export const FiberOptics = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.4 }}
-                        className="grid grid-cols-1 lg:grid-cols-2 gap-16"
+                        className="flex flex-col items-center"
                     >
-                        {/* Left Column: Image & Description */}
-                        <div className="space-y-10">
-                            <div>
-                                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{activeProduct.name}</h2>
-                                <p className="text-accent text-lg font-medium mb-6">{activeProduct.subtitle}</p>
-                                <p className="text-gray-600 leading-relaxed text-lg">
-                                    {activeProduct.description}
-                                </p>
-                            </div>
-
-                            <motion.div
-                                className="rounded-2xl overflow-hidden shadow-2xl bg-gray-50 border border-gray-100"
-                                whileHover={{ scale: 1.02 }}
-                                transition={{ duration: 0.5 }}
-                            >
-                                <img
-                                    src={activeProduct.image}
-                                    alt={activeProduct.name}
-                                    className="w-full h-auto object-cover"
-                                />
-                            </motion.div>
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">{activeProduct.name}</h2>
                         </div>
 
-                        {/* Right Column: Key Features & Specs */}
-                        <div className="space-y-12">
-                            {/* Specifications */}
-                            <div className="bg-white rounded-xl">
-                                <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                                    <div className="w-1 h-6 bg-primary rounded-full"></div>
-                                    SPECIFICATION
-                                </h3>
-                                <div className="space-y-0 border-t border-gray-100">
-                                    {activeProduct.specs && activeProduct.specs.map((item: any, index: number) => (
-                                        <div key={index} className={`flex flex-col sm:flex-row py-4 border-b border-gray-100 hover:bg-gray-50 transition-colors px-2 rounded-lg`}>
-                                            <div className="w-full sm:w-1/3 font-semibold text-gray-700 text-sm">{item.label}</div>
-                                            <div className="w-full sm:w-2/3 text-gray-600 mt-1 sm:mt-0 font-mono text-sm">
-                                                {item.value}
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-
-                            {/* Unit Devices & Options */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <div>
-                                    <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                                        <div className="w-1 h-6 bg-accent rounded-full"></div>
-                                        Key Features
-                                    </h3>
-                                    <ul className="space-y-3">
-                                        {activeProduct.features && activeProduct.features.map((item: any, index: number) => (
-                                            <li key={index} className="flex items-start gap-3">
-                                                <div className="min-w-5 mt-0.5 text-primary">
-                                                    <Check size={16} />
-                                                </div>
-                                                <span className="text-sm text-gray-600 leading-snug">{item}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-
-                                <div>
-                                    <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                                        <div className="w-1 h-6 bg-gray-400 rounded-full"></div>
-                                        Options
-                                    </h3>
-                                    <ul className="space-y-3">
-                                        {activeProduct.options && activeProduct.options.map((item: any, index: number) => (
-                                            <li key={index} className="flex items-start gap-3">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2" />
-                                                <span className="text-sm text-gray-500 leading-snug">{item}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                        <motion.div
+                            className="w-full max-w-4xl rounded-2xl overflow-hidden shadow-2xl bg-gray-50 border border-gray-100"
+                            whileHover={{ scale: 1.01 }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            <img
+                                src={activeProduct.image}
+                                alt={activeProduct.name}
+                                className="w-full h-auto object-cover"
+                            />
+                        </motion.div>
                     </motion.div>
                 </AnimatePresence>
                 {/* Image Gallery Section */}
