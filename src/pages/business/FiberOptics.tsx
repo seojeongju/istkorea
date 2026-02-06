@@ -8,13 +8,13 @@ export const FiberOptics = () => {
 
     const products: any[] = [];
 
-    const [activeProductId, setActiveProductId] = useState(products[0].id);
+    const [activeProductId, setActiveProductId] = useState<string | null>(products.length > 0 ? products[0].id : null);
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [activeProductId]);
 
-    const activeProductRaw = products.find(p => p.id === activeProductId) || products[0];
+    const activeProductRaw = products.find(p => p.id === activeProductId) || (products.length > 0 ? products[0] : null);
 
     const activeProduct = activeProductRaw ? {
         ...activeProductRaw,
