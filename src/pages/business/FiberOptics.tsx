@@ -106,25 +106,25 @@ export const FiberOptics = () => {
                 </AnimatePresence>
                 {/* Image Gallery Section */}
                 <div className="container mx-auto px-6 pb-20 border-t border-gray-100 pt-16">
-                    <div className="max-w-lg mx-auto">
+                    <div className="max-w-6xl mx-auto">
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
-                            className="grid grid-cols-1 md:grid-cols-3 gap-4"
+                            className="grid grid-cols-1 md:grid-cols-5 gap-4"
                         >
                             <motion.div
                                 whileHover={{ y: -5 }}
                                 className="group relative overflow-hidden rounded-lg shadow-md aspect-[3/4] bg-gray-100"
                             >
                                 <img
-                                    src="/images/fiber/fiber_process.jpg"
-                                    alt="Fiber drawing process"
+                                    src="/images/fiber/fiber_1.jpg"
+                                    alt="Fiber optics equipment 1"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                    <p className="text-white font-bold text-xs tracking-tight">Process Drawing</p>
+                                    <p className="text-white font-bold text-xs tracking-tight">Equipment 1</p>
                                 </div>
                             </motion.div>
 
@@ -134,12 +134,12 @@ export const FiberOptics = () => {
                                 className="group relative overflow-hidden rounded-lg shadow-md aspect-[3/4] bg-gray-100"
                             >
                                 <img
-                                    src="/images/fiber/fiber_main.jpg"
-                                    alt="Fiber production equipment"
+                                    src="/images/fiber/fiber_2.jpg"
+                                    alt="Fiber optics equipment 2"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                    <p className="text-white font-bold text-xs tracking-tight">Main System</p>
+                                    <p className="text-white font-bold text-xs tracking-tight">Equipment 2</p>
                                 </div>
                             </motion.div>
 
@@ -149,12 +149,42 @@ export const FiberOptics = () => {
                                 className="group relative overflow-hidden rounded-lg shadow-md aspect-[3/4] bg-gray-100"
                             >
                                 <img
-                                    src="/images/fiber/fiber_close_up.jpg"
-                                    alt="Fiber processing detail"
+                                    src="/images/fiber/fiber_3.jpg"
+                                    alt="Fiber optics equipment 3"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                    <p className="text-white font-bold text-xs tracking-tight">Refining Detail</p>
+                                    <p className="text-white font-bold text-xs tracking-tight">Equipment 3</p>
+                                </div>
+                            </motion.div>
+
+                            <motion.div
+                                whileHover={{ y: -5 }}
+                                transition={{ delay: 0.3 }}
+                                className="group relative overflow-hidden rounded-lg shadow-md aspect-[3/4] bg-gray-100"
+                            >
+                                <img
+                                    src="/images/fiber/fiber_4.jpg"
+                                    alt="Fiber optics equipment 4"
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                    <p className="text-white font-bold text-xs tracking-tight">Equipment 4</p>
+                                </div>
+                            </motion.div>
+
+                            <motion.div
+                                whileHover={{ y: -5 }}
+                                transition={{ delay: 0.4 }}
+                                className="group relative overflow-hidden rounded-lg shadow-md aspect-[3/4] bg-gray-100"
+                            >
+                                <img
+                                    src="/images/fiber/fiber_5.jpg"
+                                    alt="Fiber optics equipment 5"
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                    <p className="text-white font-bold text-xs tracking-tight">Equipment 5</p>
                                 </div>
                             </motion.div>
                         </motion.div>
