@@ -101,6 +101,14 @@ export const Semiconductor = () => {
                                 </button>
                             );
                         })}
+                        {/* Static link to new Slicing page */}
+                        <a
+                            href="/business/slicing"
+                            className="flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold whitespace-nowrap transition-all duration-300 bg-gray-100 text-gray-500 hover:bg-gray-200"
+                        >
+                            <Scissors size={20} />
+                            SLICING
+                        </a>
                     </div>
                 </div>
             </div>
