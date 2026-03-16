@@ -145,17 +145,15 @@ export const Header = () => {
                                                 <div key={sub.title} className="relative group/sub">
                                                     <Link
                                                         to={sub.href}
-                                                        onClick={(e) => {
-                                                            if (sub.submenu) {
-                                                                e.preventDefault(); // allow hover interaction when there's a 2nd level menu
-                                                            } else {
-                                                                setIsMenuOpen(false);
-                                                            }
+                                                        onClick={() => {
+                                                            setIsMenuOpen(false);
+                                                            // We do NOT call e.preventDefault() here anymore
+                                                            // so that the user can navigate to the parent (Semiconductor) page.
                                                         }}
-                                                        className="px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors whitespace-nowrap flex items-center justify-between"
+                                                        className="px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors flex items-center justify-between"
                                                     >
-                                                        {sub.title}
-                                                        {sub.submenu && <ChevronDown size={14} className="-rotate-90 opacity-70" />}
+                                                        <span className="whitespace-nowrap">{sub.title}</span>
+                                                        {sub.submenu && <ChevronDown size={14} className="-rotate-90 opacity-70 ml-4 flex-shrink-0" />}
                                                     </Link>
                                                     {/* 2nd Level Submenu */}
                                                     {sub.submenu && (
@@ -252,13 +250,8 @@ export const Header = () => {
                                                                 <Link
                                                                     to={sub.href}
                                                                     className={`text-lg px-4 py-2 rounded hover:bg-white transition-colors flex justify-between items-center ${sub.submenu ? 'text-gray-900 font-bold' : 'text-gray-600 hover:text-primary'}`}
-                                                                    onClick={(e) => {
-                                                                        if (sub.submenu) {
-                                                                            e.preventDefault();
-                                                                            // For simplicity on mobile, clicking the parent doesn't close but navigates, or we can just let it navigate to the parent page. We won't build a 3rd level toggle here to keep it simple, just render the children below.
-                                                                        } else {
-                                                                            setIsMenuOpen(false);
-                                                                        }
+                                                                    onClick={() => {
+                                                                        setIsMenuOpen(false);
                                                                     }}
                                                                 >
                                                                     {sub.title}
