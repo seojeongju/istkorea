@@ -48,7 +48,7 @@ export const ProductSection = () => {
             title: t('product.items.item6.title'),
             subtitle: t('product.items.item6.subtitle'),
             image: "/images/product_ingot.jpg",
-            link: "/business/semiconductor?product=wire-saw-600n"
+            link: ""
         }
     ];
 
@@ -90,14 +90,10 @@ export const ProductSection = () => {
                 </div>
 
                 <div className="flex flex-wrap justify-center gap-x-8 gap-y-16">
-                    {products.map((product, index) => (
-                        <Link 
-                            to={product.link}
-                            key={product.id}
-                            className="w-full md:w-[calc((100%-4rem)/3)] block"
-                        >
+                    {products.map((product, index) => {
+                        const CardContent = (
                             <motion.div
-                                className="group relative cursor-pointer h-full"
+                                className={`group relative h-full ${product.link ? 'cursor-pointer' : ''}`}
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
@@ -107,18 +103,20 @@ export const ProductSection = () => {
                                     <img
                                         src={product.image}
                                         alt={product.title}
-                                        className="w-full h-full object-contain p-4 transition-transform duration-700 group-hover:scale-105"
+                                        className={`w-full h-full object-contain p-4 transition-transform duration-700 ${product.link ? 'group-hover:scale-105' : ''}`}
                                     />
                                     {/* Plus icon on hover */}
-                                    <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div className="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-primary shadow-lg">
-                                            <Plus size={20} />
+                                    {product.link && (
+                                        <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                            <div className="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-primary shadow-lg">
+                                                <Plus size={20} />
+                                            </div>
                                         </div>
-                                    </div>
+                                    )}
                                 </div>
     
                                 {/* Desktop text below image */}
-                                <div className="hidden md:block mt-6 group-hover:translate-x-2 transition-transform duration-300">
+                                <div className={`hidden md:block mt-6 transition-transform duration-300 ${product.link ? 'group-hover:translate-x-2' : ''}`}>
                                     <h3 className="text-2xl font-bold text-gray-800 mb-1">{product.title}</h3>
                                     <p className="text-gray-500 font-light">{product.subtitle}</p>
                                 </div>
@@ -129,8 +127,25 @@ export const ProductSection = () => {
                                     <p className="text-sm text-gray-500">{product.subtitle}</p>
                                 </div>
                             </motion.div>
-                        </Link>
-                    ))}
+                        );
+
+                        return product.link ? (
+                            <Link 
+                                to={product.link}
+                                key={product.id}
+                                className="w-full md:w-[calc((100%-4rem)/3)] block"
+                            >
+                                {CardContent}
+                            </Link>
+                        ) : (
+                            <div 
+                                key={product.id}
+                                className="w-full md:w-[calc((100%-4rem)/3)] block"
+                            >
+                                {CardContent}
+                            </div>
+                        );
+                    })}
                 </div>
 
 
