@@ -13,7 +13,7 @@ export const ProductSection = () => {
             title: t('product.items.item1.title'),
             subtitle: t('product.items.item1.subtitle'),
             image: "/images/product_sic_cutting.png",
-            link: "/business/semiconductor?product=wire-saw-600n#product-content"
+            link: "/business/semiconductor?product=slicing#product-content"
         },
         {
             id: 2,
@@ -48,7 +48,7 @@ export const ProductSection = () => {
             title: t('product.items.item6.title'),
             subtitle: t('product.items.item6.subtitle'),
             image: "/images/product_ingot.jpg",
-            link: "/business/semiconductor?product=slicing#product-content"
+            link: "/business/semiconductor?product=wire-saw-600n#product-content"
         }
     ];
 
