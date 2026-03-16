@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useSearchParams } from 'react-router-dom';
 import { Check, Sparkles, Disc, FileText } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
@@ -27,11 +28,21 @@ export const PolishingLine = () => {
         }
     ];
 
+    const [searchParams] = useSearchParams();
     const [activeProductId, setActiveProductId] = useState(products[0].id);
 
     useEffect(() => {
+        const productParam = searchParams.get('product');
+        if (productParam && products.some(p => p.id === productParam)) {
+            setActiveProductId(productParam);
+        } else {
+            // If no valid product parameter, reset to the first product if we navigated from empty search
+            if (!productParam && activeProductId !== products[0].id) {
+                setActiveProductId(products[0].id);
+            }
+        }
         window.scrollTo(0, 0);
-    }, [activeProductId]);
+    }, [searchParams, products]);
 
     const activeProductRaw = products.find(p => p.id === activeProductId) || products[0];
 
