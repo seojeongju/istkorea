@@ -13,42 +13,42 @@ export const ProductSection = () => {
             title: t('product.items.item1.title'),
             subtitle: t('product.items.item1.subtitle'),
             image: "/images/product_sic_cutting.png",
-            link: "/business/semiconductor?product=wire-saw-600n"
+            link: "/business/semiconductor?product=wire-saw-600n#product-content"
         },
         {
             id: 2,
             title: t('product.items.item2.title'),
             subtitle: t('product.items.item2.subtitle'),
             image: "/images/product_chemical_polishing.png",
-            link: "/business/semiconductor?product=chemical-polishing"
+            link: "/business/semiconductor?product=chemical-polishing#product-content"
         },
         {
             id: 3,
             title: t('product.items.item3.title'),
             subtitle: t('product.items.item3.subtitle'),
             image: "/images/product_step_polishing.png",
-            link: "/business/polishing-line?product=sheet-polishing"
+            link: "/business/polishing-line?product=sheet-polishing#product-content"
         },
         {
             id: 4,
             title: t('product.items.item4.title'),
             subtitle: t('product.items.item4.subtitle'),
             image: "/images/product_lapping.png",
-            link: "/business/semiconductor?product=lapping-machine"
+            link: "/business/semiconductor?product=lapping-machine#product-content"
         },
         {
             id: 5,
             title: t('product.items.item5.title'),
             subtitle: t('product.items.item5.subtitle'),
             image: "/images/product_wiresaw.png",
-            link: "/business/semiconductor?product=wire-saw-600s"
+            link: "/business/semiconductor?product=wire-saw-600s#product-content"
         },
         {
             id: 6,
             title: t('product.items.item6.title'),
             subtitle: t('product.items.item6.subtitle'),
             image: "/images/product_ingot.jpg",
-            link: "/business/semiconductor?product=slicing"
+            link: "/business/semiconductor?product=slicing#product-content"
         }
     ];
 

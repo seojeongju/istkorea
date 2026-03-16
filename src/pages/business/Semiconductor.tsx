@@ -109,13 +109,24 @@ export const Semiconductor = () => {
         const productParam = searchParams.get('product');
         if (productParam && products.some(p => p.id === productParam)) {
             setActiveProductId(productParam);
+            // Scroll to content if internal navigation or deep link
+            const element = document.getElementById('product-content');
+            if (element) {
+                const headerOffset = 150; // Account for sticky header
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
         } else {
             // If no valid product parameter, reset to the first product if we navigated from empty search
             if (!productParam && activeProductId !== products[0].id) {
                 setActiveProductId(products[0].id);
+                window.scrollTo(0, 0);
             }
         }
-        window.scrollTo(0, 0);
     }, [searchParams, products]);
 
     const activeProductRaw = products.find(p => p.id === activeProductId) || products[0];
@@ -174,7 +185,7 @@ export const Semiconductor = () => {
             </div>
 
             {/* Product Content */}
-            <div className="container mx-auto px-6 py-16 min-h-[800px]">
+            <div id="product-content" className="container mx-auto px-6 py-16 min-h-[800px]">
                 <AnimatePresence mode='wait'>
                     <motion.div
                         key={activeProductId}
