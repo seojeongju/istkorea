@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSearchParams } from 'react-router-dom';
 import { FlaskConical, CircleDot, Scissors, Ruler, Check } from 'lucide-react';
@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 export const Semiconductor = () => {
     const { t } = useTranslation();
 
-    const products = [
+    const products = useMemo(() => [
         {
             id: 'chemical-polishing',
             image: '/images/semicon_chemical.png',
@@ -32,7 +32,7 @@ export const Semiconductor = () => {
             icon: <Ruler size={20} />,
             titleKey: 'wire_saw_600s'
         }
-    ];
+    ], []);
 
     const [searchParams] = useSearchParams();
     const [activeProductId, setActiveProductId] = useState(products[0].id);

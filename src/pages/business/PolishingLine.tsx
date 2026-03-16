@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSearchParams } from 'react-router-dom';
 import { Check, Sparkles, Disc, FileText } from 'lucide-react';
@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 export const PolishingLine = () => {
     const { t } = useTranslation();
 
-    const products = [
+    const products = useMemo(() => [
         {
             id: 'coil-polishing',
             image: '/images/coil_polishing_line.png',
@@ -26,7 +26,7 @@ export const PolishingLine = () => {
             icon: <FileText size={20} />,
             titleKey: 'sheet_polishing'
         }
-    ];
+    ], []);
 
     const [searchParams] = useSearchParams();
     const [activeProductId, setActiveProductId] = useState(products[0].id);
