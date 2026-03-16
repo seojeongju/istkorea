@@ -873,6 +873,32 @@
                         "와이어 단선 감지",
                         "주문 제작 고정구"
                     ]
+                },
+                "slicing": {
+                    "name": "SLICING EQUIPMENT",
+                    "subtitle": "고정밀 절단 솔루션. SiC 및 Glass 소재별 최적화된 Test Cutting 서비스 제공.",
+                    "table": {
+                        "material": "소재",
+                        "diameter_inch": "직경 (Inch)",
+                        "diameter_mm": "직경 (mm)",
+                        "thickness_range": "절단 두께 범위 (mm)",
+                        "tolerance": "절단 공차 (mm)",
+                        "roughness": "조도 (Ra, ㎛)",
+                        "price_approx": "대략 단가 (원/장)",
+                        "price_tbd": "별도협의",
+                        "price_dev": "개발중",
+                        "cutting_specs": "정밀 절단 사양"
+                    },
+                    "notes": {
+                        "sample_test": "테스트 가공(Sample Test): \"고객사 보유 소재에 대한 Test Cutting 서비스를 제공합니다.\"",
+                        "caveats_title": "주의사항 및 안내",
+                        "c1": "상기 사양은 DWS 절단 기준 As-cut 조건입니다. (AS-CUT : 절단 직후, 추가 연마 공정이 적용되지 않은 상태)",
+                        "c2": "원형(Ø) 및 사각 블록 소재 대응 가능",
+                        "c3": "0.1, 0.2 (T) 절단 장비 개발중",
+                        "c4": "대구경 또는 최소 두께 조건은 공정 안정성 검토 후 진행됩니다.",
+                        "c5": "조도, 두께 공차 및 단가는 소재 특성, 수량, 공정 조건에 따라 변동될 수 있습니다.",
+                        "c6": "상세 사양 및 견적은 별도 문의 바랍니다."
+                    }
                 }
             }
         },

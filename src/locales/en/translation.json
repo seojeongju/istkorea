@@ -873,6 +873,32 @@
                         "Wire Break Detection",
                         "Order Made Fixtures"
                     ]
+                },
+                "slicing": {
+                    "name": "SLICING EQUIPMENT",
+                    "subtitle": "High-Precision Slicing Solution.\nProviding optimized Test Cutting services for SiC and Glass materials.",
+                    "table": {
+                        "material": "Material",
+                        "diameter_inch": "Diameter (Inch)",
+                        "diameter_mm": "Diameter (mm)",
+                        "thickness_range": "Cut Thickness Range (mm)",
+                        "tolerance": "Cut Tolerance (mm)",
+                        "roughness": "Roughness (Ra, ㎛)",
+                        "price_approx": "Approx. Price (KRW/pcs)",
+                        "price_tbd": "To Be Discussed",
+                        "price_dev": "In Development",
+                        "cutting_specs": "Cutting Specifications"
+                    },
+                    "notes": {
+                        "sample_test": "Sample Test Cutting: \"We provide Test Cutting services for materials owned by customers.\"",
+                        "caveats_title": "Notes & Guidelines",
+                        "c1": "The above specifications are based on DWS cutting As-cut conditions. (AS-CUT: Immediately after cutting, no additional polishing process applied)",
+                        "c2": "Applicable for both round (Ø) and square block materials.",
+                        "c3": "0.1, 0.2 (T) cutting equipment is currently under development.",
+                        "c4": "Large diameter or minimum thickness conditions will be processed after reviewing process stability.",
+                        "c5": "Roughness, thickness tolerance, and unit price may vary depending on material characteristics, quantity, and process conditions.",
+                        "c6": "Please contact us for detailed specifications and quotations."
+                    }
                 }
             }
         },
