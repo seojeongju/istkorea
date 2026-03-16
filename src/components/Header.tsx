@@ -31,12 +31,7 @@ export const Header = () => {
             submenu: [
                 { title: t('header.submenu.press'), href: "/business/press-line" },
                 { title: t('header.submenu.polishing'), href: "/business/polishing-line" },
-                {
-                    title: t('header.submenu.semicon'), href: "/business/semiconductor", subMenuTitle: true,
-                    submenu: [
-                        { title: t('header.submenu.slicing'), href: "/business/slicing" },
-                    ]
-                },
+                { title: t('header.submenu.semicon'), href: "/business/semiconductor" },
                 { title: t('header.submenu.fiber'), href: "/business/fiber-optics" },
             ]
         },
@@ -140,39 +135,16 @@ export const Header = () => {
                                 {/* Dropdown Menu */}
                                 {item.submenu && (
                                     <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                                        <div className="bg-white rounded-xl shadow-xl border border-gray-100 overflow-visible min-w-[160px] py-2">
+                                        <div className="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden min-w-[160px] py-2">
                                             {item.submenu.map((sub: any) => (
-                                                <div key={sub.title} className="relative group/sub">
-                                                    <Link
-                                                        to={sub.href}
-                                                        onClick={() => {
-                                                            setIsMenuOpen(false);
-                                                            // We do NOT call e.preventDefault() here anymore
-                                                            // so that the user can navigate to the parent (Semiconductor) page.
-                                                        }}
-                                                        className="px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors flex items-center justify-between"
-                                                    >
-                                                        <span className="whitespace-nowrap">{sub.title}</span>
-                                                        {sub.submenu && <ChevronDown size={14} className="-rotate-90 opacity-70 ml-4 flex-shrink-0" />}
-                                                    </Link>
-                                                    {/* 2nd Level Submenu */}
-                                                    {sub.submenu && (
-                                                        <div className="absolute top-0 left-full pl-0 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-300 transform translate-x-2 group-hover/sub:translate-x-0">
-                                                            <div className="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden min-w-[160px] py-2 ml-1">
-                                                                {sub.submenu.map((subLevel: any) => (
-                                                                    <Link
-                                                                        key={subLevel.title}
-                                                                        to={subLevel.href}
-                                                                        onClick={() => setIsMenuOpen(false)}
-                                                                        className="block px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors whitespace-nowrap"
-                                                                    >
-                                                                        {subLevel.title}
-                                                                    </Link>
-                                                                ))}
-                                                            </div>
-                                                        </div>
-                                                    )}
-                                                </div>
+                                                <Link
+                                                    key={sub.title}
+                                                    to={sub.href}
+                                                    onClick={() => setIsMenuOpen(false)}
+                                                    className="block px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors whitespace-nowrap"
+                                                >
+                                                    {sub.title}
+                                                </Link>
                                             ))}
                                         </div>
                                     </div>
@@ -246,32 +218,14 @@ export const Header = () => {
                                                 >
                                                     <div className="p-4 flex flex-col gap-3">
                                                         {item.submenu.map((sub: any) => (
-                                                            <div key={sub.title} className="flex flex-col">
-                                                                <Link
-                                                                    to={sub.href}
-                                                                    className={`text-lg px-4 py-2 rounded hover:bg-white transition-colors flex justify-between items-center ${sub.submenu ? 'text-gray-900 font-bold' : 'text-gray-600 hover:text-primary'}`}
-                                                                    onClick={() => {
-                                                                        setIsMenuOpen(false);
-                                                                    }}
-                                                                >
-                                                                    {sub.title}
-                                                                </Link>
-                                                                {/* 2nd Level Mobile Submenu */}
-                                                                {sub.submenu && (
-                                                                    <div className="flex flex-col gap-2 pl-8 pr-4 mt-2 mb-2 border-l-2 border-primary/20 bg-gray-100 rounded-lg py-2">
-                                                                        {sub.submenu.map((subLevel: any) => (
-                                                                            <Link
-                                                                                key={subLevel.title}
-                                                                                to={subLevel.href}
-                                                                                onClick={() => setIsMenuOpen(false)}
-                                                                                className="text-md text-gray-500 hover:text-primary transition-colors"
-                                                                            >
-                                                                                - {subLevel.title}
-                                                                            </Link>
-                                                                        ))}
-                                                                    </div>
-                                                                )}
-                                                            </div>
+                                                            <Link
+                                                                key={sub.title}
+                                                                to={sub.href}
+                                                                onClick={() => setIsMenuOpen(false)}
+                                                                className="text-lg text-gray-600 hover:text-primary px-4 py-2 rounded hover:bg-white transition-colors"
+                                                            >
+                                                                {sub.title}
+                                                            </Link>
                                                         ))}
                                                     </div>
                                                 </motion.div>
