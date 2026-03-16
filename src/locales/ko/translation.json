@@ -17,6 +17,7 @@
             "press": "프레스 라인",
             "polishing": "연마 라인",
             "semicon": "반도체 장비",
+            "slicing": "SLICING",
             "fiber": "광통신 장비"
         },
         "contact": "Contact",
@@ -313,6 +314,10 @@
         "subpages_title": "세부 사업 영역"
     },
     "business_pages": {
+        "slicing": {
+            "title": "SLICING EQUIPMENT",
+            "subtitle": "고정밀 절단 솔루션.\nSiC 및 Glass 소재별 최적화된 Test Cutting 서비스 제공."
+        },
         "press": {
             "title": "PRESS LINE",
             "subtitle": "모든 산업 요구를 충족하는 첨단 프레스 솔루션.\n다층 적층부터 고온 진공 공정까지.",

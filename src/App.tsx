@@ -8,6 +8,7 @@ import { TermsOfService } from './pages/TermsOfService';
 import { PressLine } from './pages/business/PressLine';
 import { PolishingLine } from './pages/business/PolishingLine';
 import { Semiconductor } from './pages/business/Semiconductor';
+import { Slicing } from './pages/business/Slicing';
 import { FiberOptics } from './pages/business/FiberOptics';
 import { Support } from './pages/Support';
 import { AdminLogin } from './pages/admin/AdminLogin';
@@ -44,6 +45,7 @@ function App() {
           <Route path="/business/press-line" element={<PressLine />} />
           <Route path="/business/polishing-line" element={<PolishingLine />} />
           <Route path="/business/semiconductor" element={<Semiconductor />} />
+          <Route path="/business/slicing" element={<Slicing />} />
           <Route path="/business/fiber-optics" element={<FiberOptics />} />
           <Route path="/support" element={<Support />} />
           <Route path="/support/*" element={<Support />} />

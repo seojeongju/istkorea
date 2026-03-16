@@ -17,6 +17,7 @@
             "press": "Press Line",
             "polishing": "Polishing Line",
             "semicon": "Semiconductor Equipment",
+            "slicing": "SLICING",
             "fiber": "Fiber Optics"
         },
         "contact": "Contact",
@@ -313,6 +314,10 @@
         "subpages_title": "Business Areas"
     },
     "business_pages": {
+        "slicing": {
+            "title": "SLICING EQUIPMENT",
+            "subtitle": "High-Precision Slicing Solution.\nProviding optimized Test Cutting services for SiC and Glass materials."
+        },
         "press": {
             "title": "PRESS LINE",
             "subtitle": "Advanced Press Solutions for Every Industrial Need.\nFrom Multi-Layer Lamination to High-Temperature Vacuum Processes.",
