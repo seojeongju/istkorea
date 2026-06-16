@@ -29,17 +29,42 @@ export const Footer = () => {
                 <div className="border-t border-gray-200 my-8" />
 
                 <div className="flex flex-col md:flex-row justify-between text-sm text-gray-500">
-                    <div className="space-y-2">
-                        <p>
-                            <span className="font-bold text-gray-700">{t('footer.info.company_name')}</span> &nbsp;|&nbsp;
-                            {t('footer.info.ceo_label')}: {t('footer.info.ceo_name')} &nbsp;|&nbsp;
-                            {t('footer.info.reg_no_label')}: {t('footer.info.reg_no')}
-                        </p>
-                        <p>
-                            {t('footer.info.address_label')}: {t('footer.info.address')} &nbsp;|&nbsp;
-                            {t('footer.info.tel_label')}: {t('footer.info.tel')} &nbsp;|&nbsp;
-                            {t('footer.info.fax_label')}: {t('footer.info.fax')}
-                        </p>
+                    <div className="space-y-4 w-full md:w-3/4">
+                        <div className="space-y-1">
+                            <p>
+                                <span className="font-bold text-gray-700">{t('footer.info.company_name')}</span> &nbsp;|&nbsp;
+                                {t('footer.info.ceo_label')}: {t('footer.info.ceo_name')} &nbsp;|&nbsp;
+                                {t('footer.info.reg_no_label')}: {t('footer.info.reg_no')}
+                            </p>
+                            <p>
+                                {t('footer.info.address_label')}: {t('footer.info.address')} &nbsp;|&nbsp;
+                                {t('footer.info.tel_label')}: {t('footer.info.tel')} &nbsp;|&nbsp;
+                                {t('footer.info.fax_label')}: {t('footer.info.fax')}
+                            </p>
+                        </div>
+                        <div className="space-y-1 pt-3 border-t border-gray-200">
+                            <p>
+                                <span className="font-bold text-gray-700">{t('footer.info.china_title')}</span> &nbsp;|&nbsp;
+                                {t('footer.info.china_manager_label')}: {t('footer.info.china_manager_name')} &nbsp;|&nbsp;
+                                {t('footer.info.china_address_label')}: {t('footer.info.china_address')}
+                            </p>
+                            <p>
+                                {t('footer.info.china_tel_label')}: {t('footer.info.china_tel')} &nbsp;|&nbsp;
+                                {t('footer.info.china_fax_label')}: {t('footer.info.china_fax')} &nbsp;|&nbsp;
+                                {t('footer.info.china_email_label')}: {t('footer.info.china_email')}
+                            </p>
+                        </div>
+                        <div className="space-y-1 pt-3 border-t border-gray-200">
+                            <p>
+                                <span className="font-bold text-gray-700">{t('footer.info.vietnam_title')}</span> &nbsp;|&nbsp;
+                                {t('footer.info.vietnam_ceo_label')}: {t('footer.info.vietnam_ceo_name')} &nbsp;|&nbsp;
+                                {t('footer.info.vietnam_address_label')}: {t('footer.info.vietnam_address')}
+                            </p>
+                            <p>
+                                {t('footer.info.vietnam_tel_label')}: {t('footer.info.vietnam_tel')} &nbsp;|&nbsp;
+                                {t('footer.info.vietnam_email_label')}: {t('footer.info.vietnam_email')}
+                            </p>
+                        </div>
                         <p className="mt-4 opacity-60">{t('footer.info.copyright')}</p>
                     </div>
 
